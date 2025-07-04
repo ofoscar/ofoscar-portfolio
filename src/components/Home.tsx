@@ -1,7 +1,8 @@
-import { theme } from '../theme';
 import BioCard from './BioCard';
+import Footer from './Footer';
 import HeroSlide from './HeroSlide';
 import ProjectsSection from './ProjectsSection';
+import RecentPostsSection from './RecentPostsSection';
 
 function Home() {
   const handleGetStarted = () => {
@@ -25,7 +26,7 @@ function Home() {
         onSecondaryClick={handleLearnMore}
       />
       {/* Main Content Section */}
-      <div className='w-full py-[50px]'>
+      <div className='w-full py-[50px] px-[80px]'>
         {/* Bio Section */}
         <div className='w-full px-4'>
           <BioCard
@@ -38,31 +39,13 @@ function Home() {
 
         {/* Projects Section */}
         <ProjectsSection />
+
+        {/* Recent Posts Section */}
+        <RecentPostsSection />
       </div>
-      {/* Additional Content Section */}
-      <div className='max-w-7xl mx-auto px-4 py-16'>
-        <div className='text-center max-w-2xl mx-auto'>
-          <h2
-            className='text-3xl font-bold mb-6'
-            style={{
-              color: theme.colors.text.primary,
-              fontFamily: theme.typography.fontFamily.sans.join(', '),
-            }}
-          >
-            Clean & Minimal Design
-          </h2>
-          <p
-            className='text-lg leading-relaxed'
-            style={{
-              color: theme.colors.text.secondary,
-              fontFamily: theme.typography.fontFamily.sans.join(', '),
-            }}
-          >
-            Built with a beautiful theme system using #F9FAFB background and
-            modern design principles.
-          </p>
-        </div>
-      </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
