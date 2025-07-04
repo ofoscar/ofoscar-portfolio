@@ -16,9 +16,9 @@ export const theme = {
 
     // Brand colors
     brand: {
-      primary: '#3B82F6',
+      primary: '#BF1A2F', // Updated to red
       secondary: '#8B5CF6',
-      gradient: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%)',
+      gradient: 'linear-gradient(135deg, #EF4444 0%, #DC2626 100%)', // Updated gradient to red shades
     },
 
     // Accent colors
@@ -67,8 +67,7 @@ export const theme = {
 
   typography: {
     fontFamily: {
-      sans: ['Inter', 'system-ui', 'sans-serif'],
-      mono: ['Fira Code', 'monospace'],
+      sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
     },
     fontSize: {
       xs: '0.75rem',

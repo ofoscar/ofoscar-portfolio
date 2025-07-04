@@ -20,7 +20,7 @@
 }
 
 .brand-text {
-  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+  background: #3C3C3C;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -37,15 +37,18 @@
   color: #3B82F6;
 }
 
-.btn-primary {
-  background-color: #3B82F6;
+.contact-btn {
+  background-color: #2F2F2F;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 2rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .btn-primary:hover {
@@ -58,4 +61,63 @@
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+
+.gradient-border-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: 20px; /* match rounded-lg */
+  background: linear-gradient(
+    to bottom left,
+    #ffffff0d 0%,
+    #ffffff 50%,
+    #ffffff0d 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass Button Component */
+.glass-button {
+  /* Base button styling */
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  
+  /* Transition effects */
+  transition: all 0.2s ease-in-out;
+  
+  /* Glass morphism effect */
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(14px);
+  
+  /* Inner shadows for depth */
+  box-shadow: 
+    inset 0px -2px 4px rgba(0, 0, 0, 0.02),
+    inset 0px 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.glass-button:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure the gradient border wrapper works with the glass button */
+.glass-button.gradient-border-wrapper {
+  position: relative;
 }
