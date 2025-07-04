@@ -92,3 +92,21 @@ button, a, input, textarea, select {
     transform: translateY(-5px) translateX(-5px) scale(0.95);
   }
 }
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 8s linear infinite;
+}
