@@ -64,3 +64,31 @@ body {
 button, a, input, textarea, select {
   transition: all 0.2s ease-in-out;
 }
+
+/* Texture background animations */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.1;
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+    opacity: 0.15;
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+    opacity: 0.12;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+  33% {
+    transform: translateY(-15px) translateX(10px) scale(1.05);
+  }
+  66% {
+    transform: translateY(-5px) translateX(-5px) scale(0.95);
+  }
+}
