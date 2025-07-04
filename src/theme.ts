@@ -99,6 +99,10 @@ export const theme = {
       slow: '0.3s',
     },
   },
+
+  maxWidth: {
+    card: '1280px',
+  },
 } as const;
 
 export type Theme = typeof theme;
