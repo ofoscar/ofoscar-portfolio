@@ -20,7 +20,7 @@
 }
 
 .brand-text {
-  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+  background: #3C3C3C;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -37,15 +37,17 @@
   color: #3B82F6;
 }
 
-.btn-primary {
-  background-color: #3B82F6;
+.contact-btn {
+  background-color: #2F2F2F;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 2rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
 
 .btn-primary:hover {

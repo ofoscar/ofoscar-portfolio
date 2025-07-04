@@ -1,6 +1,7 @@
 import { theme } from '../theme';
 import BioCard from './BioCard';
 import HeroSlide from './HeroSlide';
+import ProjectsSection from './ProjectsSection';
 
 function Home() {
   const handleGetStarted = () => {
@@ -34,6 +35,9 @@ function Home() {
             skills={['React', 'TypeScript', 'Node.js', 'Design', 'UI/UX']}
           />
         </div>
+
+        {/* Projects Section */}
+        <ProjectsSection />
       </div>
       {/* Additional Content Section */}
       <div className='max-w-7xl mx-auto px-4 py-16'>
