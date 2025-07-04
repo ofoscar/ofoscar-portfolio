@@ -20,8 +20,7 @@ function Home() {
         backgroundImage='https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
         title='The World is Wired'
         subtitle={`From AI breakthroughs to new mobile frameworks, innovation travels at light speed. Explore how today's tech is shaping tomorrow—one connection at a time.`}
-        primaryButtonText='Get Started'
-        secondaryButtonText='Learn More'
+        primaryButtonText='Read the latest tech pulse'
         onPrimaryClick={handleGetStarted}
         onSecondaryClick={handleLearnMore}
       />

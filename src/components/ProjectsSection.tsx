@@ -1,6 +1,29 @@
+import { useEffect, useRef } from 'react';
 import { theme } from '../theme';
 
 function ProjectsSection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Scroll to the middle card (card 2) on component mount
+    const scrollToCenter = () => {
+      if (scrollContainerRef.current) {
+        const container = scrollContainerRef.current;
+        const cardWidth = 840;
+        const gap = 40; // Updated to match gap-[40px]
+        const containerWidth = container.clientWidth;
+        // Calculate position to center card 2
+        const cardIndex = 1; // Second card (0-indexed)
+        const cardPosition = (cardWidth + gap) * cardIndex;
+        const scrollPosition = cardPosition - (containerWidth - cardWidth) / 2;
+
+        container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      }
+    };
+
+    // Use setTimeout to ensure layout is complete
+    setTimeout(scrollToCenter, 100);
+  }, []);
   return (
     <div className='w-full px-4 mt-16'>
       <div className='max-w-[1280px] mx-auto'>
@@ -25,10 +48,19 @@ function ProjectsSection() {
           </p>
         </div>
 
-        <div className='flex flex-row gap-6 overflow-x-auto pb-4'>
+        <div
+          ref={scrollContainerRef}
+          className='flex flex-row gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto'
+          style={{
+            scrollPaddingLeft: 'calc(50% - 420px)',
+            scrollPaddingRight: 'calc(50% - 420px)',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
           {/* Project Card 1 */}
           <div
-            className='rounded-lg p-8 transition-all duration-300 hover:shadow-lg flex-shrink-0'
+            className='rounded-lg p-8 transition-all duration-300 hover:shadow-lg flex-shrink-0 snap-center'
             style={{
               backgroundColor: theme.colors.surface,
               border: `1px solid ${theme.colors.border.light}`,
@@ -87,7 +119,7 @@ function ProjectsSection() {
 
           {/* Project Card 2 */}
           <div
-            className='rounded-lg p-8 transition-all duration-300 hover:shadow-lg flex-shrink-0'
+            className='rounded-lg p-8 transition-all duration-300 hover:shadow-lg flex-shrink-0 snap-center'
             style={{
               backgroundColor: theme.colors.surface,
               border: `1px solid ${theme.colors.border.light}`,
@@ -144,7 +176,7 @@ function ProjectsSection() {
 
           {/* Project Card 3 */}
           <div
-            className='rounded-lg p-8 transition-all duration-300 hover:shadow-lg flex-shrink-0'
+            className='rounded-lg p-8 transition-all duration-300 hover:shadow-lg flex-shrink-0 snap-center'
             style={{
               backgroundColor: theme.colors.surface,
               border: `1px solid ${theme.colors.border.light}`,

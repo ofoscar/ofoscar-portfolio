@@ -1,11 +1,11 @@
 import { theme } from '../theme';
+import GlassButton from './GlassButton';
 
 interface HeroSlideProps {
   backgroundImage: string;
   title: string;
   subtitle: string;
   primaryButtonText: string;
-  secondaryButtonText: string;
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
 }
@@ -15,7 +15,6 @@ function HeroSlide({
   title,
   subtitle,
   primaryButtonText,
-  secondaryButtonText,
   onPrimaryClick,
   onSecondaryClick,
 }: HeroSlideProps) {
@@ -57,26 +56,12 @@ function HeroSlide({
             {subtitle}
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-start'>
-            <button
-              className='px-8 py-4 rounded-lg font-semibold text-white transition-all duration-200 hover:transform hover:scale-105'
-              style={{
-                background: theme.colors.brand.gradient,
-                boxShadow: theme.colors.shadow.lg,
-              }}
+            <GlassButton
+              className='gradient-border-wrapper'
               onClick={onPrimaryClick}
             >
               {primaryButtonText}
-            </button>
-            <button
-              className='px-8 py-4 rounded-lg font-semibold transition-all duration-200 hover:transform hover:scale-105 border-2 border-white text-white hover:bg-white hover:text-gray-900'
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-              }}
-              onClick={onSecondaryClick}
-            >
-              {secondaryButtonText}
-            </button>
+            </GlassButton>
           </div>
         </div>
       </div>

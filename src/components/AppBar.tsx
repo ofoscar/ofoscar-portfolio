@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function AppBar() {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -9,7 +10,7 @@ function AppBar() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo and brand */}
-          <div className='flex items-center space-x-3'>
+          <div className='flex items-center space-x-1 cursor-pointer'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='24'
@@ -36,13 +37,16 @@ function AppBar() {
             <Link to='/projects' className='nav-link'>
               Projects
             </Link>
-            <Link to='/contact' className='nav-link'>
-              Contact
+            <Link to='/blog' className='nav-link'>
+              Blog
             </Link>
-            <button className='contact-btn'>
-              Contact
+            <button
+              className='contact-btn'
+              onClick={() => navigate('/contact')}
+            >
+              <div className='px-2'>Contact</div>
               <div
-                className='rounded-full h-8 w-'
+                className='rounded-full h-8 w-8 flex items-center justify-center'
                 style={{ backgroundColor: '#BF1A2F' }}
               >
                 <svg
@@ -50,7 +54,6 @@ function AppBar() {
                   width='22'
                   height='22'
                   viewBox='0 0 16 16'
-                  className='ml-2'
                 >
                   <path
                     fill='currentColor'
@@ -128,7 +131,20 @@ function AppBar() {
             >
               Contact
             </Link>
-            <button className='w-full bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors mt-2'>
+            <button
+              className='w-full px-4 py-2 rounded-lg text-white font-medium transition-all duration-200 hover:scale-105 mt-2'
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                backgroundImage:
+                  'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                border: '1px solid transparent',
+                backgroundClip: 'padding-box',
+                backdropFilter: 'blur(14px)',
+                WebkitBackdropFilter: 'blur(14px)',
+                boxShadow:
+                  'inset 0 -2px 4px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.4)',
+              }}
+            >
               Get Started
             </button>
           </div>
