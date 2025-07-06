@@ -12,7 +12,10 @@ function AppBar() {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo and brand */}
-          <div className='flex items-center space-x-1 cursor-pointer'>
+          <div
+            className='flex items-center space-x-1 cursor-pointer'
+            onClick={() => navigate('/')}
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='24'
@@ -59,9 +62,9 @@ function AppBar() {
                 >
                   <path
                     fill='currentColor'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M5.5 4H12v6.5h-1V5.707l-6.146 6.147l-.708-.708L10.293 5H5.5z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   />
                 </svg>
               </div>
