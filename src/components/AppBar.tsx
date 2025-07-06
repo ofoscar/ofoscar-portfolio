@@ -1,16 +1,21 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
 function AppBar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <nav className='nav-container'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo and brand */}
-          <div className='flex items-center space-x-1 cursor-pointer'>
+          <div
+            className='flex items-center space-x-1 cursor-pointer'
+            onClick={() => navigate('/')}
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width='24'
@@ -29,22 +34,22 @@ function AppBar() {
           {/* Desktop Navigation */}
           <div className='hidden md:flex items-center space-x-8'>
             <Link to='/' className='nav-link'>
-              Home
+              {t('nav.home')}
             </Link>
             <Link to='/about' className='nav-link'>
-              About
+              {t('nav.about')}
             </Link>
             <Link to='/projects' className='nav-link'>
-              Projects
+              {t('nav.projects')}
             </Link>
             <Link to='/blog' className='nav-link'>
-              Blog
+              {t('nav.blog')}
             </Link>
             <button
               className='contact-btn'
               onClick={() => navigate('/contact')}
             >
-              <div className='px-2'>Contact</div>
+              <div className='px-2'>{t('nav.contact')}</div>
               <div
                 className='rounded-full h-8 w-8 flex items-center justify-center'
                 style={{ backgroundColor: '#BF1A2F' }}
@@ -57,9 +62,9 @@ function AppBar() {
                 >
                   <path
                     fill='currentColor'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M5.5 4H12v6.5h-1V5.707l-6.146 6.147l-.708-.708L10.293 5H5.5z'
-                    clip-rule='evenodd'
+                    clipRule='evenodd'
                   />
                 </svg>
               </div>
@@ -108,28 +113,28 @@ function AppBar() {
               className='block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              {t('nav.home')}
             </Link>
             <Link
               to='/about'
               className='block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              {t('nav.about')}
             </Link>
             <Link
               to='/projects'
               className='block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
               onClick={() => setIsMenuOpen(false)}
             >
-              Projects
+              {t('nav.projects')}
             </Link>
             <Link
               to='/contact'
               className='block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              {t('nav.contact')}
             </Link>
             <button
               className='w-full px-4 py-2 rounded-lg text-white font-medium transition-all duration-200 hover:scale-105 mt-2'
