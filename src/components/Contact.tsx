@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import GlassButton from './GlassButton';
 import Footer from './Footer';
+import GlassButton from './GlassButton';
 
 interface FormData {
   name: string;
