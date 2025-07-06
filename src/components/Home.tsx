@@ -23,6 +23,7 @@ function Home() {
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
         primaryButtonText={t('hero.cta')}
+        secondaryButtonText={t('hero.secondaryCta')}
         onPrimaryClick={handleGetStarted}
         onSecondaryClick={handleLearnMore}
       />

@@ -9,7 +9,8 @@
   "hero": {
     "title": "Construyendo Experiencias Digitales",
     "subtitle": "Desarrollador full-stack apasionado por crear soluciones web innovadoras e interfaces de usuario hermosas.",
-    "cta": "Ver Mi Trabajo"
+    "cta": "Ver Mi Trabajo",
+    "secondaryCta": "Saber Más"
   },
   "bio": {
     "name": "Oscar Rodríguez",

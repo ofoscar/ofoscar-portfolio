@@ -9,7 +9,8 @@
   "hero": {
     "title": "Building Digital Experiences",
     "subtitle": "Full-stack developer passionate about creating innovative web solutions and beautiful user interfaces.",
-    "cta": "View My Work"
+    "cta": "View My Work",
+    "secondaryCta": "Learn More"
   },
   "bio": {
     "name": "Oscar Rodriguez",

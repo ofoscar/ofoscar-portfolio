@@ -6,6 +6,7 @@ interface HeroSlideProps {
   title: string;
   subtitle: string;
   primaryButtonText: string;
+  secondaryButtonText?: string;
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
 }
@@ -15,8 +16,9 @@ function HeroSlide({
   title,
   subtitle,
   primaryButtonText,
+  secondaryButtonText,
   onPrimaryClick,
-  onSecondaryClick: _onSecondaryClick,
+  onSecondaryClick,
 }: HeroSlideProps) {
   return (
     <div
@@ -62,6 +64,14 @@ function HeroSlide({
             >
               {primaryButtonText}
             </GlassButton>
+            {secondaryButtonText && (
+              <GlassButton
+                className='text-lg md:text-2xl'
+                onClick={onSecondaryClick}
+              >
+                {secondaryButtonText}
+              </GlassButton>
+            )}
           </div>
         </div>
       </div>
