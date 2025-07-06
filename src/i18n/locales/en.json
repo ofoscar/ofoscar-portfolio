@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Building Digital Experiences",
+    "subtitle": "Full-stack developer passionate about creating innovative web solutions and beautiful user interfaces.",
+    "cta": "View My Work"
+  },
+  "bio": {
+    "name": "Oscar Rodriguez",
+    "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions that solve real-world problems and deliver exceptional user experiences.",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "GraphQL"
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A showcase of my latest work and technical experiments",
+    "viewProject": "View Project",
+    "viewCode": "View Code"
+  },
+  "blog": {
+    "title": "Recent Posts",
+    "subtitle": "Latest insights and thoughts on technology, development, and design",
+    "readMore": "Read More",
+    "readTime": "min read",
+    "posts": {
+      "webdev": {
+        "title": "The Future of Web Development",
+        "excerpt": "Exploring emerging trends and technologies that are shaping the future of web development, including AI integration and serverless architectures.",
+        "tags": ["Web Dev", "AI", "Tech Trends"]
+      },
+      "react": {
+        "title": "Building Scalable React Applications",
+        "excerpt": "Best practices and architectural patterns for creating maintainable and scalable React applications that can grow with your team.",
+        "tags": ["React", "Architecture", "Best Practices"]
+      },
+      "typescript": {
+        "title": "TypeScript Tips and Tricks",
+        "excerpt": "Advanced TypeScript techniques that will help you write more robust and type-safe code, improving your development experience.",
+        "tags": ["TypeScript", "Tips", "Development"]
+      },
+      "ui": {
+        "title": "Designing Beautiful UIs",
+        "excerpt": "A comprehensive guide to creating visually appealing and user-friendly interfaces that enhance the overall user experience.",
+        "tags": ["UI/UX", "Design", "User Experience"]
+      },
+      "devops": {
+        "title": "Modern DevOps Practices",
+        "excerpt": "Essential DevOps practices for modern development teams, including CI/CD pipelines, containerization, and cloud deployment strategies.",
+        "tags": ["DevOps", "CI/CD", "Cloud"]
+      },
+      "performance": {
+        "title": "Performance Optimization Strategies",
+        "excerpt": "Proven techniques for optimizing web application performance, from bundle size reduction to runtime optimization strategies.",
+        "tags": ["Performance", "Optimization", "Web Dev"]
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Oscar Rodriguez. All rights reserved.",
+    "builtWith": "Built with React & TypeScript"
+  },
+  "language": {
+    "switch": "Switch Language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "message": "We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking 'Accept', you consent to our use of cookies.",
+    "accept": "Accept All",
+    "decline": "Decline"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or question...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again or contact me directly."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "response": "Response Time",
+      "responseValue": "Usually within 24 hours"
+    },
+    "social": {
+      "title": "Find Me Online",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  }
+}

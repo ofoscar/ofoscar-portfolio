@@ -16,7 +16,7 @@ function HeroSlide({
   subtitle,
   primaryButtonText,
   onPrimaryClick,
-  onSecondaryClick,
+  onSecondaryClick: _onSecondaryClick,
 }: HeroSlideProps) {
   return (
     <div
@@ -57,7 +57,7 @@ function HeroSlide({
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-start'>
             <GlassButton
-              className='gradient-border-wrapper'
+              className='gradient-border-wrapper text-lg md:text-2xl'
               onClick={onPrimaryClick}
             >
               {primaryButtonText}

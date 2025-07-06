@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 
 function ProjectsSection() {
+  const { t } = useTranslation();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,7 +37,7 @@ function ProjectsSection() {
               fontFamily: theme.typography.fontFamily.sans.join(', '),
             }}
           >
-            Featured Projects
+            {t('projects.title')}
           </h2>
           <p
             className='text-lg'
@@ -44,7 +46,7 @@ function ProjectsSection() {
               fontFamily: theme.typography.fontFamily.sans.join(', '),
             }}
           >
-            A showcase of my recent work and creative endeavors
+            {t('projects.subtitle')}
           </p>
         </div>
 

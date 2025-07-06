@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Construyendo Experiencias Digitales",
+    "subtitle": "Desarrollador full-stack apasionado por crear soluciones web innovadoras e interfaces de usuario hermosas.",
+    "cta": "Ver Mi Trabajo"
+  },
+  "bio": {
+    "name": "Oscar Rodríguez",
+    "description": "Soy un desarrollador full-stack apasionado con experiencia en tecnologías web modernas. Me encanta crear soluciones innovadoras que resuelven problemas del mundo real y brindan experiencias excepcionales al usuario.",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "GraphQL"
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una muestra de mi trabajo más reciente y experimentos técnicos",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código"
+  },
+  "blog": {
+    "title": "Publicaciones Recientes",
+    "subtitle": "Últimas ideas y pensamientos sobre tecnología, desarrollo y diseño",
+    "readMore": "Leer Más",
+    "readTime": "min de lectura",
+    "posts": {
+      "webdev": {
+        "title": "El Futuro del Desarrollo Web",
+        "excerpt": "Explorando tendencias emergentes y tecnologías que están moldeando el futuro del desarrollo web, incluyendo integración de IA y arquitecturas sin servidor.",
+        "tags": ["Desarrollo Web", "IA", "Tendencias Tech"]
+      },
+      "react": {
+        "title": "Construyendo Aplicaciones React Escalables",
+        "excerpt": "Mejores prácticas y patrones arquitectónicos para crear aplicaciones React mantenibles y escalables que pueden crecer con tu equipo.",
+        "tags": ["React", "Arquitectura", "Mejores Prácticas"]
+      },
+      "typescript": {
+        "title": "Consejos y Trucos de TypeScript",
+        "excerpt": "Técnicas avanzadas de TypeScript que te ayudarán a escribir código más robusto y seguro, mejorando tu experiencia de desarrollo.",
+        "tags": ["TypeScript", "Consejos", "Desarrollo"]
+      },
+      "ui": {
+        "title": "Diseñando Interfaces Hermosas",
+        "excerpt": "Una guía completa para crear interfaces visualmente atractivas y fáciles de usar que mejoren la experiencia general del usuario.",
+        "tags": ["UI/UX", "Diseño", "Experiencia Usuario"]
+      },
+      "devops": {
+        "title": "Prácticas Modernas de DevOps",
+        "excerpt": "Prácticas esenciales de DevOps para equipos de desarrollo modernos, incluyendo pipelines CI/CD, containerización y estrategias de despliegue en la nube.",
+        "tags": ["DevOps", "CI/CD", "Nube"]
+      },
+      "performance": {
+        "title": "Estrategias de Optimización de Rendimiento",
+        "excerpt": "Técnicas probadas para optimizar el rendimiento de aplicaciones web, desde la reducción del tamaño del bundle hasta estrategias de optimización en tiempo de ejecución.",
+        "tags": ["Rendimiento", "Optimización", "Desarrollo Web"]
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Oscar Rodríguez. Todos los derechos reservados.",
+    "builtWith": "Construido con React y TypeScript"
+  },
+  "language": {
+    "switch": "Cambiar Idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "cookies": {
+    "title": "Usamos cookies",
+    "message": "Utilizamos cookies para mejorar su experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en 'Aceptar', usted consiente el uso de cookies.",
+    "accept": "Aceptar Todo",
+    "decline": "Rechazar"
+  },
+  "contact": {
+    "title": "Ponte En Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos sobre cómo podemos trabajar juntos para dar vida a tus ideas.",
+    "form": {
+      "name": "Nombre Completo",
+      "namePlaceholder": "Tu nombre",
+      "email": "Dirección de Email",
+      "emailPlaceholder": "tu.email@ejemplo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿De qué se trata?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto o pregunta...",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado exitosamente! Te responderé pronto.",
+      "error": "Algo salió mal. Por favor intenta de nuevo o contáctame directamente."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación",
+      "response": "Tiempo de Respuesta",
+      "responseValue": "Generalmente dentro de 24 horas"
+    },
+    "social": {
+      "title": "Encuéntrame En Línea",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    }
+  }
+}
