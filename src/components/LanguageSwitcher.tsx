@@ -15,7 +15,7 @@ const LanguageSwitcher: React.FC = () => {
     <div className='flex items-center'>
       <button
         onClick={toggleLanguage}
-        className='relative flex items-center w-14 h-7 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50'
+        className='cursor-pointer relative flex items-center w-14 h-7 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50'
         style={{
           backgroundColor: isSpanish
             ? 'rgba(191, 26, 47, 0.4)' // theme.colors.brand.primary with opacity

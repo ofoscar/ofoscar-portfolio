@@ -65,7 +65,7 @@ const Contact = () => {
           src='https://images.unsplash.com/photo-1636955779321-819753cd1741?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           alt='Hero Background'
           className='absolute inset-0 w-full h-full object-cover'
-          onLoad={() => console.log('Hero image loaded successfully')}
+          onLoad={() => {}}
           onError={(e) => {
             console.error('Hero image failed to load:', e);
             e.currentTarget.style.display = 'none';
@@ -92,7 +92,7 @@ const Contact = () => {
       </div>
       <div className='py-[60px] w-full flex justify-center'>
         {/* Main Content */}
-        <div className='max-w-5xl w-full bg-white rounded-2xl shadow-lg flex'>
+        <div className='max-w-5xl w-full bg-white rounded-2xl flex'>
           {/* Image Section */}
           <div className='w-1/2 h-auto'>
             <img
