@@ -6,9 +6,7 @@ interface HeroSlideProps {
   title: string;
   subtitle: string;
   primaryButtonText: string;
-  secondaryButtonText?: string;
   onPrimaryClick?: () => void;
-  onSecondaryClick?: () => void;
 }
 
 function HeroSlide({
@@ -16,9 +14,7 @@ function HeroSlide({
   title,
   subtitle,
   primaryButtonText,
-  secondaryButtonText,
   onPrimaryClick,
-  onSecondaryClick,
 }: HeroSlideProps) {
   return (
     <div
@@ -59,19 +55,11 @@ function HeroSlide({
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-start'>
             <GlassButton
-              className='gradient-border-wrapper text-lg md:text-2xl'
+              className='gradient-border-wrapper text-lg md:text-2xl w-[220px]'
               onClick={onPrimaryClick}
             >
               {primaryButtonText}
             </GlassButton>
-            {secondaryButtonText && (
-              <GlassButton
-                className='text-lg md:text-2xl'
-                onClick={onSecondaryClick}
-              >
-                {secondaryButtonText}
-              </GlassButton>
-            )}
           </div>
         </div>
       </div>

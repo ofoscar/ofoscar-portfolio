@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import BioCard from './BioCard';
 import Footer from './Footer';
 import HeroSlide from './HeroSlide';
@@ -7,12 +8,10 @@ import RecentPostsSection from './RecentPostsSection';
 
 function Home() {
   const { t } = useTranslation();
-  const handleGetStarted = () => {
-    console.log('Get Started clicked');
-  };
+  const navigate = useNavigate();
 
-  const handleLearnMore = () => {
-    console.log('Learn More clicked');
+  const handleGetStarted = () => {
+    navigate('/projects');
   };
 
   return (
@@ -23,9 +22,7 @@ function Home() {
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
         primaryButtonText={t('hero.cta')}
-        secondaryButtonText={t('hero.secondaryCta')}
         onPrimaryClick={handleGetStarted}
-        onSecondaryClick={handleLearnMore}
       />
       {/* Main Content Section */}
       <div className='w-full py-[50px] px-[80px]'>
