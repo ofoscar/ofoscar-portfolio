@@ -9,9 +9,11 @@ import RecentPostsSection from './RecentPostsSection';
 function Home() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+
   const handleGetStarted = () => {
     navigate('/projects');
   };
+
   return (
     <div>
       {/* Hero Section/Slide */}
