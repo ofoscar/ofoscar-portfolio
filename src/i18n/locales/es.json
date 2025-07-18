@@ -8,7 +8,7 @@
   },
   "hero": {
     "title": "Construyendo Experiencias Digitales",
-    "subtitle": "Desarrollador full-stack apasionado por crear soluciones web innovadoras e interfaces de usuario hermosas.",
+    "subtitle": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions that solve real-world problems and deliver exceptional user experiences.",
     "cta": "Ver Mi Trabajo",
     "secondaryCta": "Saber Más"
   },
@@ -20,10 +20,8 @@
       "TypeScript",
       "Node.js",
       "Python",
-      "AWS",
       "PostgreSQL",
-      "Docker",
-      "GraphQL"
+      "Docker"
     ]
   },
   "projects": {

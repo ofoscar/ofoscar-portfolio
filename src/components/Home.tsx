@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import BioCard from './BioCard';
 import Footer from './Footer';
 import HeroSlide from './HeroSlide';
 import ProjectsSection from './ProjectsSection';
 import RecentPostsSection from './RecentPostsSection';
-
+import profile_img from '/profile.jpg'; // Example profile image import
 function Home() {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -18,19 +17,14 @@ function Home() {
     <div>
       {/* Hero Section/Slide */}
       <HeroSlide
-        backgroundImage='https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        profileImage={profile_img}
         title={t('hero.title')}
         subtitle={t('hero.subtitle')}
         primaryButtonText={t('hero.cta')}
         onPrimaryClick={handleGetStarted}
       />
       {/* Main Content Section */}
-      <div className='w-full py-[50px] px-[80px]'>
-        {/* Bio Section */}
-        <div className='w-full px-4'>
-          <BioCard profileImage='https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
-        </div>
-
+      <div className='w-full px-[80px] py-[40px] flex flex-col gap-10'>
         {/* Projects Section */}
         <ProjectsSection />
 

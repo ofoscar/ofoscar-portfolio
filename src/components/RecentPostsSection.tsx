@@ -56,7 +56,7 @@ function RecentPostsSection() {
   ];
 
   return (
-    <div className='w-full px-4 mt-16'>
+    <div className='w-full px-4'>
       <div className='max-w-[1280px] mx-auto'>
         <div className='text-center mb-12'>
           <h2
