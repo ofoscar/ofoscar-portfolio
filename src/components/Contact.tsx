@@ -47,7 +47,7 @@ const Contact = () => {
         message: t('contact.form.success'),
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch {
       setStatus({
         type: 'error',
         message: t('contact.form.error'),
