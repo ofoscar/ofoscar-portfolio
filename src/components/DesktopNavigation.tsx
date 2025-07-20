@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import ContactButton from './ContactButton';
 
 function DesktopNavigation() {
-  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const handleBlogClick = () => {
@@ -26,27 +26,7 @@ function DesktopNavigation() {
       >
         {t('nav.blog')}
       </button>
-      <button className='contact-btn' onClick={() => navigate('/contact')}>
-        <div className='px-2'>{t('nav.contact')}</div>
-        <div
-          className='rounded-full h-8 w-8 flex items-center justify-center'
-          style={{ backgroundColor: '#BF1A2F' }}
-        >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            width='22'
-            height='22'
-            viewBox='0 0 16 16'
-          >
-            <path
-              fill='currentColor'
-              fillRule='evenodd'
-              d='M5.5 4H12v6.5h-1V5.707l-6.146 6.147l-.708-.708L10.293 5H5.5z'
-              clipRule='evenodd'
-            />
-          </svg>
-        </div>
-      </button>
+      <ContactButton />
     </div>
   );
 }

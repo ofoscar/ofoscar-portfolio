@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import DesktopNavigation from './DesktopNavigation';
 import MobileNavigation from './MobileNavigation';
@@ -7,7 +6,6 @@ import MobileNavigation from './MobileNavigation';
 function AppBar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
 
   return (
     <nav className='nav-container'>
