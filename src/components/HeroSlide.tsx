@@ -24,7 +24,7 @@ function HeroSlide({
 
   return (
     <div
-      className='w-full relative flex items-center justify-center overflow-hidden min-h-[480px] md:h-[480px] p-4 sm:p-8 md:p-[80px]'
+      className='w-full relative flex items-center justify-center overflow-hidden min-h-[480px] lg:h-[480px] p-4 sm:p-8 md:p-[80px]'
       style={{
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
