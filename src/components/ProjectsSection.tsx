@@ -75,18 +75,21 @@ function ProjectsSection() {
           }}
         >
           <ProjectCard
+            id='modern-web-app'
             title='Modern Web Application'
             description='A full-stack web application built with React, TypeScript, and Node.js. Features modern UI/UX design, responsive layouts, and seamless user experience.'
             technologies={['React', 'TypeScript', 'Node.js', 'Tailwind CSS']}
             imageUrl='https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
           <ProjectCard
+            id='data-visualization-dashboard'
             title='Data Visualization Dashboard'
             description='Interactive dashboard for data visualization and analytics. Built with modern charting libraries and real-time data processing capabilities.'
             technologies={['Vue.js', 'D3.js', 'Python', 'PostgreSQL']}
             imageUrl='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
           <ProjectCard
+            id='ecommerce-platform'
             title='Mobile-First E-commerce Platform'
             description='Responsive e-commerce platform optimized for mobile devices. Features secure payment integration, inventory management, and user-friendly shopping experience.'
             technologies={['Next.js', 'Stripe', 'MongoDB', 'Vercel']}

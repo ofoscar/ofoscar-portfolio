@@ -68,6 +68,15 @@
       }
     }
   },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate full-stack developer creating innovative digital solutions",
+    "experience": {
+      "years": "5+",
+      "projects": "50+",
+      "technologies": "20+"
+    }
+  },
   "footer": {
     "copyright": "© 2025 Oscar Rodriguez. All rights reserved.",
     "builtWith": "Built with React & TypeScript"

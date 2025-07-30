@@ -1,31 +1,19 @@
 import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 import CloudTextureBackground from './CloudTextureBackground';
-import GlassButton from './GlassButton';
 import ProfileImage from './ProfileImage';
+import profile_img from '/profile.jpg';
 
-interface HeroSlideProps {
-  title: string;
-  subtitle: string;
-  primaryButtonText: string;
-  profileImage?: string;
-  onPrimaryClick?: () => void;
-}
-
-function HeroSlide({
-  title,
-  subtitle,
-  primaryButtonText,
-  profileImage,
-  onPrimaryClick,
-}: HeroSlideProps) {
+function About() {
   const { t } = useTranslation();
   const skills = t('bio.skills', { returnObjects: true }) as string[];
 
   return (
     <div
-      className='w-full relative flex items-center justify-center overflow-hidden min-h-[480px] lg:h-[480px] p-4 sm:p-8 md:p-[80px]'
+      className='relative flex items-center justify-center overflow-hidden'
       style={{
+        width: '100dvw',
+        height: '100dvh',
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
       }}
@@ -40,13 +28,11 @@ function HeroSlide({
       ></div>
 
       {/* Content */}
-      <div className='relative z-10 text-center md:text-left w-full max-w-[1280px] flex flex-col md:flex-row items-center justify-between gap-8'>
+      <div className='relative z-10 text-center md:text-left w-full max-w-[1280px] flex flex-col md:flex-row items-center justify-between gap-8 p-4 sm:p-8 md:p-[80px]'>
         {/* Mobile Layout: Profile Image First */}
-        {profileImage && (
-          <div className='block md:hidden '>
-            <ProfileImage src={profileImage} alt='Hero Profile' />
-          </div>
-        )}
+        <div className='block md:hidden '>
+          <ProfileImage src={profile_img} alt='About Profile' />
+        </div>
 
         <div className='flex-col max-w-none md:max-w-[750px] w-full'>
           <h1
@@ -56,7 +42,7 @@ function HeroSlide({
               textShadow: 'none',
             }}
           >
-            {title}
+            {t('about.title')}
           </h1>
           <p
             className='text-lg sm:text-xl leading-tight text-white mb-6 md:mb-8'
@@ -65,7 +51,7 @@ function HeroSlide({
               textShadow: 'none',
             }}
           >
-            {subtitle}
+            {t('about.subtitle')}
           </p>
 
           {/* Skills */}
@@ -89,25 +75,45 @@ function HeroSlide({
               ))}
           </div>
 
-          <div className='flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
-            <GlassButton
-              className='gradient-border-wrapper text-base sm:text-lg md:text-2xl w-full sm:w-[220px]'
-              onClick={onPrimaryClick}
-            >
-              {primaryButtonText}
-            </GlassButton>
+          {/* Experience Stats */}
+          <div className='flex flex-wrap gap-6 justify-center md:justify-start'>
+            <div className='text-center md:text-left'>
+              <div
+                className='text-2xl font-bold text-white'
+                style={{ textShadow: 'none' }}
+              >
+                {t('about.experience.years')}
+              </div>
+              <div className='text-sm text-gray-200'>Experience</div>
+            </div>
+            <div className='text-center md:text-left'>
+              <div
+                className='text-2xl font-bold text-white'
+                style={{ textShadow: 'none' }}
+              >
+                {t('about.experience.projects')}
+              </div>
+              <div className='text-sm text-gray-200'>Completed</div>
+            </div>
+            <div className='text-center md:text-left'>
+              <div
+                className='text-2xl font-bold text-white'
+                style={{ textShadow: 'none' }}
+              >
+                {t('about.experience.technologies')}
+              </div>
+              <div className='text-sm text-gray-200'>Technologies</div>
+            </div>
           </div>
         </div>
 
         {/* Desktop Layout: Profile Image on Right */}
-        {profileImage && (
-          <div className='hidden md:block ml-8 flex-shrink-0'>
-            <ProfileImage src={profileImage} alt='Hero Profile' />
-          </div>
-        )}
+        <div className='hidden md:block ml-8 flex-shrink-0'>
+          <ProfileImage src={profile_img} alt='About Profile' />
+        </div>
       </div>
     </div>
   );
 }
 
-export default HeroSlide;
+export default About;
