@@ -43,7 +43,7 @@ function HeroSlide({
       <div className='relative z-10 text-center md:text-left w-full max-w-[1280px] flex flex-col md:flex-row items-center justify-between gap-8'>
         {/* Mobile Layout: Profile Image First */}
         {profileImage && (
-          <div className='block md:hidden mb-6'>
+          <div className='block md:hidden '>
             <ProfileImage src={profileImage} alt='Hero Profile' />
           </div>
         )}

@@ -5,6 +5,7 @@ import BottomBar from './components/BottomBar';
 import Contact from './components/Contact';
 import CookiesPopup from './components/CookiesPopup';
 import Home from './components/Home';
+import ProjectDetail from './components/ProjectDetail';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/project/:projectId' element={<ProjectDetail />} />
         </Routes>
 
         {/* Bottom components */}
