@@ -26,6 +26,24 @@
   display: none;
 }
 
+/* Mobile About page optimizations */
+@media (max-width: 768px) {
+  .about-mobile-content {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    min-height: calc(100vh - 64px);
+    justify-content: flex-start !important;
+  }
+  
+  .about-mobile-spacing > * {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-mobile-spacing > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .brand-text {
   background: #3C3C3C;
   -webkit-background-clip: text;

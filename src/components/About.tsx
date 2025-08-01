@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 import CloudTextureBackground from './CloudTextureBackground';
-import ProfileImage from './ProfileImage';
 import EducationCard from './EducationCard';
+import ProfileImage from './ProfileImage';
 import profile_img from '/profile.jpg';
 
 function About() {
@@ -60,10 +60,10 @@ function About() {
 
   return (
     <div
-      className='relative flex items-center justify-center overflow-hidden'
+      className='relative flex items-center justify-center overflow-hidden md:h-[calc(100dvh-64px)]'
       style={{
         width: '100dvw',
-        height: 'calc(100dvh - 64px)', // Subtract AppBar height (h-16 = 64px)
+        minHeight: 'calc(100dvh - 64px)', // Use minHeight for mobile flexibility
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
       }}
@@ -78,15 +78,15 @@ function About() {
       ></div>
 
       {/* Content */}
-      <div className='relative z-10 text-center md:text-left w-full max-w-[1280px] flex flex-col md:flex-row items-center justify-between gap-8 p-4 sm:p-8 md:p-[80px]'>
+      <div className='relative z-10 text-center md:text-left w-full max-w-[1280px] flex flex-col md:flex-row items-center md:justify-between gap-8 p-4 sm:p-8 md:p-[80px] about-mobile-content'>
         {/* Mobile Layout: Profile Image First */}
-        <div className='block md:hidden '>
+        <div className='block md:hidden flex-shrink-0'>
           <ProfileImage src={profile_img} alt='About Profile' />
         </div>
 
-        <div className='flex-col max-w-none md:max-w-[750px] w-full'>
+        <div className='flex-col max-w-none md:max-w-[750px] w-full about-mobile-spacing'>
           <h1
-            className='text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-white w-full leading-tight md:leading-none'
+            className='text-3xl sm:text-4xl md:text-5xl font-bold text-white w-full leading-tight md:leading-none'
             style={{
               fontFamily: theme.typography.fontFamily.sans.join(', '),
               textShadow: 'none',
@@ -95,7 +95,7 @@ function About() {
             {t('about.title')}
           </h1>
           <p
-            className='text-lg sm:text-xl leading-tight text-white mb-6 md:mb-8'
+            className='text-lg sm:text-xl leading-tight text-white'
             style={{
               fontFamily: theme.typography.fontFamily.sans.join(', '),
               textShadow: 'none',
@@ -105,7 +105,7 @@ function About() {
           </p>
 
           {/* Skills */}
-          <div className='flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start mb-6 md:mb-8'>
+          <div className='flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start'>
             {skills &&
               skills.map((skill) => (
                 <span
@@ -126,7 +126,7 @@ function About() {
           </div>
 
           {/* Experience Stats */}
-          <div className='flex flex-wrap gap-6 justify-center md:justify-start mb-6 md:mb-8'>
+          <div className='flex flex-wrap gap-6 justify-center md:justify-start'>
             <div className='text-center md:text-left'>
               <div
                 className='text-2xl font-bold text-white'
