@@ -74,25 +74,44 @@ function ProjectsSection() {
           }}
         >
           <ProjectCard
-            id='modern-web-app'
-            title='Modern Web Application'
-            description='A full-stack web application built with React, TypeScript, and Node.js. Features modern UI/UX design, responsive layouts, and seamless user experience.'
-            technologies={['React', 'TypeScript', 'Node.js', 'Tailwind CSS']}
-            imageUrl='https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            id='casino-management-system'
+            title='Comprehensive Casino Management System'
+            description='A complete casino management ecosystem consisting of multiple interconnected applications for operations, customer service, and terminal management. Successfully deployed and implemented in a live casino environment.'
+            technologies={[
+              'React.js',
+              'Flutter',
+              'SQL',
+              'Canvas API',
+              'Desktop Apps',
+            ]}
+            imageUrl='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
           <ProjectCard
-            id='data-visualization-dashboard'
-            title='Data Visualization Dashboard'
-            description='Interactive dashboard for data visualization and analytics. Built with modern charting libraries and real-time data processing capabilities.'
-            technologies={['Vue.js', 'D3.js', 'Python', 'PostgreSQL']}
-            imageUrl='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            id='restaurant-management-flutter'
+            title='Restaurant Management System'
+            description='A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.'
+            technologies={[
+              'Flutter',
+              'Dart',
+              'Real-time Database',
+              'Push Notifications',
+              'Mobile Development',
+            ]}
+            imageUrl='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
           <ProjectCard
-            id='ecommerce-platform'
-            title='Mobile-First E-commerce Platform'
-            description='Responsive e-commerce platform optimized for mobile devices. Features secure payment integration, inventory management, and user-friendly shopping experience.'
-            technologies={['Next.js', 'Stripe', 'MongoDB', 'Vercel']}
-            imageUrl='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            id='bng-agroproductos-website'
+            title='BNG Agroproductos Business Website'
+            description='A comprehensive business website for BNG Agroproductos, an agricultural company focused on innovation and sustainable land care. Features product catalog, company information, and integrated contact system.'
+            technologies={[
+              'HTML5',
+              'CSS3',
+              'JavaScript',
+              'Contact Forms',
+              'Email Integration',
+              'Responsive Design',
+            ]}
+            imageUrl='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
         </div>
       </div>

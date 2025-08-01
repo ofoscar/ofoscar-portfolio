@@ -1,3 +1,10 @@
+export interface ProjectSection {
+  title: string;
+  description: string;
+  content: string[];
+  imageUrl?: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -10,4 +17,5 @@ export interface Project {
   features?: string[];
   challenges?: string[];
   learnings?: string[];
+  sections?: ProjectSection[];
 }
