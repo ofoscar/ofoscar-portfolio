@@ -79,7 +79,24 @@
   },
   "footer": {
     "copyright": "© 2025 Oscar Ramirez. Todos los derechos reservados.",
-    "builtWith": "Construido con React y TypeScript"
+    "builtWith": "Construido con React y TypeScript",
+    "about": {
+      "title": "Acerca de",
+      "description": "Apasionado por construir soluciones innovadoras y compartir conocimientos a través del código. Siempre explorando nuevas tecnologías y mejores prácticas."
+    },
+    "newsletter": {
+      "title": "Boletín",
+      "description": "Suscríbete para recibir las últimas actualizaciones sobre tecnología, consejos de programación y perspectivas de proyectos.",
+      "emailPlaceholder": "Ingresa tu email",
+      "subscribe": "Suscribirse"
+    },
+    "quickLinks": {
+      "title": "Enlaces Rápidos"
+    },
+    "connect": {
+      "title": "Conectar",
+      "description": "Sígueme en redes sociales para actualizaciones y discusiones sobre tecnología."
+    }
   },
   "language": {
     "switch": "Cambiar Idioma",

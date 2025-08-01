@@ -35,8 +35,8 @@ function Projects() {
 
       {/* Projects Grid */}
       <div className='w-full px-4 sm:px-6 lg:px-8 pb-16'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 lg:gap-8'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='flex flex-col lg:grid-cols-2 xl:grid-cols-2 gap-6 lg:gap-8'>
             {projectsData.map((project) => (
               <div key={project.id} className='w-full'>
                 <div className='h-full'>

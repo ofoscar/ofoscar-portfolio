@@ -2,183 +2,343 @@ import type { Project } from '../types/project';
 
 export const projectsData: Project[] = [
   {
-    id: 'modern-web-app',
-    title: 'Modern Web Application',
+    id: 'casino-management-system',
+    title: 'Comprehensive Casino Management System',
     description:
-      'A full-stack web application built with React, TypeScript, and Node.js. Features modern UI/UX design, responsive layouts, and seamless user experience.',
+      'A complete casino management ecosystem consisting of multiple interconnected applications for operations, customer service, and terminal management. Successfully deployed and implemented in a live casino environment.',
     fullDescription:
-      'This comprehensive web application showcases modern development practices and cutting-edge technologies. Built from the ground up with a focus on performance, accessibility, and user experience, it demonstrates proficiency in full-stack development.',
-    technologies: ['React', 'TypeScript', 'Node.js', 'Tailwind CSS'],
+      'Led the development and deployment of a comprehensive casino management system comprising four distinct applications designed to streamline casino operations. The project involved creating management dashboards, self-service kiosks, operational tools, and terminal tracking systems. Successfully traveled to the first casino location to oversee installation and provide hands-on training to casino staff.',
+    technologies: ['React.js', 'Flutter', 'SQL', 'Canvas API', 'Desktop Apps'],
     imageUrl:
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    demoUrl: 'https://example.com/demo',
-    codeUrl: 'https://github.com/example/repo',
+      'https://images.unsplash.com/photo-1491644386567-d98960637850?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
-      'Responsive design that works on all devices',
-      'Real-time data synchronization',
-      'Advanced authentication and authorization',
-      'Interactive UI components',
-      'Optimized performance and SEO',
+      'Multi-application ecosystem for complete casino operations',
+      'Real-time reporting with virtualized tables for performance',
+      'Self-service customer kiosks with card reader integration',
+      'Desktop Flutter application for casino worker operations',
+      'Interactive canvas-based terminal management system',
+      'Advanced data visualization and analytics',
+      'Cross-platform compatibility and deployment',
+      'Live production deployment and staff training',
     ],
     challenges: [
-      'Implementing complex state management',
-      'Ensuring cross-browser compatibility',
-      'Optimizing for mobile performance',
+      'Coordinating development across multiple application types and platforms',
+      'Implementing secure card reader integration for customer self-service',
+      'Creating intuitive interfaces for casino workers with varying technical skills',
+      'Ensuring real-time data synchronization across all applications',
+      'Managing complex SQL queries for comprehensive reporting',
+      'Optimizing virtualized tables for large datasets',
+      'Handling deployment logistics and on-site installation',
     ],
     learnings: [
-      'Advanced React patterns and hooks',
-      'TypeScript best practices',
-      'Modern CSS techniques with Tailwind',
+      'Multi-platform development coordination and project management',
+      'Advanced React.js patterns for complex data visualization',
+      'Flutter desktop application development and deployment',
+      'Canvas API for interactive terminal management interfaces',
+      'Hardware integration with card readers and casino equipment',
+      'SQL optimization for high-performance reporting systems',
+      'Client training and change management in production environments',
+      'Real-world software deployment and maintenance strategies',
+    ],
+    sections: [
+      {
+        title: 'Management Dashboard System',
+        description:
+          'Built with React.js and SQL backend, this comprehensive management system provides casino administrators with detailed reporting capabilities and operational insights.',
+        content: [
+          'Developed virtualized tables to handle large datasets efficiently, ensuring smooth performance even with thousands of records',
+          'Created dynamic reporting modules that allow managers to generate custom reports based on various parameters',
+          'Implemented real-time data synchronization to provide up-to-the-minute operational statistics',
+          'Designed intuitive dashboard interfaces that present complex data in easily digestible formats',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Customer Self-Service Kiosks',
+        description:
+          'React.js powered self-service stations that allow casino customers to check their loyalty card points and account information independently.',
+        content: [
+          'Integrated card reader hardware to securely access customer accounts',
+          'Developed user-friendly interfaces suitable for customers of all technical levels',
+          'Implemented secure authentication and data protection measures',
+          'Created responsive designs that work effectively on kiosk touchscreen displays',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Casino Operations Desktop Application',
+        description:
+          'A Flutter-based desktop application that serves as the primary tool for casino workers to perform daily operations and customer service tasks.',
+        content: [
+          'Built a comprehensive desktop application using Flutter for cross-platform compatibility',
+          'Designed workflows that match the natural processes of casino operations',
+          'Implemented features for customer account management, transaction processing, and service requests',
+          'Created training-friendly interfaces that reduce the learning curve for new casino staff',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Interactive Terminal Management System',
+        description:
+          'An innovative React.js application featuring a canvas-based interface for managing and monitoring casino gaming terminals in real-time.',
+        content: [
+          'Developed an interactive canvas system where terminals are represented as moveable, resizable boxes',
+          'Implemented drag-and-drop functionality for easy terminal repositioning and floor plan management',
+          'Created real-time monitoring capabilities that display terminal status and performance metrics',
+          'Built comprehensive reporting features with sorting and filtering options for terminal analytics',
+          'Designed visual indicators for quick identification of terminal issues or maintenance needs',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Deployment and Training',
+        description:
+          'Successfully traveled to the first casino location to oversee the complete system installation and provide comprehensive training to casino staff.',
+        content: [
+          'Coordinated the installation of all four applications across different hardware setups',
+          'Conducted hands-on training sessions for casino managers and operational staff',
+          'Provided detailed documentation and user guides for each application component',
+          'Established support protocols and troubleshooting procedures for ongoing maintenance',
+          'Gathered user feedback and implemented immediate improvements based on real-world usage',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
     ],
   },
   {
-    id: 'data-visualization-dashboard',
-    title: 'Data Visualization Dashboard',
+    id: 'restaurant-management-flutter',
+    title: 'Restaurant Management System',
     description:
-      'Interactive dashboard for data visualization and analytics. Built with modern charting libraries and real-time data processing capabilities.',
+      'A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.',
     fullDescription:
-      'An advanced analytics dashboard that transforms complex data into intuitive visualizations. This project demonstrates expertise in data processing, real-time updates, and creating engaging user interfaces for data-driven applications.',
-    technologies: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
+      'Developed a complete restaurant management solution using Flutter that provides restaurant managers with real-time insights into their operations. The application features interactive floor plan management, order tracking, table status monitoring, and intelligent notification systems to alert managers of unusual activities or issues requiring attention.',
+    technologies: [
+      'Flutter',
+      'Dart',
+      'Real-time Database',
+      'Push Notifications',
+      'Mobile Development',
+    ],
     imageUrl:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    demoUrl: 'https://example.com/dashboard',
-    codeUrl: 'https://github.com/example/dashboard',
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
-      'Interactive charts and graphs',
-      'Real-time data updates',
-      'Customizable dashboard layouts',
-      'Export capabilities',
-      'Advanced filtering and search',
+      'Real-time table status tracking and management',
+      'Comprehensive order management system',
+      'Interactive restaurant floor plan visualization',
+      'Push notification system for unusual activity alerts',
+      'Advanced reporting and analytics dashboard',
+      'Live status updates across all connected devices',
+      'Intuitive mobile-first interface design',
+      'Multi-restaurant support and management',
     ],
     challenges: [
-      'Handling large datasets efficiently',
-      'Creating smooth animations',
-      'Implementing real-time websocket connections',
+      'Implementing real-time synchronization across multiple devices',
+      'Creating an intuitive and responsive floor plan interface',
+      'Designing an effective notification system without overwhelming managers',
+      'Optimizing performance for real-time updates in busy restaurant environments',
+      'Ensuring data consistency during high-traffic periods',
+      'Building a scalable architecture for multiple restaurant locations',
     ],
     learnings: [
-      'D3.js and advanced data visualization',
-      'Vue.js composition API',
-      'Backend data processing optimization',
+      'Advanced Flutter development and state management patterns',
+      'Real-time database synchronization and conflict resolution',
+      'Mobile app performance optimization for business-critical applications',
+      'User experience design for high-stress restaurant environments',
+      'Push notification implementation and management strategies',
+      'Cross-platform mobile development best practices',
+    ],
+    sections: [
+      {
+        title: 'Table Management System',
+        description:
+          'Real-time table tracking system that provides instant visibility into table status, occupancy, and turnover rates across the entire restaurant.',
+        content: [
+          'Developed real-time table status updates that sync instantly across all connected devices',
+          'Created intuitive visual indicators for table availability, occupancy, and cleaning status',
+          'Implemented table reservation and waitlist management capabilities',
+          'Built analytics to track table turnover rates and optimize seating efficiency',
+          'Designed touch-friendly interfaces for quick status updates by restaurant staff',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Order Management System',
+        description:
+          'Comprehensive order tracking system that monitors all orders from placement to completion, ensuring smooth kitchen operations and customer satisfaction.',
+        content: [
+          'Built a complete order lifecycle management system from placement to delivery',
+          'Implemented real-time order status updates for kitchen staff and servers',
+          'Created order prioritization algorithms to optimize kitchen workflow',
+          'Developed integration capabilities with POS systems and kitchen display systems',
+          'Designed order modification and cancellation workflows with proper audit trails',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Live Restaurant Floor Plan',
+        description:
+          'Interactive visual representation of the restaurant layout that provides real-time status updates and enables efficient floor management.',
+        content: [
+          'Created an interactive floor plan interface that updates in real-time',
+          'Implemented drag-and-drop functionality for table layout modifications',
+          'Built visual status indicators that show table occupancy at a glance',
+          'Developed zoom and pan capabilities for large restaurant layouts',
+          'Designed color-coded systems for quick identification of table states and issues',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Intelligent Notification System',
+        description:
+          'Smart notification system that alerts managers to unusual activities, operational issues, and important events requiring immediate attention.',
+        content: [
+          'Developed intelligent algorithms to detect unusual activity patterns',
+          'Implemented customizable notification rules and priority levels',
+          'Created push notification system for immediate manager alerts',
+          'Built notification history and tracking for audit purposes',
+          'Designed escalation procedures for critical issues that require immediate response',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Advanced Reporting and Analytics',
+        description:
+          'Comprehensive reporting system that provides insights into restaurant performance, operational efficiency, and business intelligence.',
+        content: [
+          'Built comprehensive reporting modules for daily, weekly, and monthly analytics',
+          'Created performance dashboards with key operational metrics and KPIs',
+          'Implemented data visualization tools for trend analysis and insights',
+          'Developed export capabilities for financial and operational reporting',
+          'Designed predictive analytics features to forecast busy periods and staffing needs',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
     ],
   },
   {
-    id: 'ecommerce-platform',
-    title: 'Mobile-First E-commerce Platform',
+    id: 'bng-agroproductos-website',
+    title: 'BNG Agroproductos Business Website',
     description:
-      'Responsive e-commerce platform optimized for mobile devices. Features secure payment integration, inventory management, and user-friendly shopping experience.',
+      'A comprehensive business website for BNG Agroproductos, an agricultural company focused on innovation and sustainable land care. Features product catalog, company information, and integrated contact system.',
     fullDescription:
-      'A complete e-commerce solution built with mobile-first approach. This platform handles everything from product catalog management to secure payments, demonstrating full-stack e-commerce development skills.',
-    technologies: ['Next.js', 'Stripe', 'MongoDB', 'Vercel'],
+      'Developed a professional business website for BNG Agroproductos, showcasing their commitment to agricultural innovation and sustainable land management. The site serves as a digital presence for the company, featuring their product catalog, company values, and providing customers with an easy way to get in touch through a custom contact form system with email integration.',
+    technologies: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'Contact Forms',
+      'Email Integration',
+      'Responsive Design',
+    ],
     imageUrl:
-      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    demoUrl: 'https://example.com/shop',
-    codeUrl: 'https://github.com/example/ecommerce',
+      'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
-      'Mobile-optimized shopping experience',
-      'Secure payment processing with Stripe',
-      'Inventory management system',
-      'User authentication and profiles',
-      'Order tracking and history',
+      'Professional business website with modern design',
+      'Comprehensive product catalog showcasing agricultural products',
+      'Responsive design optimized for all devices',
+      'Custom contact form with email integration',
+      'Domain-specific email setup and configuration',
+      'Company information and values presentation',
+      'SEO optimization for agricultural industry',
+      'Fast loading times and optimized performance',
     ],
     challenges: [
-      'Implementing secure payment flows',
-      'Managing complex state across pages',
-      'Optimizing for mobile performance',
+      'Creating a professional design that reflects agricultural innovation',
+      'Implementing a reliable contact form system',
+      'Setting up custom domain email integration',
+      'Optimizing the site for search engines in the agricultural sector',
+      'Ensuring mobile responsiveness for farmers and business clients',
+      'Balancing modern web design with agricultural industry aesthetics',
     ],
     learnings: [
-      'Next.js advanced features',
-      'Payment gateway integration',
-      'E-commerce best practices',
+      'Business website development and client communication',
+      'Email system integration and domain configuration',
+      'Agricultural industry web design principles',
+      'Contact form security and spam prevention',
+      'SEO strategies for niche industries',
+      'Client requirement analysis and implementation',
     ],
-  },
-  {
-    id: 'api-integration-tool',
-    title: 'API Integration Tool',
-    description:
-      'Developer tool for managing and testing API integrations. Features automated testing, documentation generation, and real-time monitoring.',
-    fullDescription:
-      'A comprehensive API management platform designed for developers and teams. This tool streamlines the API integration process with automated testing, comprehensive documentation, and real-time monitoring capabilities.',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'Socket.io'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1518186233392-c232efbf2373?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    demoUrl: 'https://example.com/api-tool',
-    codeUrl: 'https://github.com/example/api-tool',
-    features: [
-      'Automated API testing and validation',
-      'Real-time monitoring and alerts',
-      'Interactive API documentation',
-      'Team collaboration features',
-      'Integration with popular development tools',
-    ],
-    challenges: [
-      'Handling multiple API protocols and formats',
-      'Creating a flexible testing framework',
-      'Implementing real-time monitoring at scale',
-    ],
-    learnings: [
-      'API design patterns and best practices',
-      'Real-time communication with Socket.io',
-      'Scalable backend architecture',
-    ],
-  },
-  {
-    id: 'machine-learning-platform',
-    title: 'Machine Learning Platform',
-    description:
-      'End-to-end ML platform for data scientists and engineers. Includes model training, deployment, and monitoring capabilities.',
-    fullDescription:
-      'A comprehensive machine learning platform that covers the entire ML lifecycle from data preparation to model deployment and monitoring. Built for data scientists and ML engineers who need a unified platform for their workflows.',
-    technologies: ['Python', 'TensorFlow', 'Docker', 'Kubernetes'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    demoUrl: 'https://example.com/ml-platform',
-    codeUrl: 'https://github.com/example/ml-platform',
-    features: [
-      'Drag-and-drop model building interface',
-      'Automated hyperparameter tuning',
-      'Model versioning and experiment tracking',
-      'One-click deployment to production',
-      'Real-time model performance monitoring',
-    ],
-    challenges: [
-      'Scaling model training across distributed systems',
-      'Managing complex ML workflows',
-      'Ensuring model reproducibility',
-    ],
-    learnings: [
-      'MLOps best practices and tools',
-      'Container orchestration with Kubernetes',
-      'Distributed computing for ML workloads',
-    ],
-  },
-  {
-    id: 'social-media-scheduler',
-    title: 'Social Media Scheduler',
-    description:
-      'Social media management tool with scheduling, analytics, and content optimization features. Built for marketing teams and content creators.',
-    fullDescription:
-      'A powerful social media management platform that helps marketing teams and content creators plan, schedule, and analyze their social media presence across multiple platforms with advanced analytics and AI-powered content suggestions.',
-    technologies: ['React', 'Python', 'Redis', 'AWS'],
-    imageUrl:
-      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=1539&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    demoUrl: 'https://example.com/social-scheduler',
-    codeUrl: 'https://github.com/example/social-scheduler',
-    features: [
-      'Multi-platform content scheduling',
-      'Advanced analytics and reporting',
-      'AI-powered content suggestions',
-      'Team collaboration and approval workflows',
-      'Social media trend analysis',
-    ],
-    challenges: [
-      'Integrating with multiple social media APIs',
-      'Building a reliable scheduling system',
-      'Implementing real-time analytics processing',
-    ],
-    learnings: [
-      'Social media API integration patterns',
-      'Background job processing with Redis',
-      'Building scalable web applications on AWS',
+    sections: [
+      {
+        title: 'Product Catalog System',
+        description:
+          'Comprehensive catalog showcasing BNG Agroproductos agricultural products with detailed information and professional presentation.',
+        content: [
+          'Designed and implemented a user-friendly product catalog interface',
+          'Created detailed product pages with specifications and benefits',
+          'Organized products into logical categories for easy navigation',
+          'Implemented responsive image galleries for product visualization',
+          'Added search and filtering capabilities for product discovery',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Contact Form Integration',
+        description:
+          'Custom contact form system with email integration, allowing customers to reach BNG Agroproductos directly through their business domain.',
+        content: [
+          'Built a secure and reliable contact form with form validation',
+          'Integrated email functionality with custom domain setup',
+          'Implemented spam protection and security measures',
+          'Created automatic email responses for customer inquiries',
+          'Designed user-friendly form interface with clear call-to-actions',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Company Branding and Design',
+        description:
+          'Professional web design that reflects BNG Agroproductos values of innovation and sustainable agriculture practices.',
+        content: [
+          'Developed a visual identity that reflects agricultural innovation and sustainability',
+          'Created a modern, professional layout that appeals to business clients',
+          'Implemented consistent branding throughout all pages and sections',
+          'Designed engaging sections highlighting company values and mission',
+          'Ensured the design conveys trust and professionalism for B2B clients',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Responsive Web Development',
+        description:
+          'Mobile-first responsive design ensuring optimal user experience across all devices and platforms.',
+        content: [
+          'Implemented mobile-first responsive design for optimal viewing on all devices',
+          'Optimized navigation and user interface for touch interactions',
+          'Ensured fast loading times across different network conditions',
+          'Created accessible design following web accessibility standards',
+          'Optimized images and content for various screen sizes and resolutions',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Domain and Email Setup',
+        description:
+          'Complete domain and email system configuration, providing BNG Agroproductos with professional communication channels.',
+        content: [
+          'Configured custom domain setup and DNS management',
+          'Implemented professional email system with company domain',
+          'Set up email forwarding and auto-responder systems',
+          'Ensured reliable email delivery and security configurations',
+          'Provided training and documentation for email system management',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
     ],
   },
 ];

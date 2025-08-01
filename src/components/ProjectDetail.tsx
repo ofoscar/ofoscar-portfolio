@@ -35,14 +35,6 @@ function ProjectDetail() {
         {' '}
         <div className='max-w-4xl mx-auto'>
           {' '}
-          {/* Back Button */}{' '}
-          <div className='mb-8'>
-            {' '}
-            <GlassButton onClick={() => navigate('/')} className='text-sm'>
-              {' '}
-              ← Back to Projects{' '}
-            </GlassButton>{' '}
-          </div>{' '}
           {/* Project Header */}{' '}
           <div className='mb-8'>
             {' '}
@@ -129,6 +121,74 @@ function ProjectDetail() {
               ))}{' '}
             </div>{' '}
           </div>{' '}
+          {/* Detailed Sections */}
+          {project.sections && project.sections.length > 0 && (
+            <div className='mb-12'>
+              <h2
+                className='text-2xl font-semibold mb-8'
+                style={{
+                  color: theme.colors.text.primary,
+                  fontFamily: theme.typography.fontFamily.sans.join(', '),
+                }}
+              >
+                Project Deep Dive
+              </h2>
+              <div className='space-y-12'>
+                {project.sections.map((section, index) => (
+                  <div
+                    key={index}
+                    className='bg-opacity-50 rounded-lg p-6'
+                    style={{
+                      backgroundColor: theme.colors.surfaceSecondary,
+                      border: `1px solid ${theme.colors.border.light}`,
+                    }}
+                  >
+                    <h3
+                      className='text-xl font-semibold mb-4'
+                      style={{
+                        color: theme.colors.text.primary,
+                        fontFamily: theme.typography.fontFamily.sans.join(', '),
+                      }}
+                    >
+                      {section.title}
+                    </h3>
+                    <p
+                      className='text-base leading-relaxed mb-6'
+                      style={{
+                        color: theme.colors.text.secondary,
+                        fontFamily: theme.typography.fontFamily.sans.join(', '),
+                      }}
+                    >
+                      {section.description}
+                    </p>
+                    {section.imageUrl && (
+                      <div className='mb-6'>
+                        <img
+                          src={section.imageUrl}
+                          alt={section.title}
+                          className='w-full h-48 sm:h-64 object-cover rounded-lg shadow-md'
+                        />
+                      </div>
+                    )}
+                    <ul className='space-y-3'>
+                      {section.content.map((item, itemIndex) => (
+                        <li
+                          key={itemIndex}
+                          className='flex items-start text-sm sm:text-base'
+                          style={{ color: theme.colors.text.secondary }}
+                        >
+                          <span className='text-blue-500 mr-3 mt-1 flex-shrink-0'>
+                            ▶
+                          </span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           {/* Features */}{' '}
           {project.features && (
             <div className='mb-8'>

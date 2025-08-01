@@ -79,7 +79,24 @@
   },
   "footer": {
     "copyright": "© 2025 Oscar Ramirez. All rights reserved.",
-    "builtWith": "Built with React & TypeScript"
+    "builtWith": "Built with React & TypeScript",
+    "about": {
+      "title": "About",
+      "description": "Passionate about building innovative solutions and sharing knowledge through code. Always exploring new technologies and best practices."
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to get the latest updates on tech, coding tips, and project insights.",
+      "emailPlaceholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "quickLinks": {
+      "title": "Quick Links"
+    },
+    "connect": {
+      "title": "Connect",
+      "description": "Follow me on social media for updates and tech discussions."
+    }
   },
   "language": {
     "switch": "Switch Language",
