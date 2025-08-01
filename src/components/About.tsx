@@ -1,19 +1,69 @@
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { theme } from '../theme';
 import CloudTextureBackground from './CloudTextureBackground';
 import ProfileImage from './ProfileImage';
+import EducationCard from './EducationCard';
 import profile_img from '/profile.jpg';
 
 function About() {
   const { t } = useTranslation();
   const skills = t('bio.skills', { returnObjects: true }) as string[];
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollToCard = (index: number) => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 280; // width of each card
+      const gap = 16; // gap between cards (gap-4 = 1rem = 16px)
+      const scrollPosition = index * (cardWidth + gap);
+
+      scrollContainerRef.current.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  // Education data array
+  const educationData = [
+    {
+      logo: 'https://amo.org.mx/wp-content/uploads/2024/06/uas-logo.png',
+      alt: 'Universidad Autónoma de Sinaloa',
+      title: t('about.education.degree.title'),
+      description: t('about.education.degree.description'),
+      details: t('about.education.degree.details'),
+      period: t('about.education.degree.period'),
+      style: {
+        backgroundColor: 'rgba(255, 255, 255, 0.08)',
+        backdropFilter: 'blur(12px)',
+        border: '1px solid rgba(255, 255, 255, 0.15)',
+        boxShadow:
+          'inset 0px -1px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 2px rgba(255, 255, 255, 0.15)',
+        width: '400px',
+      },
+    },
+    {
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Calgary_univ_full_coat_arms.svg/1200px-Calgary_univ_full_coat_arms.svg.png',
+      alt: 'University of Calgary',
+      title: t('about.education.english.title'),
+      description: t('about.education.english.description'),
+      level: t('about.education.english.level'),
+    },
+    {
+      logo: 'https://cdn-icons-png.flaticon.com/512/10268/10268343.png',
+      alt: 'Université de Mérici',
+      title: t('about.education.french.title'),
+      description: t('about.education.french.description'),
+      level: t('about.education.french.level'),
+    },
+  ];
 
   return (
     <div
       className='relative flex items-center justify-center overflow-hidden'
       style={{
         width: '100dvw',
-        height: '100dvh',
+        height: 'calc(100dvh - 64px)', // Subtract AppBar height (h-16 = 64px)
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
       }}
@@ -76,7 +126,7 @@ function About() {
           </div>
 
           {/* Experience Stats */}
-          <div className='flex flex-wrap gap-6 justify-center md:justify-start'>
+          <div className='flex flex-wrap gap-6 justify-center md:justify-start mb-6 md:mb-8'>
             <div className='text-center md:text-left'>
               <div
                 className='text-2xl font-bold text-white'
@@ -103,6 +153,46 @@ function About() {
                 {t('about.experience.technologies')}
               </div>
               <div className='text-sm text-gray-200'>Technologies</div>
+            </div>
+          </div>
+
+          {/* Education Section */}
+          <div className='w-full'>
+            <h2
+              className='text-xl sm:text-2xl font-bold mb-4 text-white text-center md:text-left'
+              style={{
+                fontFamily: theme.typography.fontFamily.sans.join(', '),
+                textShadow: 'none',
+              }}
+            >
+              {t('about.education.title')}
+            </h2>
+
+            {/* Education Cards - Horizontal Scrollable */}
+            <div
+              ref={scrollContainerRef}
+              className='overflow-x-auto pb-2 scrollbar-hide'
+              style={{
+                scrollbarWidth: 'none' /* Firefox */,
+                msOverflowStyle: 'none' /* Internet Explorer 10+ */,
+              }}
+            >
+              <div className='flex gap-4 min-w-max'>
+                {educationData.map((education, index) => (
+                  <EducationCard
+                    key={index}
+                    logo={education.logo}
+                    alt={education.alt}
+                    title={education.title}
+                    description={education.description}
+                    details={education.details}
+                    period={education.period}
+                    level={education.level}
+                    onClick={() => scrollToCard(index)}
+                    style={education.style}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
