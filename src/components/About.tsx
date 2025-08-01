@@ -84,7 +84,7 @@ function About() {
           <ProfileImage src={profile_img} alt='About Profile' />
         </div>
 
-        <div className='flex-col max-w-none md:max-w-[750px] w-full about-mobile-spacing'>
+        <div className='flex flex-col md:gap-5 max-w-none md:max-w-[750px] w-full about-mobile-spacing'>
           <h1
             className='text-3xl sm:text-4xl md:text-5xl font-bold text-white w-full leading-tight md:leading-none'
             style={{
