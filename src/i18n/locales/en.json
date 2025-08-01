@@ -13,7 +13,7 @@
     "secondaryCta": "Learn More"
   },
   "bio": {
-    "name": "Oscar Rodriguez",
+    "name": "Oscar Ramirez",
     "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions that solve real-world problems and deliver exceptional user experiences.",
     "skills": [
       "React",
@@ -78,7 +78,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2025 Oscar Rodriguez. All rights reserved.",
+    "copyright": "© 2025 Oscar Ramirez. All rights reserved.",
     "builtWith": "Built with React & TypeScript"
   },
   "language": {
