@@ -43,7 +43,7 @@ function ProjectsSection() {
     setTimeout(scrollToCenter, 100);
   }, []);
   return (
-    <div className='w-full px-4 sm:px-4 md:px-6'>
+    <div className='w-full'>
       <div className='max-w-[1280px] mx-auto'>
         <div className='text-center mb-8 md:mb-12'>
           <h2
@@ -65,10 +65,9 @@ function ProjectsSection() {
             {t('projects.subtitle')}
           </p>
         </div>
-
         <div
           ref={scrollContainerRef}
-          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-0'
+          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-0 py-2'
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
