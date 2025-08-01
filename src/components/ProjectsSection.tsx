@@ -84,7 +84,7 @@ function ProjectsSection() {
               'Canvas API',
               'Desktop Apps',
             ]}
-            imageUrl='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            imageUrl='https://images.unsplash.com/photo-1491644386567-d98960637850?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           />
           <ProjectCard
             id='restaurant-management-flutter'

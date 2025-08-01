@@ -10,7 +10,7 @@ export const projectsData: Project[] = [
       'Led the development and deployment of a comprehensive casino management system comprising four distinct applications designed to streamline casino operations. The project involved creating management dashboards, self-service kiosks, operational tools, and terminal tracking systems. Successfully traveled to the first casino location to oversee installation and provide hands-on training to casino staff.',
     technologies: ['React.js', 'Flutter', 'SQL', 'Canvas API', 'Desktop Apps'],
     imageUrl:
-      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1491644386567-d98960637850?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
       'Multi-application ecosystem for complete casino operations',
       'Real-time reporting with virtualized tables for performance',
