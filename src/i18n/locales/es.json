@@ -75,6 +75,25 @@
       "years": "5+",
       "projects": "50+",
       "technologies": "20+"
+    },
+    "education": {
+      "title": "Educación e Idiomas",
+      "degree": {
+        "title": "Ingeniería en Informática",
+        "description": "Universidad Autónoma de Sinaloa",
+        "details": "Título universitario en Ingeniería en Informática",
+        "period": "2017 - 2021"
+      },
+      "english": {
+        "title": "Inglés Avanzado",
+        "description": "Curso de inglés avanzado en la Universidad de Calgary, Canadá",
+        "level": "Nivel avanzado en conversación, lectura y comprensión auditiva"
+      },
+      "french": {
+        "title": "Idioma Francés",
+        "description": "Estudié en la Université de Mérici, Quebec",
+        "level": "Nivel intermedio"
+      }
     }
   },
   "footer": {

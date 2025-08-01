@@ -75,6 +75,25 @@
       "years": "5+",
       "projects": "50+",
       "technologies": "20+"
+    },
+    "education": {
+      "title": "Education & Languages",
+      "degree": {
+        "title": "Computer Engineering",
+        "description": "Universidad Autónoma de Sinaloa",
+        "details": "College degree in Computer Engineering",
+        "period": "2017 - 2021"
+      },
+      "english": {
+        "title": "Advanced English",
+        "description": "Advanced English course at University of Calgary, Canada",
+        "level": "Advanced speaking, reading and listening"
+      },
+      "french": {
+        "title": "French Language",
+        "description": "Studied at Université de Mérici, Quebec",
+        "level": "Intermediate level"
+      }
     }
   },
   "footer": {

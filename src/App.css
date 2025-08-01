@@ -17,6 +17,15 @@
   backdrop-filter: blur(10px);
 }
 
+/* Hide scrollbar utility class */
+.scrollbar-hide {
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .brand-text {
   background: #3C3C3C;
   -webkit-background-clip: text;
