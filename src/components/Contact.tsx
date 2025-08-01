@@ -8,6 +8,8 @@ interface FormData {
   email: string;
   subject: string;
   message: string;
+  phone?: string;
+  business?: string;
 }
 
 interface FormStatus {
@@ -22,6 +24,8 @@ const Contact = () => {
     email: '',
     subject: '',
     message: '',
+    phone: '',
+    business: '',
   });
   const [status, setStatus] = useState<FormStatus>({ type: 'idle' });
 
@@ -46,7 +50,14 @@ const Contact = () => {
         type: 'success',
         message: t('contact.form.success'),
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        phone: '',
+        business: '',
+      });
     } catch {
       setStatus({
         type: 'error',
@@ -60,7 +71,7 @@ const Contact = () => {
   return (
     <div className='min-h-screen flex flex-col items-center bg-gray-50'>
       {/* Hero Section */}
-      <div className='relative w-full h-[450px] bg-gray-300'>
+      <div className='relative w-full h-[300px] sm:h-[400px] lg:h-[450px] bg-gray-300'>
         <img
           src='https://images.unsplash.com/photo-1636955779321-819753cd1741?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
           alt='Hero Background'
@@ -72,50 +83,50 @@ const Contact = () => {
           }}
         />
         <div className='absolute inset-0 bg-black opacity-50'></div>
-        <div className='absolute inset-0 bg-opacity-40 flex items-start justify-center flex-col w-full py-[40px] px-[80px]'>
+        <div className='absolute inset-0 bg-opacity-40 flex items-start justify-center flex-col w-full py-4 px-4 sm:py-6 sm:px-8 lg:py-[40px] lg:px-[80px]'>
           <div className='flex flex-col max-w-[780px]'>
-            <h1 className='text-6xl font-bold text-white w-full'>
+            <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white w-full'>
               Say Hello 👋
             </h1>
-            <p className='text-3xl text-white mt-2 w-full'>
+            <p className='text-base sm:text-lg md:text-xl lg:text-3xl text-white mt-2 w-full'>
               Got a project, idea, or just want to connect? I’d love to hear
               from you. Whether it’s collaboration, freelance work, or feedback
               — feel free to reach out.
             </p>
             <div className='mt-4'>
-              <GlassButton className='gradient-border-wrapper text-lg md:text-2xl'>
+              <GlassButton className='gradient-border-wrapper text-sm sm:text-base md:text-lg lg:text-2xl'>
                 Start the Conversation
               </GlassButton>
             </div>
           </div>
         </div>
       </div>
-      <div className='py-[60px] w-full flex justify-center'>
+      <div className='py-6 px-4 sm:py-8 sm:px-6 lg:py-[60px] w-full flex justify-center'>
         {/* Main Content */}
-        <div className='max-w-5xl w-full bg-white rounded-2xl flex'>
+        <div className='max-w-5xl w-full bg-white rounded-2xl flex flex-col lg:flex-row shadow-lg'>
           {/* Image Section */}
-          <div className='w-1/2 h-auto'>
+          <div className='w-full lg:w-1/2 h-48 sm:h-64 lg:h-auto'>
             <img
               src='https://images.unsplash.com/photo-1495954380655-01609180eda3?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
               alt='Contact Us'
-              className='w-full h-full object-cover rounded-l-2xl'
+              className='w-full h-full object-cover rounded-t-2xl lg:rounded-l-2xl lg:rounded-t-none'
             />
           </div>
 
           {/* Form Section */}
-          <div className='w-1/2 p-8'>
+          <div className='w-full lg:w-1/2 p-4 sm:p-6 lg:p-8'>
             {/* Form Header */}
-            <div className='text-center mb-8'>
-              <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-4'>
+            <div className='text-center mb-6 lg:mb-8'>
+              <h1 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 mb-4'>
                 Contact Me
               </h1>
-              <p className='text-xl text-gray-600'>
+              <p className='text-base sm:text-lg lg:text-xl text-gray-600'>
                 Always open to new opportunities and collaborations. Don't doubt
                 in contacting me!
               </p>
             </div>
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className='space-y-6'>
+            <form onSubmit={handleSubmit} className='space-y-4 sm:space-y-6'>
               {/* Name Field */}
               <div>
                 <label
@@ -131,7 +142,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder='Your name'
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
+                  className='w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
                   required
                 />
               </div>
@@ -151,7 +162,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder='your.email@example.com'
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
+                  className='w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
                   required
                 />
               </div>
@@ -168,8 +179,10 @@ const Contact = () => {
                   type='tel'
                   id='phone'
                   name='phone'
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   placeholder='Your phone number'
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
+                  className='w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
                 />
               </div>
 
@@ -185,8 +198,10 @@ const Contact = () => {
                   type='text'
                   id='business'
                   name='business'
+                  value={formData.business}
+                  onChange={handleInputChange}
                   placeholder='Your business name'
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
+                  className='w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200'
                 />
               </div>
 
@@ -205,7 +220,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder='Tell me about your project or question...'
-                  className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none'
+                  className='w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none'
                   required
                 />
               </div>
@@ -229,7 +244,7 @@ const Contact = () => {
               <button
                 type='submit'
                 disabled={!isFormValid || status.type === 'sending'}
-                className='w-full bg-[#BF1A2F] hover:bg-red-700 text-white font-medium py-3 px-6 rounded-lg focus:ring-4 focus:ring-red-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95'
+                className='w-full bg-[#BF1A2F] hover:bg-red-700 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg focus:ring-4 focus:ring-red-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95'
               >
                 {status.type === 'sending' ? 'Sending...' : 'Send Message'}
               </button>

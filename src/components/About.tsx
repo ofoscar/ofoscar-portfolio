@@ -1,14 +1,17 @@
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { theme } from '../theme';
 import CloudTextureBackground from './CloudTextureBackground';
 import EducationCard from './EducationCard';
 import Footer from './Footer';
+import GlassButton from './GlassButton';
 import ProfileImage from './ProfileImage';
 import profile_img from '/profile.jpg';
 
 function About() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const skills = t('bio.skills', { returnObjects: true }) as string[];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -196,6 +199,16 @@ function About() {
                   ))}
                 </div>
               </div>
+            </div>
+
+            {/* Call to Action Button - Mobile Only */}
+            <div className='w-full flex justify-center md:justify-start mt-6'>
+              <GlassButton
+                onClick={() => navigate('/contact')}
+                className='gradient-border-wrapper text-sm sm:text-base'
+              >
+                {t('about.cta.button', "Let's Work Together")}
+              </GlassButton>
             </div>
           </div>
 

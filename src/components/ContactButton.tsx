@@ -24,7 +24,7 @@ function ContactButton({
     return (
       <button
         onClick={handleClick}
-        className='contact-btn flex items-center justify-between px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105 mt-2'
+        className='w-full contact-btn flex items-center justify-between px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105 mt-2'
       >
         <div className='px-2'>{t('nav.contact')}</div>
         <div
