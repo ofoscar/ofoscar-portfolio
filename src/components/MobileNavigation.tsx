@@ -38,6 +38,15 @@ function MobileNavigation({
         >
           {t('nav.projects')}
         </Link>
+        <a
+          href='https://blog.ofoscar.com'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='block text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {t('nav.blog', 'Blog')}
+        </a>
         <Link
           to='/contact'
           className='block text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
