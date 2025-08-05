@@ -62,7 +62,7 @@ function ProjectCard({
             className='w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg'
           />
         </div>
-        <div className='w-full lg:w-2/3'>
+        <div className='w-full lg:w-2/3 flex flex-col justify-between'>
           <h3
             className='text-lg sm:text-xl font-semibold mb-2 md:mb-3'
             style={{
@@ -81,11 +81,11 @@ function ProjectCard({
           >
             {description}
           </p>
-          <div className='flex flex-wrap gap-2'>
+          <div className='flex gap-2 overflow-x-auto scrollbar-hide max-w-full'>
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className='px-2 sm:px-3 py-1 text-xs sm:text-sm rounded-full'
+                className='px-2 sm:px-3 py-1 text-xs sm:text-sm rounded-full whitespace-nowrap flex-shrink-0'
                 style={{
                   backgroundColor: theme.colors.surfaceSecondary,
                   color: theme.colors.text.primary,

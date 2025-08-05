@@ -1,33 +1,15 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import { theme } from '../theme';
 import Footer from './Footer';
 import GlassButton from './GlassButton';
+import ProjectNotFound from './ProjectNotFound';
 
 function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>();
-  const navigate = useNavigate();
   const project = projectsData.find((p) => p.id === projectId);
   if (!project) {
-    return (
-      <div className='min-h-screen flex items-center justify-center'>
-        {' '}
-        <div className='text-center'>
-          {' '}
-          <h1
-            className='text-2xl font-bold mb-4'
-            style={{ color: theme.colors.text.primary }}
-          >
-            {' '}
-            Project Not Found{' '}
-          </h1>{' '}
-          <GlassButton onClick={() => navigate('/')}>
-            {' '}
-            Back to Home{' '}
-          </GlassButton>{' '}
-        </div>{' '}
-      </div>
-    );
+    return <ProjectNotFound />;
   }
   return (
     <div className='min-h-screen'>
@@ -38,16 +20,28 @@ function ProjectDetail() {
           {/* Project Header */}{' '}
           <div className='mb-8'>
             {' '}
-            <h1
-              className='text-3xl sm:text-4xl font-bold mb-4'
-              style={{
-                color: theme.colors.text.primary,
-                fontFamily: theme.typography.fontFamily.sans.join(', '),
-              }}
-            >
-              {' '}
-              {project.title}{' '}
-            </h1>{' '}
+            <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4'>
+              <h1
+                className='text-3xl sm:text-4xl font-bold'
+                style={{
+                  color: theme.colors.text.primary,
+                  fontFamily: theme.typography.fontFamily.sans.join(', '),
+                }}
+              >
+                {' '}
+                {project.title}{' '}
+              </h1>
+              <button
+                onClick={() =>
+                  window.open('https://bngagroproductos.com', '_blank')
+                }
+                className='px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-colors duration-200 flex items-center gap-2 self-start'
+                title='Visit Project'
+              >
+                <span>🚀</span>
+                Visit
+              </button>
+            </div>{' '}
             <p
               className='text-lg leading-relaxed mb-6'
               style={{

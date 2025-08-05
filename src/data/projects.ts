@@ -111,121 +111,6 @@ export const projectsData: Project[] = [
     ],
   },
   {
-    id: 'restaurant-management-flutter',
-    title: 'Restaurant Management System',
-    description:
-      'A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.',
-    fullDescription:
-      'Developed a complete restaurant management solution using Flutter that provides restaurant managers with real-time insights into their operations. The application features interactive floor plan management, order tracking, table status monitoring, and intelligent notification systems to alert managers of unusual activities or issues requiring attention.',
-    technologies: [
-      'Flutter',
-      'Dart',
-      'Real-time Database',
-      'Push Notifications',
-      'Mobile Development',
-    ],
-    imageUrl:
-      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    features: [
-      'Real-time table status tracking and management',
-      'Comprehensive order management system',
-      'Interactive restaurant floor plan visualization',
-      'Push notification system for unusual activity alerts',
-      'Advanced reporting and analytics dashboard',
-      'Live status updates across all connected devices',
-      'Intuitive mobile-first interface design',
-      'Multi-restaurant support and management',
-    ],
-    challenges: [
-      'Implementing real-time synchronization across multiple devices',
-      'Creating an intuitive and responsive floor plan interface',
-      'Designing an effective notification system without overwhelming managers',
-      'Optimizing performance for real-time updates in busy restaurant environments',
-      'Ensuring data consistency during high-traffic periods',
-      'Building a scalable architecture for multiple restaurant locations',
-    ],
-    learnings: [
-      'Advanced Flutter development and state management patterns',
-      'Real-time database synchronization and conflict resolution',
-      'Mobile app performance optimization for business-critical applications',
-      'User experience design for high-stress restaurant environments',
-      'Push notification implementation and management strategies',
-      'Cross-platform mobile development best practices',
-    ],
-    sections: [
-      {
-        title: 'Table Management System',
-        description:
-          'Real-time table tracking system that provides instant visibility into table status, occupancy, and turnover rates across the entire restaurant.',
-        content: [
-          'Developed real-time table status updates that sync instantly across all connected devices',
-          'Created intuitive visual indicators for table availability, occupancy, and cleaning status',
-          'Implemented table reservation and waitlist management capabilities',
-          'Built analytics to track table turnover rates and optimize seating efficiency',
-          'Designed touch-friendly interfaces for quick status updates by restaurant staff',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Order Management System',
-        description:
-          'Comprehensive order tracking system that monitors all orders from placement to completion, ensuring smooth kitchen operations and customer satisfaction.',
-        content: [
-          'Built a complete order lifecycle management system from placement to delivery',
-          'Implemented real-time order status updates for kitchen staff and servers',
-          'Created order prioritization algorithms to optimize kitchen workflow',
-          'Developed integration capabilities with POS systems and kitchen display systems',
-          'Designed order modification and cancellation workflows with proper audit trails',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Live Restaurant Floor Plan',
-        description:
-          'Interactive visual representation of the restaurant layout that provides real-time status updates and enables efficient floor management.',
-        content: [
-          'Created an interactive floor plan interface that updates in real-time',
-          'Implemented drag-and-drop functionality for table layout modifications',
-          'Built visual status indicators that show table occupancy at a glance',
-          'Developed zoom and pan capabilities for large restaurant layouts',
-          'Designed color-coded systems for quick identification of table states and issues',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Intelligent Notification System',
-        description:
-          'Smart notification system that alerts managers to unusual activities, operational issues, and important events requiring immediate attention.',
-        content: [
-          'Developed intelligent algorithms to detect unusual activity patterns',
-          'Implemented customizable notification rules and priority levels',
-          'Created push notification system for immediate manager alerts',
-          'Built notification history and tracking for audit purposes',
-          'Designed escalation procedures for critical issues that require immediate response',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Advanced Reporting and Analytics',
-        description:
-          'Comprehensive reporting system that provides insights into restaurant performance, operational efficiency, and business intelligence.',
-        content: [
-          'Built comprehensive reporting modules for daily, weekly, and monthly analytics',
-          'Created performance dashboards with key operational metrics and KPIs',
-          'Implemented data visualization tools for trend analysis and insights',
-          'Developed export capabilities for financial and operational reporting',
-          'Designed predictive analytics features to forecast busy periods and staffing needs',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-    ],
-  },
-  {
     id: 'bng-agroproductos-website',
     title: 'BNG Agroproductos Business Website',
     description:
@@ -338,6 +223,121 @@ export const projectsData: Project[] = [
         ],
         imageUrl:
           'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+    ],
+  },
+  {
+    id: 'restaurant-management-flutter',
+    title: 'Restaurant Management System',
+    description:
+      'A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.',
+    fullDescription:
+      'Developed a complete restaurant management solution using Flutter that provides restaurant managers with real-time insights into their operations. The application features interactive floor plan management, order tracking, table status monitoring, and intelligent notification systems to alert managers of unusual activities or issues requiring attention.',
+    technologies: [
+      'Flutter',
+      'Dart',
+      'Real-time Database',
+      'Push Notifications',
+      'Mobile Development',
+    ],
+    imageUrl:
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    features: [
+      'Real-time table status tracking and management',
+      'Comprehensive order management system',
+      'Interactive restaurant floor plan visualization',
+      'Push notification system for unusual activity alerts',
+      'Advanced reporting and analytics dashboard',
+      'Live status updates across all connected devices',
+      'Intuitive mobile-first interface design',
+      'Multi-restaurant support and management',
+    ],
+    challenges: [
+      'Implementing real-time synchronization across multiple devices',
+      'Creating an intuitive and responsive floor plan interface',
+      'Designing an effective notification system without overwhelming managers',
+      'Optimizing performance for real-time updates in busy restaurant environments',
+      'Ensuring data consistency during high-traffic periods',
+      'Building a scalable architecture for multiple restaurant locations',
+    ],
+    learnings: [
+      'Advanced Flutter development and state management patterns',
+      'Real-time database synchronization and conflict resolution',
+      'Mobile app performance optimization for business-critical applications',
+      'User experience design for high-stress restaurant environments',
+      'Push notification implementation and management strategies',
+      'Cross-platform mobile development best practices',
+    ],
+    sections: [
+      {
+        title: 'Table Management System',
+        description:
+          'Real-time table tracking system that provides instant visibility into table status, occupancy, and turnover rates across the entire restaurant.',
+        content: [
+          'Developed real-time table status updates that sync instantly across all connected devices',
+          'Created intuitive visual indicators for table availability, occupancy, and cleaning status',
+          'Implemented table reservation and waitlist management capabilities',
+          'Built analytics to track table turnover rates and optimize seating efficiency',
+          'Designed touch-friendly interfaces for quick status updates by restaurant staff',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Order Management System',
+        description:
+          'Comprehensive order tracking system that monitors all orders from placement to completion, ensuring smooth kitchen operations and customer satisfaction.',
+        content: [
+          'Built a complete order lifecycle management system from placement to delivery',
+          'Implemented real-time order status updates for kitchen staff and servers',
+          'Created order prioritization algorithms to optimize kitchen workflow',
+          'Developed integration capabilities with POS systems and kitchen display systems',
+          'Designed order modification and cancellation workflows with proper audit trails',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Live Restaurant Floor Plan',
+        description:
+          'Interactive visual representation of the restaurant layout that provides real-time status updates and enables efficient floor management.',
+        content: [
+          'Created an interactive floor plan interface that updates in real-time',
+          'Implemented drag-and-drop functionality for table layout modifications',
+          'Built visual status indicators that show table occupancy at a glance',
+          'Developed zoom and pan capabilities for large restaurant layouts',
+          'Designed color-coded systems for quick identification of table states and issues',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Intelligent Notification System',
+        description:
+          'Smart notification system that alerts managers to unusual activities, operational issues, and important events requiring immediate attention.',
+        content: [
+          'Developed intelligent algorithms to detect unusual activity patterns',
+          'Implemented customizable notification rules and priority levels',
+          'Created push notification system for immediate manager alerts',
+          'Built notification history and tracking for audit purposes',
+          'Designed escalation procedures for critical issues that require immediate response',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Advanced Reporting and Analytics',
+        description:
+          'Comprehensive reporting system that provides insights into restaurant performance, operational efficiency, and business intelligence.',
+        content: [
+          'Built comprehensive reporting modules for daily, weekly, and monthly analytics',
+          'Created performance dashboards with key operational metrics and KPIs',
+          'Implemented data visualization tools for trend analysis and insights',
+          'Developed export capabilities for financial and operational reporting',
+          'Designed predictive analytics features to forecast busy periods and staffing needs',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
   },

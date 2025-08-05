@@ -133,7 +133,7 @@ void main( ) {
     c += c1;
     
     vec4 skycolour = mix(u_colors[1], u_colors[0], p.y);
-    vec4 cloudcolour = vec4(1.0, 1.0, 1.0,1.0) * clamp(((1.0-shadow) + light*c), 0.0, 1.0);
+    vec4 cloudcolour = vec4(1.0, 0.0, 0.0, 1.0) * clamp(((1.0-shadow) + light*c), 0.0, 1.0);
    
     f = coverage + cloudalpha*alpha*f*r;
     
