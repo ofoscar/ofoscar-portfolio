@@ -78,15 +78,23 @@ function ProjectCard({
         }
       }}
     >
-      <div className='flex flex-col lg:flex-row gap-4 md:gap-6 h-full'>
-        <div className='w-full lg:w-1/3'>
+      <div
+        className={`${
+          variant === 'grid' ? 'flex flex-col' : 'flex flex-col lg:flex-row'
+        } gap-4 md:gap-6 h-full`}
+      >
+        <div className={variant === 'grid' ? 'w-full' : 'w-full lg:w-1/3'}>
           <img
             src={imageUrl}
             alt={title}
             className='w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg'
           />
         </div>
-        <div className='w-full h-full lg:w-2/3 flex flex-col justify-between'>
+        <div
+          className={`${
+            variant === 'grid' ? 'w-full' : 'w-full h-full lg:w-2/3'
+          } flex flex-col justify-between`}
+        >
           <div className='flex flex-col gap-3 md:gap-4'>
             <h3
               className='text-lg sm:text-xl font-semibold'
@@ -109,8 +117,14 @@ function ProjectCard({
 
             {/* Review Section */}
             {review && (
-              <div className='flex flex-col gap-2 sm:flex-row sm:gap-3 items-start sm:items-center'>
-                {/* Review Image - Top on mobile, Left on desktop */}
+              <div
+                className={`flex gap-2 items-start ${
+                  variant === 'grid'
+                    ? 'flex-col'
+                    : 'flex-col sm:flex-row sm:gap-3 sm:items-center'
+                }`}
+              >
+                {/* Review Image - Top on mobile and grid variant, Left on scroll variant desktop */}
                 {review.imageUrl && (
                   <div className='flex-shrink-0'>
                     <img
