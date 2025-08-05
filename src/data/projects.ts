@@ -360,4 +360,127 @@ export const projectsData: Project[] = [
         'Good functionality overall, though it took some time to adapt to the new system. The real-time tracking is very helpful.',
     }, */
   },
+  {
+    id: 'inma-influencer-management',
+    title: 'INMA: Influencer Management App Design',
+    description:
+      'A comprehensive Figma design for an influencer management platform that streamlines collaboration payments, event management, and reporting for both influencers and administrators.',
+    fullDescription:
+      'Designed a complete user interface and user experience for INMA, an influencer management application that addresses the complex needs of managing influencer collaborations, payments, and events. The design features dual login systems for influencers and administrators, comprehensive dashboard views, detailed collaboration tracking, and robust reporting capabilities with data visualization.',
+    technologies: [
+      'Figma',
+      'UI/UX Design',
+      'User Experience',
+      'Interface Design',
+      'Prototyping',
+      'Design Systems',
+    ],
+    imageUrl: '/inma_screen.png',
+    features: [
+      'Dual login system for influencers and administrators',
+      'Comprehensive dashboard with collaboration payment overview',
+      'Real-time payment status tracking (paid, pending, without closure)',
+      'Next Events section with event management capabilities',
+      'Detailed collaboration payment views and management',
+      'Event detail pages with influencer linking functionality',
+      'Admin-only event creation and management tools',
+      'Advanced reporting with line charts for monthly analytics',
+      'Influencer payment confirmation system',
+      'Responsive design for multiple device types',
+    ],
+    challenges: [
+      'Designing intuitive interfaces for two distinct user types (influencers and admins)',
+      'Creating clear visual hierarchy for complex payment and collaboration data',
+      'Balancing feature accessibility while maintaining security for admin functions',
+      'Designing effective data visualization for financial reporting',
+      'Ensuring seamless user flow between different app sections',
+      'Creating a design system that scales across all app features',
+    ],
+    learnings: [
+      'Advanced Figma prototyping and component design techniques',
+      'User experience design for financial and business management applications',
+      'Design system creation and maintenance for complex applications',
+      'Data visualization design principles for business analytics',
+      'Multi-user role interface design and user flow optimization',
+      'Mobile-first design approach for business management tools',
+    ],
+    sections: [
+      {
+        title: 'Authentication and User Management',
+        description:
+          'Dual login system designed to provide secure access for both influencers and administrators with role-based interface customization.',
+        content: [
+          'Designed intuitive login interfaces for both influencer and admin user types',
+          'Created role-based dashboard customization that adapts based on user permissions',
+          'Implemented secure authentication flow design with clear user state indicators',
+          'Designed user profile management interfaces for both user types',
+          'Created onboarding flows tailored to each user role and their specific needs',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Dashboard and Payment Overview',
+        description:
+          'Main dashboard featuring collaboration payment summaries with clear visual indicators for paid, pending, and unclosed payments.',
+        content: [
+          'Designed comprehensive dashboard with at-a-glance payment status overview',
+          'Created visual card-based layouts for different payment categories',
+          'Implemented color-coded system for quick identification of payment statuses',
+          'Designed interactive elements that provide detailed payment information on interaction',
+          'Created responsive grid layouts that adapt to different screen sizes and orientations',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Event Management System',
+        description:
+          'Next Events section with comprehensive event creation, management, and influencer linking capabilities designed specifically for administrator users.',
+        content: [
+          'Designed event creation interfaces exclusively for administrative users',
+          'Created event detail pages with comprehensive information display',
+          'Implemented influencer linking functionality within event management',
+          'Designed event calendar and timeline views for better planning visualization',
+          'Created notification systems for event updates and influencer assignments',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Collaboration Payment Management',
+        description:
+          'Detailed collaboration management interface allowing administrators to create and link collaborations while enabling influencers to confirm payments.',
+        content: [
+          'Designed detailed collaboration pages with comprehensive payment information',
+          'Created admin interfaces for adding new collaborations with influencer linking',
+          'Implemented influencer payment confirmation workflows and interfaces',
+          'Designed payment tracking systems with detailed audit trails',
+          'Created collaborative workflows that connect administrators and influencers seamlessly',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Advanced Reporting and Analytics',
+        description:
+          'Comprehensive reporting interface featuring line charts and analytics for monthly collaboration summaries and business intelligence.',
+        content: [
+          'Designed advanced reporting dashboards with interactive line charts',
+          'Created monthly collaboration summary visualizations for trend analysis',
+          'Implemented filtering and date range selection interfaces for custom reports',
+          'Designed exportable report formats for business documentation needs',
+          'Created comparative analytics views for performance tracking and optimization',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+    ],
+    /*  review: {
+      rating: 5,
+      reviewerName: 'Project Stakeholder',
+      comment:
+        'Excellent design work that captured all our requirements perfectly. The user flows are intuitive and the interface is professional.',
+    }, */
+  },
 ];
