@@ -83,7 +83,7 @@ function About() {
         ></div>
 
         {/* Content */}
-        <div className='relative z-10 text-center md:text-left w-full max-w-7xl flex flex-col md:flex-row items-center md:justify-between sm:p-8 about-mobile-content'>
+        <div className='relative z-10 text-center md:text-left w-full max-w-7xl flex flex-col md:flex-row items-center md:justify-between p-4 sm:p-8 about-mobile-content gap-4'>
           {/* Mobile Layout: Profile Image First */}
           <div className='block md:hidden flex-shrink-0'>
             <ProfileImage src={profile_img} alt='About Profile' />
@@ -202,7 +202,7 @@ function About() {
             </div>
 
             {/* Call to Action Button - Mobile Only */}
-            <div className='w-full flex justify-center md:justify-start mt-6'>
+            <div className='w-full flex justify-center md:justify-start'>
               <GlassButton
                 onClick={() => navigate('/contact')}
                 className='gradient-border-wrapper text-sm sm:text-base'

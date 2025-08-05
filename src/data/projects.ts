@@ -3,7 +3,7 @@ import type { Project } from '../types/project';
 export const projectsData: Project[] = [
   {
     id: 'casino-management-system',
-    title: 'Comprehensive Casino Management System',
+    title: 'BetCore: Comprehensive Casino Management System',
     description:
       'A complete casino management ecosystem consisting of multiple interconnected applications for operations, customer service, and terminal management. Successfully deployed and implemented in a live casino environment.',
     fullDescription:
@@ -109,10 +109,139 @@ export const projectsData: Project[] = [
           'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
+    /*  review: {
+      rating: 5,
+      reviewerName: 'Casino Manager',
+      comment:
+        'Exceptional system that revolutionized our operations. The team delivered beyond expectations and provided excellent on-site support.',
+    }, */
+  },
+  {
+    id: 'bng-agroproductos-website',
+    title: 'BNG Agroproductos: Business Website',
+    description:
+      'A comprehensive business website for BNG Agroproductos, an agricultural company focused on innovation and sustainable land care. Features product catalog, company information, and integrated contact system.',
+    fullDescription:
+      'Developed a professional business website for BNG Agroproductos, showcasing their commitment to agricultural innovation and sustainable land management. The site serves as a digital presence for the company, featuring their product catalog, company values, and providing customers with an easy way to get in touch through a custom contact form system with email integration.',
+    technologies: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'Contact Forms',
+      'Email Integration',
+      'Responsive Design',
+    ],
+    imageUrl:
+      'https://images.unsplash.com/photo-1594771804886-a933bb2d609b?q=80&w=2682&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    features: [
+      'Professional business website with modern design',
+      'Comprehensive product catalog showcasing agricultural products',
+      'Responsive design optimized for all devices',
+      'Custom contact form with email integration',
+      'Domain-specific email setup and configuration',
+      'Company information and values presentation',
+      'SEO optimization for agricultural industry',
+      'Fast loading times and optimized performance',
+    ],
+    challenges: [
+      'Creating a professional design that reflects agricultural innovation',
+      'Implementing a reliable contact form system',
+      'Setting up custom domain email integration',
+      'Optimizing the site for search engines in the agricultural sector',
+      'Ensuring mobile responsiveness for farmers and business clients',
+      'Balancing modern web design with agricultural industry aesthetics',
+    ],
+    learnings: [
+      'Business website development and client communication',
+      'Email system integration and domain configuration',
+      'Agricultural industry web design principles',
+      'Contact form security and spam prevention',
+      'SEO strategies for niche industries',
+      'Client requirement analysis and implementation',
+    ],
+    sections: [
+      {
+        title: 'Product Catalog System',
+        description:
+          'Comprehensive catalog showcasing BNG Agroproductos agricultural products with detailed information and professional presentation.',
+        content: [
+          'Designed and implemented a user-friendly product catalog interface',
+          'Created detailed product pages with specifications and benefits',
+          'Organized products into logical categories for easy navigation',
+          'Implemented responsive image galleries for product visualization',
+          'Added search and filtering capabilities for product discovery',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Contact Form Integration',
+        description:
+          'Custom contact form system with email integration, allowing customers to reach BNG Agroproductos directly through their business domain.',
+        content: [
+          'Built a secure and reliable contact form with form validation',
+          'Integrated email functionality with custom domain setup',
+          'Implemented spam protection and security measures',
+          'Created automatic email responses for customer inquiries',
+          'Designed user-friendly form interface with clear call-to-actions',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Company Branding and Design',
+        description:
+          'Professional web design that reflects BNG Agroproductos values of innovation and sustainable agriculture practices.',
+        content: [
+          'Developed a visual identity that reflects agricultural innovation and sustainability',
+          'Created a modern, professional layout that appeals to business clients',
+          'Implemented consistent branding throughout all pages and sections',
+          'Designed engaging sections highlighting company values and mission',
+          'Ensured the design conveys trust and professionalism for B2B clients',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Responsive Web Development',
+        description:
+          'Mobile-first responsive design ensuring optimal user experience across all devices and platforms.',
+        content: [
+          'Implemented mobile-first responsive design for optimal viewing on all devices',
+          'Optimized navigation and user interface for touch interactions',
+          'Ensured fast loading times across different network conditions',
+          'Created accessible design following web accessibility standards',
+          'Optimized images and content for various screen sizes and resolutions',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Domain and Email Setup',
+        description:
+          'Complete domain and email system configuration, providing BNG Agroproductos with professional communication channels.',
+        content: [
+          'Configured custom domain setup and DNS management',
+          'Implemented professional email system with company domain',
+          'Set up email forwarding and auto-responder systems',
+          'Ensured reliable email delivery and security configurations',
+          'Provided training and documentation for email system management',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+    ],
+    review: {
+      rating: 5,
+      reviewerName: 'Daniel Bojórquez (BNG Team Lead)',
+      comment:
+        'Professional website that perfectly represents our agricultural values. Great attention to detail and responsive design.',
+      imageUrl: '/bng_logo.png',
+    },
   },
   {
     id: 'restaurant-management-flutter',
-    title: 'Restaurant Management System',
+    title: 'Tably: Restaurant Management System',
     description:
       'A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.',
     fullDescription:
@@ -224,121 +353,11 @@ export const projectsData: Project[] = [
           'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
-  },
-  {
-    id: 'bng-agroproductos-website',
-    title: 'BNG Agroproductos Business Website',
-    description:
-      'A comprehensive business website for BNG Agroproductos, an agricultural company focused on innovation and sustainable land care. Features product catalog, company information, and integrated contact system.',
-    fullDescription:
-      'Developed a professional business website for BNG Agroproductos, showcasing their commitment to agricultural innovation and sustainable land management. The site serves as a digital presence for the company, featuring their product catalog, company values, and providing customers with an easy way to get in touch through a custom contact form system with email integration.',
-    technologies: [
-      'HTML5',
-      'CSS3',
-      'JavaScript',
-      'Contact Forms',
-      'Email Integration',
-      'Responsive Design',
-    ],
-    imageUrl:
-      'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    features: [
-      'Professional business website with modern design',
-      'Comprehensive product catalog showcasing agricultural products',
-      'Responsive design optimized for all devices',
-      'Custom contact form with email integration',
-      'Domain-specific email setup and configuration',
-      'Company information and values presentation',
-      'SEO optimization for agricultural industry',
-      'Fast loading times and optimized performance',
-    ],
-    challenges: [
-      'Creating a professional design that reflects agricultural innovation',
-      'Implementing a reliable contact form system',
-      'Setting up custom domain email integration',
-      'Optimizing the site for search engines in the agricultural sector',
-      'Ensuring mobile responsiveness for farmers and business clients',
-      'Balancing modern web design with agricultural industry aesthetics',
-    ],
-    learnings: [
-      'Business website development and client communication',
-      'Email system integration and domain configuration',
-      'Agricultural industry web design principles',
-      'Contact form security and spam prevention',
-      'SEO strategies for niche industries',
-      'Client requirement analysis and implementation',
-    ],
-    sections: [
-      {
-        title: 'Product Catalog System',
-        description:
-          'Comprehensive catalog showcasing BNG Agroproductos agricultural products with detailed information and professional presentation.',
-        content: [
-          'Designed and implemented a user-friendly product catalog interface',
-          'Created detailed product pages with specifications and benefits',
-          'Organized products into logical categories for easy navigation',
-          'Implemented responsive image galleries for product visualization',
-          'Added search and filtering capabilities for product discovery',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Contact Form Integration',
-        description:
-          'Custom contact form system with email integration, allowing customers to reach BNG Agroproductos directly through their business domain.',
-        content: [
-          'Built a secure and reliable contact form with form validation',
-          'Integrated email functionality with custom domain setup',
-          'Implemented spam protection and security measures',
-          'Created automatic email responses for customer inquiries',
-          'Designed user-friendly form interface with clear call-to-actions',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Company Branding and Design',
-        description:
-          'Professional web design that reflects BNG Agroproductos values of innovation and sustainable agriculture practices.',
-        content: [
-          'Developed a visual identity that reflects agricultural innovation and sustainability',
-          'Created a modern, professional layout that appeals to business clients',
-          'Implemented consistent branding throughout all pages and sections',
-          'Designed engaging sections highlighting company values and mission',
-          'Ensured the design conveys trust and professionalism for B2B clients',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Responsive Web Development',
-        description:
-          'Mobile-first responsive design ensuring optimal user experience across all devices and platforms.',
-        content: [
-          'Implemented mobile-first responsive design for optimal viewing on all devices',
-          'Optimized navigation and user interface for touch interactions',
-          'Ensured fast loading times across different network conditions',
-          'Created accessible design following web accessibility standards',
-          'Optimized images and content for various screen sizes and resolutions',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-      {
-        title: 'Domain and Email Setup',
-        description:
-          'Complete domain and email system configuration, providing BNG Agroproductos with professional communication channels.',
-        content: [
-          'Configured custom domain setup and DNS management',
-          'Implemented professional email system with company domain',
-          'Set up email forwarding and auto-responder systems',
-          'Ensured reliable email delivery and security configurations',
-          'Provided training and documentation for email system management',
-        ],
-        imageUrl:
-          'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      },
-    ],
+    /*  review: {
+      rating: 3,
+      reviewerName: 'Restaurant Owner',
+      comment:
+        'Good functionality overall, though it took some time to adapt to the new system. The real-time tracking is very helpful.',
+    }, */
   },
 ];

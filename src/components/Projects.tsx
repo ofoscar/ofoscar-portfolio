@@ -47,6 +47,8 @@ function Projects() {
                     technologies={project.technologies}
                     imageUrl={project.imageUrl}
                     variant='grid'
+                    review={project.review}
+                    features={project.features}
                   />
                 </div>
               </div>
