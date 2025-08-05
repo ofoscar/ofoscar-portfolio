@@ -46,7 +46,7 @@ function RecentPostsSection() {
 
   if (loading) {
     return (
-      <div className='w-full px-4 py-16'>
+      <div className='w-full px-4'>
         <div className='max-w-[1280px] mx-auto flex flex-col gap-8'>
           <div className='text-center flex flex-col gap-2'>
             <h2
@@ -82,7 +82,7 @@ function RecentPostsSection() {
 
   if (error) {
     return (
-      <div className='w-full px-4 py-16'>
+      <div className='w-full px-4'>
         <div className='max-w-[1280px] mx-auto flex flex-col gap-8'>
           <div className='text-center flex flex-col gap-2'>
             <h2
@@ -119,7 +119,7 @@ function RecentPostsSection() {
   }
 
   return (
-    <div className='w-full px-4 py-16'>
+    <div className='w-full px-4'>
       <div className='max-w-[1280px] mx-auto flex flex-col gap-8'>
         <div className='text-center flex flex-col gap-2'>
           <h2

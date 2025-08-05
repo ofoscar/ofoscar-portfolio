@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useScrollDirection } from '../hooks/useScrollDirection';
 import DesktopNavigation from './DesktopNavigation';
 import MobileNavigation from './MobileNavigation';
 
 function AppBar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { visible } = useScrollDirection();
 
   return (
-    <nav className='nav-container'>
+    <nav className={`nav-container ${visible ? 'nav-visible' : 'nav-hidden'}`}>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo and brand */}

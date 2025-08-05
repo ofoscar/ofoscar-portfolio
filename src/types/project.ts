@@ -13,6 +13,7 @@ export interface ProjectReview {
 }
 
 export interface Project {
+  starred?: boolean; // Optional field to indicate if the project is starred
   id: string;
   title: string;
   description: string;

@@ -1,11 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 import { theme } from '../theme';
 import ProjectCard from './ProjectCard';
 
 function ProjectsSection() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -74,18 +76,43 @@ function ProjectsSection() {
             msOverflowStyle: 'none',
           }}
         >
-          {projectsData.slice(0, 3).map((project) => (
-            <ProjectCard
-              key={project.id}
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              imageUrl={project.imageUrl}
-              review={project.review}
-              features={project.features}
-            />
-          ))}
+          {projectsData
+            .filter((project) => project.starred)
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                imageUrl={project.imageUrl}
+                review={project.review}
+                features={project.features}
+              />
+            ))}
+        </div>
+
+        {/* See More Button */}
+        <div className='text-center mt-8 md:mt-12'>
+          <button
+            onClick={() => navigate('/projects')}
+            className='px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg'
+            style={{
+              backgroundColor: theme.colors.surface,
+              color: theme.colors.text.primary,
+              border: `2px solid ${theme.colors.border.light}`,
+              fontFamily: theme.typography.fontFamily.sans.join(', '),
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor =
+                theme.colors.surfaceSecondary;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = theme.colors.surface;
+            }}
+          >
+            {t('projects.seeMore', 'See More Projects')}
+          </button>
         </div>
       </div>
     </div>
