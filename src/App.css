@@ -5,6 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-top: 64px; /* Height of the AppBar (h-16 = 4rem = 64px) */
 }
 
 .app-overlay {
@@ -15,6 +16,20 @@
 .nav-container {
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-visible {
+  transform: translateY(0);
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
 }
 
 /* Hide scrollbar utility class */
