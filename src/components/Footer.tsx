@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
   className?: string;
@@ -53,36 +54,38 @@ function Footer({ className = '' }: FooterProps) {
               </h3>
               <ul className='space-y-2 text-sm'>
                 <li>
-                  <a
-                    href='#projects'
+                  <Link
+                    to='/projects'
                     className='text-gray-300 hover:text-white transition-colors'
                   >
                     {t('nav.projects')}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href='#about'
+                  <Link
+                    to='/about'
                     className='text-gray-300 hover:text-white transition-colors'
                   >
                     {t('nav.about')}
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
-                    href='#blog'
+                    href='https://blog.ofoscar.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='text-gray-300 hover:text-white transition-colors'
                   >
                     {t('nav.blog')}
                   </a>
                 </li>
                 <li>
-                  <a
-                    href='#contact'
+                  <Link
+                    to='/contact'
                     className='text-gray-300 hover:text-white transition-colors'
                   >
                     {t('nav.contact')}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

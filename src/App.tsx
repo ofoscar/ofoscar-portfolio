@@ -8,10 +8,12 @@ import CookiesPopup from './components/CookiesPopup';
 import Home from './components/Home';
 import ProjectDetail from './components/ProjectDetail';
 import Projects from './components/Projects';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className='app-container'>
         <AppBar />
 
