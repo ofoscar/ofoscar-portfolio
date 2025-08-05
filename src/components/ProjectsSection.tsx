@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { projectsData } from '../data/projects';
 import { theme } from '../theme';
 import ProjectCard from './ProjectCard';
 
@@ -73,46 +74,18 @@ function ProjectsSection() {
             msOverflowStyle: 'none',
           }}
         >
-          <ProjectCard
-            id='casino-management-system'
-            title='Comprehensive Casino Management System'
-            description='A complete casino management ecosystem consisting of multiple interconnected applications for operations, customer service, and terminal management. Successfully deployed and implemented in a live casino environment.'
-            technologies={[
-              'React.js',
-              'Flutter',
-              'SQL',
-              'Canvas API',
-              'Desktop Apps',
-            ]}
-            imageUrl='https://images.unsplash.com/photo-1491644386567-d98960637850?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          />
-          <ProjectCard
-            id='bng-agroproductos-website'
-            title='BNG Agroproductos Business Website'
-            description='A comprehensive business website for BNG Agroproductos, an agricultural company focused on innovation and sustainable land care. Features product catalog, company information, and integrated contact system.'
-            technologies={[
-              'HTML5',
-              'CSS3',
-              'JavaScript',
-              'Contact Forms',
-              'Email Integration',
-              'Responsive Design',
-            ]}
-            imageUrl='https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          />
-          <ProjectCard
-            id='restaurant-management-flutter'
-            title='Restaurant Management System'
-            description='A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.'
-            technologies={[
-              'Flutter',
-              'Dart',
-              'Real-time Database',
-              'Push Notifications',
-              'Mobile Development',
-            ]}
-            imageUrl='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          />
+          {projectsData.slice(0, 3).map((project) => (
+            <ProjectCard
+              key={project.id}
+              id={project.id}
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              imageUrl={project.imageUrl}
+              review={project.review}
+              features={project.features}
+            />
+          ))}
         </div>
       </div>
     </div>

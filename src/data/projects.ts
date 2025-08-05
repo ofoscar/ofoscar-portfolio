@@ -3,7 +3,7 @@ import type { Project } from '../types/project';
 export const projectsData: Project[] = [
   {
     id: 'casino-management-system',
-    title: 'Comprehensive Casino Management System',
+    title: 'BetCore: Comprehensive Casino Management System',
     description:
       'A complete casino management ecosystem consisting of multiple interconnected applications for operations, customer service, and terminal management. Successfully deployed and implemented in a live casino environment.',
     fullDescription:
@@ -109,10 +109,16 @@ export const projectsData: Project[] = [
           'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
+    /*  review: {
+      rating: 5,
+      reviewerName: 'Casino Manager',
+      comment:
+        'Exceptional system that revolutionized our operations. The team delivered beyond expectations and provided excellent on-site support.',
+    }, */
   },
   {
     id: 'bng-agroproductos-website',
-    title: 'BNG Agroproductos Business Website',
+    title: 'BNG Agroproductos: Business Website',
     description:
       'A comprehensive business website for BNG Agroproductos, an agricultural company focused on innovation and sustainable land care. Features product catalog, company information, and integrated contact system.',
     fullDescription:
@@ -126,7 +132,7 @@ export const projectsData: Project[] = [
       'Responsive Design',
     ],
     imageUrl:
-      'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1594771804886-a933bb2d609b?q=80&w=2682&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
       'Professional business website with modern design',
       'Comprehensive product catalog showcasing agricultural products',
@@ -225,10 +231,17 @@ export const projectsData: Project[] = [
           'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
+    review: {
+      rating: 5,
+      reviewerName: 'Daniel Bojórquez (BNG Team Lead)',
+      comment:
+        'Professional website that perfectly represents our agricultural values. Great attention to detail and responsive design.',
+      imageUrl: '/bng_logo.png',
+    },
   },
   {
     id: 'restaurant-management-flutter',
-    title: 'Restaurant Management System',
+    title: 'Tably: Restaurant Management System',
     description:
       'A comprehensive Flutter application for restaurant operations management featuring real-time table tracking, order management, live floor plan visualization, and notification systems for managers.',
     fullDescription:
@@ -340,5 +353,11 @@ export const projectsData: Project[] = [
           'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
+    /*  review: {
+      rating: 3,
+      reviewerName: 'Restaurant Owner',
+      comment:
+        'Good functionality overall, though it took some time to adapt to the new system. The real-time tracking is very helpful.',
+    }, */
   },
 ];

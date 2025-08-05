@@ -5,6 +5,13 @@ export interface ProjectSection {
   imageUrl?: string;
 }
 
+export interface ProjectReview {
+  rating: number; // 1-5 stars
+  reviewerName: string;
+  comment: string;
+  imageUrl?: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -18,4 +25,5 @@ export interface Project {
   challenges?: string[];
   learnings?: string[];
   sections?: ProjectSection[];
+  review?: ProjectReview;
 }
