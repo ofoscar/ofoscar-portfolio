@@ -76,18 +76,20 @@ function ProjectsSection() {
             msOverflowStyle: 'none',
           }}
         >
-          {projectsData.slice(0, 3).map((project) => (
-            <ProjectCard
-              key={project.id}
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              imageUrl={project.imageUrl}
-              review={project.review}
-              features={project.features}
-            />
-          ))}
+          {projectsData
+            .filter((project) => project.starred)
+            .map((project) => (
+              <ProjectCard
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                imageUrl={project.imageUrl}
+                review={project.review}
+                features={project.features}
+              />
+            ))}
         </div>
 
         {/* See More Button */}

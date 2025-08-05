@@ -2,6 +2,7 @@ import type { Project } from '../types/project';
 
 export const projectsData: Project[] = [
   {
+    starred: true,
     id: 'casino-management-system',
     title: 'BetCore: Comprehensive Casino Management System',
     description:
@@ -117,6 +118,7 @@ export const projectsData: Project[] = [
     }, */
   },
   {
+    starred: true,
     id: 'bng-agroproductos-website',
     title: 'BNG Agroproductos: Business Website',
     description:
@@ -240,6 +242,7 @@ export const projectsData: Project[] = [
     },
   },
   {
+    starred: true,
     id: 'restaurant-management-flutter',
     title: 'Tably: Restaurant Management System',
     description:
@@ -358,6 +361,131 @@ export const projectsData: Project[] = [
       reviewerName: 'Restaurant Owner',
       comment:
         'Good functionality overall, though it took some time to adapt to the new system. The real-time tracking is very helpful.',
+    }, */
+  },
+  {
+    starred: false,
+    id: 'pawn-in-management-system',
+    title: 'Pawn In: Comprehensive Pawn Shop Management System',
+    description:
+      'A real-time web application for managing pawn shop operations across multiple branches. Features live inventory updates, product management, and multi-branch coordination using socket connections.',
+    fullDescription:
+      'Developed a comprehensive web-based management system for pawn shop operations that enables real-time coordination across multiple branch locations. The application provides live inventory tracking, product management, and seamless communication between branches using socket technology for instant updates.',
+    technologies: [
+      'React.js',
+      'Socket.io',
+      'Node.js',
+      'Real-time Updates',
+      'Multi-branch Management',
+      'Inventory Management',
+    ],
+    imageUrl:
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    features: [
+      'Real-time inventory synchronization across all branches',
+      'Comprehensive product management and cataloging system',
+      'Multi-branch coordination and communication',
+      'Live updates using socket connections',
+      'Product addition and modification capabilities',
+      'Branch-specific inventory tracking and reporting',
+      'User role management for different branch levels',
+      'Real-time notifications for inventory changes',
+    ],
+    challenges: [
+      'Implementing real-time synchronization across multiple branch locations',
+      'Managing complex inventory states with concurrent users',
+      'Ensuring data consistency during high-traffic operations',
+      'Designing an intuitive interface for pawn shop workers',
+      'Optimizing socket connections for reliable real-time updates',
+      'Handling offline scenarios and data synchronization',
+      'Managing user permissions across different branch hierarchies',
+    ],
+    learnings: [
+      'Advanced socket.io implementation for real-time applications',
+      'Multi-branch business logic and data architecture',
+      'Real-time state management and conflict resolution',
+      'Pawn shop industry operations and workflow optimization',
+      'Scalable web application architecture for multiple locations',
+      'User experience design for business-critical operations',
+      'Performance optimization for real-time data synchronization',
+    ],
+    sections: [
+      {
+        title: 'Real-time Inventory Management',
+        description:
+          'Advanced inventory system that provides instant synchronization across all pawn shop branches, ensuring accurate product tracking and availability.',
+        content: [
+          'Implemented socket.io for real-time inventory updates across all connected branches',
+          'Created comprehensive product cataloging with detailed item specifications and pricing',
+          'Developed instant notification system for inventory changes and new product additions',
+          'Built conflict resolution mechanisms for concurrent inventory modifications',
+          'Designed visual indicators for real-time stock level changes and product status updates',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1586953208448-b95a79798f07?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Multi-Branch Coordination System',
+        description:
+          'Comprehensive branch management system that enables seamless coordination and communication between multiple pawn shop locations.',
+        content: [
+          'Built centralized branch management with location-specific inventory tracking',
+          'Implemented branch-to-branch product transfer and coordination features',
+          'Created real-time communication channels between branch managers and staff',
+          'Developed branch-specific reporting and analytics dashboards',
+          'Designed hierarchical user permissions for different branch management levels',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Product Management Interface',
+        description:
+          'User-friendly product management system that allows staff to easily add, modify, and track items across the pawn shop inventory.',
+        content: [
+          'Developed intuitive product entry forms with comprehensive item categorization',
+          'Created photo upload and management system for product documentation',
+          'Implemented barcode scanning integration for quick product identification',
+          'Built product search and filtering capabilities with advanced query options',
+          'Designed product history tracking for loan and sale transaction records',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Live Updates and Notification System',
+        description:
+          'Advanced real-time communication system using socket technology to provide instant updates and notifications across all branch locations.',
+        content: [
+          'Implemented robust socket.io architecture for reliable real-time communication',
+          'Created intelligent notification system for critical inventory and operational updates',
+          'Built real-time dashboard displays showing live activity across all branches',
+          'Developed connection management and automatic reconnection handling',
+          'Designed scalable message broadcasting system for multi-branch coordination',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Analytics and Reporting Dashboard',
+        description:
+          'Comprehensive reporting system providing insights into pawn shop performance, inventory trends, and multi-branch analytics.',
+        content: [
+          'Built detailed analytics dashboards for inventory performance and branch comparisons',
+          'Created comprehensive reporting modules for daily, weekly, and monthly operations',
+          'Implemented data visualization tools for trend analysis and business insights',
+          'Developed export capabilities for financial and operational reporting',
+          'Designed predictive analytics for inventory forecasting and business planning',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+    ],
+    /*  review: {
+      rating: 4,
+      reviewerName: 'Pawn Shop Manager',
+      comment:
+        'Great system for coordinating our multiple locations. The real-time updates have significantly improved our inventory management.',
     }, */
   },
 ];
