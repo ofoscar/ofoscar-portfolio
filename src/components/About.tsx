@@ -66,10 +66,10 @@ function About() {
   return (
     <div className='flex flex-col w-full overflow-hidden'>
       <div
-        className='relative flex items-center justify-center overflow-hidden md:h-[calc(100dvh-64px)]'
+        className='relative flex items-center justify-center overflow-hidden md:h-[calc(94dvh-64px)]'
         style={{
           width: '100dvw',
-          minHeight: 'calc(100dvh - 64px)', // Use minHeight for mobile flexibility
+          minHeight: 'calc(94dvh - 64px)', // Use minHeight for mobile flexibility
           backgroundColor: theme.colors.surface,
         }}
       >
