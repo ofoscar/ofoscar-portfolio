@@ -87,7 +87,7 @@ function ProjectCard({
           <img
             src={imageUrl}
             alt={title}
-            className='w-full h-48 sm:h-56 md:h-48 object-cover rounded-lg'
+            className='w-full h-48 sm:h-56 md:h-full object-cover rounded-lg'
           />
         </div>
         <div

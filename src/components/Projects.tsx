@@ -1,19 +1,23 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { projectsData } from '../data/projects';
+import { getProjectsData } from '../data/projects';
 import { theme } from '../theme';
 import Footer from './Footer';
 import ProjectCard from './ProjectCard';
 
 function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [showTagsModal, setShowTagsModal] = useState(false);
+
+  // Get projects data based on current language
+  const projectsData = getProjectsData(i18n.language);
 
   // Available tags for filtering
   const availableTags = [
     'Flutter',
     'Mobile Development',
+    'Figma',
     'JavaScript',
     'React.js',
     'Web Development',
@@ -112,7 +116,7 @@ function Projects() {
                 <button
                   key={tag}
                   onClick={() => toggleTag(tag)}
-                  className={`px-3 py-1 text-sm rounded-full whitespace-nowrap flex-shrink-0 transition-all duration-200 ${
+                  className={`cursor-pointer px-3 py-1 text-sm rounded-full whitespace-nowrap flex-shrink-0 transition-all duration-200 ${
                     selectedTags.includes(tag)
                       ? 'scale-105 shadow-md'
                       : 'hover:scale-105'
@@ -137,13 +141,13 @@ function Projects() {
             {/* More options button - fixed position */}
             <button
               onClick={openTagsModal}
-              className='px-3 py-1 text-sm rounded-full whitespace-nowrap flex-shrink-0 transition-all duration-200 hover:scale-105'
+              className='cursor-pointer px-3 py-1 text-sm rounded-full whitespace-nowrap flex-shrink-0 transition-all duration-200 hover:scale-105'
               style={{
                 backgroundColor: theme.colors.surfaceSecondary,
                 color: theme.colors.text.primary,
                 border: `1px solid ${theme.colors.border.light}`,
               }}
-              title='Show all tags'
+              title={t('projects.showAllTags')}
             >
               ⋯
             </button>
@@ -163,8 +167,7 @@ function Projects() {
                   fontFamily: theme.typography.fontFamily.sans.join(', '),
                 }}
               >
-                No projects found for the selected tags. Try selecting different
-                tags or clear all filters.
+                {t('projects.noProjectsFound')}
               </p>
             </div>
           ) : (
@@ -193,7 +196,7 @@ function Projects() {
       {/* Tags Modal Overlay */}
       {showTagsModal && (
         <div
-          className='fixed inset-0 bg-black bg-opacity-20 flex items-center justify-center z-50 p-4'
+          className='fixed inset-0 bg-black/60 flex items-center justify-center z-2000 p-4'
           onClick={closeTagsModal}
         >
           <div
@@ -208,7 +211,7 @@ function Projects() {
                   fontFamily: theme.typography.fontFamily.sans.join(', '),
                 }}
               >
-                Filter by Tags
+                {t('projects.filterByTags')}
               </h3>
               <button
                 onClick={closeTagsModal}
@@ -258,7 +261,7 @@ function Projects() {
                   border: `1px solid ${theme.colors.border.light}`,
                 }}
               >
-                Clear All
+                {t('projects.clearAll')}
               </button>
               <button
                 onClick={closeTagsModal}
@@ -269,7 +272,7 @@ function Projects() {
                   border: `1px solid ${theme.colors.brand.primary}`,
                 }}
               >
-                Done
+                {t('projects.done')}
               </button>
             </div>
           </div>

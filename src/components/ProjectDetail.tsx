@@ -1,5 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { projectsData } from '../data/projects';
+import { getProjectsData } from '../data/projects';
 import { theme } from '../theme';
 import Footer from './Footer';
 import GlassButton from './GlassButton';
@@ -7,6 +8,10 @@ import ProjectNotFound from './ProjectNotFound';
 
 function ProjectDetail() {
   const { projectId } = useParams<{ projectId: string }>();
+  const { i18n } = useTranslation();
+
+  // Get projects data based on current language
+  const projectsData = getProjectsData(i18n.language);
   const project = projectsData.find((p) => p.id === projectId);
   if (!project) {
     return <ProjectNotFound />;
@@ -31,16 +36,16 @@ function ProjectDetail() {
                 {' '}
                 {project.title}{' '}
               </h1>
-              <button
-                onClick={() =>
-                  window.open('https://bngagroproductos.com', '_blank')
-                }
-                className='px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-colors duration-200 flex items-center gap-2 self-start'
-                title='Visit Project'
-              >
-                <span>🚀</span>
-                Visit
-              </button>
+              {project.demoUrl && (
+                <button
+                  onClick={() => window.open(project.demoUrl, '_blank')}
+                  className='px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-colors duration-200 flex items-center gap-2 self-start'
+                  title='Visit Project'
+                >
+                  <span>🚀</span>
+                  Visit
+                </button>
+              )}
             </div>{' '}
             <p
               className='text-lg leading-relaxed mb-6'
