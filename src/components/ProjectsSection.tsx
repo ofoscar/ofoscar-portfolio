@@ -99,7 +99,7 @@ function ProjectsSection() {
         <div className='text-center mt-8 md:mt-12'>
           <button
             onClick={() => navigate('/projects')}
-            className='px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg'
+            className='cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg'
             style={{
               backgroundColor: theme.colors.surface,
               color: theme.colors.text.primary,
