@@ -15,15 +15,15 @@ function Projects() {
 
   // Available tags for filtering
   const availableTags = [
-    'Flutter',
-    'Mobile Development',
-    'Figma',
     'JavaScript',
+    'Flutter',
+    'Figma',
+    'Push Notifications',
     'React.js',
+    'Mobile Development',
     'Web Development',
     'Real-time',
     'Email Integration',
-    'Push Notifications',
     'Inventory Management',
     'Responsive Design',
   ];

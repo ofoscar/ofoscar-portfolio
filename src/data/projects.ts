@@ -842,7 +842,7 @@ const projectsDataEs: Project[] = [
       'Flutter',
       'Dart',
       'Base de Datos en Tiempo Real',
-      'Notificaciones Push',
+      'Push Notifications',
       'Desarrollo Móvil',
     ],
     imageUrl:
