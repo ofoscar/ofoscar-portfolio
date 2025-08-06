@@ -1,14 +1,17 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { projectsData } from '../data/projects';
+import { getProjectsData } from '../data/projects';
 import { theme } from '../theme';
 import ProjectCard from './ProjectCard';
 
 function ProjectsSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Get projects data based on current language
+  const projectsData = getProjectsData(i18n.language);
 
   useEffect(() => {
     // Scroll to the middle card (card 2) on component mount

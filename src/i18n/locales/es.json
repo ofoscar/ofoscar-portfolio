@@ -28,7 +28,13 @@
     "title": "Proyectos Destacados",
     "subtitle": "Una muestra de mi trabajo más reciente y experimentos técnicos",
     "viewProject": "Ver Proyecto",
-    "viewCode": "Ver Código"
+    "viewCode": "Ver Código",
+    "seeMore": "Ver Más Proyectos",
+    "showAllTags": "Mostrar todas las etiquetas",
+    "noProjectsFound": "No se encontraron proyectos para las etiquetas seleccionadas. Intenta seleccionar diferentes etiquetas o borrar todos los filtros.",
+    "filterByTags": "Filtrar por Etiquetas",
+    "clearAll": "Borrar Todo",
+    "done": "Hecho"
   },
   "blog": {
     "title": "Publicaciones Recientes",

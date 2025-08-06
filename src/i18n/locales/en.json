@@ -28,7 +28,13 @@
     "title": "Featured Projects",
     "subtitle": "A showcase of my latest work and technical experiments",
     "viewProject": "View Project",
-    "viewCode": "View Code"
+    "viewCode": "View Code",
+    "seeMore": "See More Projects",
+    "showAllTags": "Show all tags",
+    "noProjectsFound": "No projects found for the selected tags. Try selecting different tags or clear all filters.",
+    "filterByTags": "Filter by Tags",
+    "clearAll": "Clear All",
+    "done": "Done"
   },
   "blog": {
     "title": "Recent Posts",
