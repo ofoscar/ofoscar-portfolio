@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import NewsletterSection from './NewsletterSection';
 
 interface FooterProps {
   className?: string;
@@ -28,24 +29,7 @@ function Footer({ className = '' }: FooterProps) {
             </div>
 
             {/* Newsletter Section */}
-            <div>
-              <h3 className='text-lg font-semibold mb-4'>
-                {t('footer.newsletter.title')}
-              </h3>
-              <p className='text-gray-300 text-sm mb-4'>
-                {t('footer.newsletter.description')}
-              </p>
-              <div className='flex flex-col space-y-2'>
-                <input
-                  type='email'
-                  placeholder={t('footer.newsletter.emailPlaceholder')}
-                  className='px-3 py-2 text-sm bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500'
-                />
-                <button className='px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500'>
-                  {t('footer.newsletter.subscribe')}
-                </button>
-              </div>
-            </div>
+            <NewsletterSection />
 
             {/* Quick Links */}
             <div>

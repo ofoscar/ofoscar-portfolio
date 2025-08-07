@@ -113,7 +113,10 @@
       "title": "Newsletter",
       "description": "Subscribe to get the latest updates on tech, coding tips, and project insights.",
       "emailPlaceholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "An error occurred. Please try again later.",
+      "sending": "Subscribing..."
     },
     "quickLinks": {
       "title": "Quick Links"

@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ContactCard from './ContactCard';
@@ -43,31 +44,38 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent, form: HTMLFormElement) => {
     e.preventDefault();
-    setStatus({ type: 'sending' });
-
-    // Simulate form submission
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setStatus({
-        type: 'success',
-        message: t('contact.form.success'),
+    /* setLoading(true); */
+    emailjs
+      .sendForm(
+        'service_vk962ka',
+        'template_nn0i73f',
+        form,
+        '7ZW8TSNw8GdGThTnK',
+      )
+      .then((result) => {
+        if (result.text === 'OK') {
+          setStatus({
+            type: 'success',
+            message: t('contact.form.success'),
+          });
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+            phone: '',
+            business: '',
+          });
+        }
+      })
+      .catch(() => {
+        setStatus({
+          type: 'error',
+          message: t('contact.form.error'),
+        });
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        phone: '',
-        business: '',
-      });
-    } catch {
-      setStatus({
-        type: 'error',
-        message: t('contact.form.error'),
-      });
-    }
   };
 
   const isFormValid = formData.name && formData.email && formData.message;
