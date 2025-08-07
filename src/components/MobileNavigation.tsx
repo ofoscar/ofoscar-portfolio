@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import ContactButton from './ContactButton';
 
 interface MobileNavigationProps {
   isMenuOpen: boolean;
@@ -47,13 +48,10 @@ function MobileNavigation({
         >
           {t('nav.blog', 'Blog')}
         </a>
-        <Link
-          to='/contact'
-          className='block text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
-          onClick={() => setIsMenuOpen(false)}
-        >
-          {t('nav.contact')}
-        </Link>
+        <ContactButton
+          variant='mobile'
+          onMobileClick={() => setIsMenuOpen(false)}
+        />
       </div>
     </div>
   );

@@ -113,7 +113,10 @@
       "title": "Boletín",
       "description": "Suscríbete para recibir las últimas actualizaciones sobre tecnología, consejos de programación y perspectivas de proyectos.",
       "emailPlaceholder": "Ingresa tu email",
-      "subscribe": "Suscribirse"
+      "subscribe": "Suscribirse",
+      "success": "¡Gracias por suscribirte!",
+      "error": "Ocurrió un error. Por favor, inténtalo de nuevo más tarde.",
+      "sending": "Suscribiendo..."
     },
     "quickLinks": {
       "title": "Enlaces Rápidos"

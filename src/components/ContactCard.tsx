@@ -26,7 +26,7 @@ interface ContactCardProps {
   onInputChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
-  onSubmit: (e: React.FormEvent) => void;
+  onSubmit: (e: React.FormEvent, form: HTMLFormElement) => void;
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({
@@ -80,7 +80,13 @@ const ContactCard: React.FC<ContactCardProps> = ({
         </div>
 
         {/* Contact Form */}
-        <form onSubmit={onSubmit} className='space-y-3 sm:space-y-4'>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            onSubmit(e, e.currentTarget);
+          }}
+          className='space-y-3 sm:space-y-4'
+        >
           {/* Name Row (full width) */}
           <div>
             <label
