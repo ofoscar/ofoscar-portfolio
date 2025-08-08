@@ -31,7 +31,7 @@ function HeroSlide({
       }}
     >
       {/* Cloud Texture Background */}
-      <CloudTextureBackground className='opacity-30' />
+      <CloudTextureBackground className='opacity-80' />
 
       {/* Overlay for better text readability */}
       <div
