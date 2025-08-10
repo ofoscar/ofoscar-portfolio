@@ -34,14 +34,14 @@ function ProjectsSection() {
         const gap = isMobile ? 20 : 40;
         const containerWidth = container.clientWidth;
 
-        // Only center on desktop, let mobile/tablet start from first card
-        if (!isMobile && !isTablet) {
-          const cardIndex = 1; // Second card (0-indexed)
-          const cardPosition = (cardWidth + gap) * cardIndex;
-          const scrollPosition =
-            cardPosition - (containerWidth - cardWidth) / 2;
-          container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-        }
+        // Always center on the middle card (index 1) on all devices
+        const cardIndex = 1; // Second card (0-indexed) - the middle card
+        const cardPosition = (cardWidth + gap) * cardIndex;
+        const scrollPosition = Math.max(
+          0,
+          cardPosition - (containerWidth - cardWidth) / 2,
+        );
+        container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
       }
     };
 
@@ -73,7 +73,7 @@ function ProjectsSection() {
         </div>
         <div
           ref={scrollContainerRef}
-          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto'
+          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-4 md:px-8'
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
