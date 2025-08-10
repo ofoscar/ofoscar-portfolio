@@ -23,11 +23,11 @@ function Home() {
         primaryButtonText={t('hero.cta')}
         onPrimaryClick={handleGetStarted}
       />
+      {/* Projects Section - No Padding */}
+      <ProjectsSection />
+
       {/* Main Content Section */}
       <div className='w-full px-4 sm:px-8 md:px-12 lg:px-[80px] py-6 sm:py-8 md:py-[40px] flex flex-col gap-12 sm:gap-8 md:gap-10'>
-        {/* Projects Section */}
-        <ProjectsSection />
-
         {/* Recent Posts Section */}
         <RecentPostsSection />
       </div>

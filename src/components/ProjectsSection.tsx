@@ -51,7 +51,7 @@ function ProjectsSection() {
   return (
     <div className='w-full'>
       <div className='max-w-[1280px] mx-auto'>
-        <div className='text-center mb-8 md:mb-12'>
+        <div className='text-center mb-8 md:mb-12 pt-8 px-4'>
           <h2
             className='text-2xl sm:text-3xl font-bold mb-3 md:mb-4'
             style={{
@@ -73,7 +73,7 @@ function ProjectsSection() {
         </div>
         <div
           ref={scrollContainerRef}
-          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-0 py-2'
+          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto'
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
