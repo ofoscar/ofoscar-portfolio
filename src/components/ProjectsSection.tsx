@@ -73,7 +73,7 @@ function ProjectsSection() {
         </div>
         <div
           ref={scrollContainerRef}
-          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-4 md:px-8'
+          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-4 md:px-8 py-4'
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',

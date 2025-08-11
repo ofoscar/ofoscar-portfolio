@@ -50,7 +50,7 @@ function ProjectCard({
 
   // Different styles for different variants
   const baseClasses =
-    'rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-lg cursor-pointer hover:scale-[1.02]';
+    'rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-lg cursor-pointer ';
   const scrollClasses =
     'flex-shrink-0 snap-center w-[calc(100vw-4rem)] sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] lg:w-[calc(100vw-12rem)] xl:w-[840px]';
   const gridClasses = 'w-full h-full';
