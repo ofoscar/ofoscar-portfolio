@@ -51,7 +51,7 @@ function ProjectsSection() {
   return (
     <div className='w-full'>
       <div className='max-w-[1280px] mx-auto'>
-        <div className='text-center mb-8 md:mb-12 pt-8 px-4'>
+        <div className='text-center mb-8 md:mb-12 px-4'>
           <h2
             className='text-2xl sm:text-3xl font-bold mb-3 md:mb-4'
             style={{
