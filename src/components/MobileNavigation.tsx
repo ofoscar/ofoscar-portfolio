@@ -13,10 +13,12 @@ function MobileNavigation({
 }: MobileNavigationProps) {
   const { t } = useTranslation();
 
-  if (!isMenuOpen) return null;
-
   return (
-    <div className='md:hidden'>
+    <div
+      className={`md:hidden mobile-menu mobile-menu-container ${
+        isMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'
+      }`}
+    >
       <div className='px-4 py-2 space-y-2'>
         <Link
           to='/'

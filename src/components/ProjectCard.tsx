@@ -50,7 +50,7 @@ function ProjectCard({
 
   // Different styles for different variants
   const baseClasses =
-    'rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-lg cursor-pointer hover:scale-[1.02]';
+    'rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-lg cursor-pointer ';
   const scrollClasses =
     'flex-shrink-0 snap-center w-[calc(100vw-4rem)] sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] lg:w-[calc(100vw-12rem)] xl:w-[840px]';
   const gridClasses = 'w-full h-full';
@@ -83,19 +83,33 @@ function ProjectCard({
           variant === 'grid' ? 'flex flex-col' : 'flex flex-col lg:flex-row'
         } gap-4 md:gap-6 h-full`}
       >
-        <div className={variant === 'grid' ? 'w-full' : 'w-full lg:w-1/3'}>
+        <div
+          className={
+            variant === 'grid' ? 'w-full relative' : 'w-full lg:w-2/3 relative'
+          }
+        >
           <img
             src={imageUrl}
             alt={title}
             className='w-full h-48 sm:h-56 md:h-full object-cover rounded-lg'
           />
+          {/* Logo overlay in bottom left */}
+          {review?.imageUrl && (
+            <div className='absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm rounded-md p-1.5 shadow-md'>
+              <img
+                src={review.imageUrl}
+                alt={`${review.reviewerName} logo`}
+                className='w-8 h-8 sm:w-10 sm:h-10 object-contain'
+              />
+            </div>
+          )}
         </div>
         <div
           className={`${
             variant === 'grid' ? 'w-full' : 'w-full h-full lg:w-2/3'
           } flex flex-col justify-between`}
         >
-          <div className='flex flex-col gap-3 md:gap-4'>
+          <div className='flex flex-col gap-3 md:gap-4 max-h-[400px] overflow-hidden'>
             <h3
               className='text-lg sm:text-xl font-semibold'
               style={{
@@ -117,45 +131,27 @@ function ProjectCard({
 
             {/* Review Section */}
             {review && (
-              <div
-                className={`flex gap-2 items-start ${
-                  variant === 'grid'
-                    ? 'flex-col'
-                    : 'flex-col sm:flex-row sm:gap-3 sm:items-center'
-                }`}
-              >
-                {/* Review Image - Top on mobile and grid variant, Left on scroll variant desktop */}
-                {review.imageUrl && (
-                  <div className='flex-shrink-0'>
-                    <img
-                      src={review.imageUrl}
-                      alt={`${review.reviewerName} logo`}
-                      className='w-25 sm:w-35 object-contain rounded'
-                    />
-                  </div>
-                )}
-                <div className='flex flex-col gap-1 flex-1'>
-                  <div className='flex items-center gap-2'>
-                    <StarRating rating={review.rating} />
-                    <span
-                      className='text-xs sm:text-sm font-bold'
-                      style={{ color: theme.colors.text.secondary }}
-                    >
-                      {review.reviewerName}
-                    </span>
-                  </div>
-                  <p
-                    className='text-xs sm:text-sm italic'
+              <div className='flex flex-col gap-1'>
+                <div className='flex items-center gap-2'>
+                  <StarRating rating={review.rating} />
+                  <span
+                    className='text-xs sm:text-sm font-bold'
                     style={{ color: theme.colors.text.secondary }}
                   >
-                    "{review.comment}"
-                  </p>
+                    {review.reviewerName}
+                  </span>
                 </div>
+                <p
+                  className='text-xs sm:text-sm italic'
+                  style={{ color: theme.colors.text.secondary }}
+                >
+                  "{review.comment}"
+                </p>
               </div>
             )}
 
             {/* Features Section - Only show when no review */}
-            {!review && features && features.length > 0 && (
+            {features && features.length > 0 && (
               <div className='flex flex-col gap-2 mb-2'>
                 <h4
                   className='text-xs sm:text-sm font-semibold'

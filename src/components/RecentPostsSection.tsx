@@ -123,7 +123,7 @@ function RecentPostsSection() {
       <div className='max-w-[1280px] mx-auto flex flex-col gap-8'>
         <div className='text-center flex flex-col gap-2'>
           <h2
-            className='text-3xl font-bold'
+            className='text-2xl sm:text-3xl font-bold'
             style={{
               color: theme.colors.text.primary,
               fontFamily: theme.typography.fontFamily.sans.join(', '),
@@ -132,7 +132,7 @@ function RecentPostsSection() {
             {t('blog.title')}
           </h2>
           <p
-            className='text-lg'
+            className='text-base sm:text-lg'
             style={{
               color: theme.colors.text.secondary,
               fontFamily: theme.typography.fontFamily.sans.join(', '),
@@ -147,6 +147,29 @@ function RecentPostsSection() {
           {posts.map((post) => (
             <ApiPostCard key={post._id} post={post} />
           ))}
+        </div>
+
+        {/* See More Button */}
+        <div className='text-center'>
+          <button
+            onClick={() => window.open('https://blog.ofoscar.com', '_blank')}
+            className='cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg'
+            style={{
+              backgroundColor: theme.colors.surface,
+              color: theme.colors.text.primary,
+              border: `2px solid ${theme.colors.border.light}`,
+              fontFamily: theme.typography.fontFamily.sans.join(', '),
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor =
+                theme.colors.surfaceSecondary;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = theme.colors.surface;
+            }}
+          >
+            {t('blog.seeMore', 'See More Posts')}
+          </button>
         </div>
       </div>
     </div>

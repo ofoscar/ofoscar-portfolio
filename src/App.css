@@ -103,6 +103,24 @@
   border-top: 1px solid rgba(229, 231, 235, 0.8);
 }
 
+.mobile-menu-container {
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+.mobile-menu-open {
+  max-height: 300px;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.mobile-menu-closed {
+  max-height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+}
+
 
 .gradient-border-wrapper::before {
   content: '';
