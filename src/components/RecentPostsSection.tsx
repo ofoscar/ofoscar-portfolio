@@ -148,6 +148,29 @@ function RecentPostsSection() {
             <ApiPostCard key={post._id} post={post} />
           ))}
         </div>
+
+        {/* See More Button */}
+        <div className='text-center'>
+          <button
+            onClick={() => window.open('https://blog.ofoscar.com', '_blank')}
+            className='cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg'
+            style={{
+              backgroundColor: theme.colors.surface,
+              color: theme.colors.text.primary,
+              border: `2px solid ${theme.colors.border.light}`,
+              fontFamily: theme.typography.fontFamily.sans.join(', '),
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor =
+                theme.colors.surfaceSecondary;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = theme.colors.surface;
+            }}
+          >
+            {t('blog.seeMore', 'See More Posts')}
+          </button>
+        </div>
       </div>
     </div>
   );
