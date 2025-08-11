@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({
   showSocials = false,
 }) => {
   return (
-    <div className='relative w-full h-[300px] sm:h-[400px] lg:h-[450px] bg-gray-300'>
+    <div className='relative w-full h-[350px] sm:h-[400px] lg:h-[450px] bg-gray-300'>
       <img
         src={backgroundImage}
         alt='Hero Background'
@@ -29,16 +29,16 @@ const Hero: React.FC<HeroProps> = ({
         }}
       />
       <div className='absolute inset-0 bg-black opacity-50'></div>
-      <div className='absolute inset-0 bg-opacity-40 flex items-start justify-center flex-col w-full py-4 px-4 sm:py-6 sm:px-8 lg:py-[40px] lg:px-[80px]'>
-        <div className='flex flex-col max-w-[780px]'>
-          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white w-full'>
+      <div className='absolute inset-0 bg-opacity-40 flex flex-col sm:flex-row sm:items-end sm:justify-between items-start justify-center w-full py-4 px-8 sm:py-6 lg:py-[40px] lg:px-[80px]'>
+        <div className='flex flex-col max-w-[800px] w-full sm:w-auto'>
+          <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center sm:text-left w-full'>
             {title}
           </h1>
-          <p className='text-base sm:text-lg md:text-xl lg:text-3xl text-white mt-2 w-full'>
+          <p className='text-base sm:text-lg md:text-xl lg:text-3xl text-white text-center sm:text-left mt-2 w-full'>
             {description}
           </p>
           {buttonText && (
-            <div className='mt-4'>
+            <div className='mt-4 flex justify-center sm:justify-start'>
               <GlassButton
                 className='gradient-border-wrapper text-sm sm:text-base md:text-lg lg:text-2xl'
                 onClick={onButtonClick}
@@ -49,9 +49,9 @@ const Hero: React.FC<HeroProps> = ({
           )}
         </div>
 
-        {/* Social Links - Bottom Right */}
+        {/* Social Links */}
         {showSocials && (
-          <div className='absolute bottom-4 right-4 sm:bottom-6 sm:right-8 lg:bottom-8 lg:right-12'>
+          <div className='flex flex-row items-center sm:justify-end justify-center sm:items-end mt-4 sm:mt-0 w-full'>
             <div className='flex gap-3'>
               <a
                 href='https://github.com/ofoscar'

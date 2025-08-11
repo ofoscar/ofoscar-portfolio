@@ -50,10 +50,10 @@ function ProjectsSection() {
   }, []);
   return (
     <div className='w-full'>
-      <div className='max-w-[1280px] mx-auto'>
-        <div className='text-center mb-8 md:mb-12 px-4'>
+      <div className='max-w-[1280px] mx-auto flex flex-col gap-6'>
+        <div className='text-center px-4 flex flex-col gap-2'>
           <h2
-            className='text-2xl sm:text-3xl font-bold mb-3 md:mb-4'
+            className='text-2xl sm:text-3xl font-bold'
             style={{
               color: theme.colors.text.primary,
               fontFamily: theme.typography.fontFamily.sans.join(', '),
