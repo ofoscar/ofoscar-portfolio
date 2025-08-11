@@ -123,7 +123,7 @@ function RecentPostsSection() {
       <div className='max-w-[1280px] mx-auto flex flex-col gap-8'>
         <div className='text-center flex flex-col gap-2'>
           <h2
-            className='text-2xl font-bold'
+            className='text-2xl sm:text-3xl font-bold'
             style={{
               color: theme.colors.text.primary,
               fontFamily: theme.typography.fontFamily.sans.join(', '),

@@ -85,7 +85,7 @@ function ProjectCard({
       >
         <div
           className={
-            variant === 'grid' ? 'w-full relative' : 'w-full lg:w-1/3 relative'
+            variant === 'grid' ? 'w-full relative' : 'w-full lg:w-2/3 relative'
           }
         >
           <img
