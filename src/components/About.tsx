@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { theme } from '../theme';
@@ -7,6 +7,7 @@ import EducationCard from './EducationCard';
 import Footer from './Footer';
 import GlassButton from './GlassButton';
 import ProfileImage from './ProfileImage';
+import ResumeModal from './ResumeModal';
 import profile_img from '/profile.jpg';
 
 function About() {
@@ -14,6 +15,32 @@ function About() {
   const navigate = useNavigate();
   const skills = t('bio.skills', { returnObjects: true }) as string[];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+
+  // Mobile detection
+  const isMobile = () => {
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      ) || window.innerWidth < 768
+    );
+  };
+
+  // Handle resume button click
+  const handleResumeClick = () => {
+    if (isMobile()) {
+      // Mobile: Direct download
+      const link = document.createElement('a');
+      link.href = '/CV-ofoscar.pdf';
+      link.download = 'Oscar-Ramirez-Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      // Desktop: Open modal
+      setIsResumeModalOpen(true);
+    }
+  };
 
   const scrollToCard = (index: number) => {
     if (scrollContainerRef.current) {
@@ -202,12 +229,18 @@ function About() {
             </div>
 
             {/* Call to Action Button - Mobile Only */}
-            <div className='w-full flex justify-center md:justify-start'>
+            <div className='w-full flex flex-col sm:flex-row justify-center md:justify-start gap-3 sm:gap-4'>
               <GlassButton
                 onClick={() => navigate('/contact')}
-                className='gradient-border-wrapper text-sm sm:text-base'
+                className='gradient-border-wrapper text-sm sm:text-base w-full sm:w-auto'
               >
                 {t('about.cta.button', "Let's Work Together")}
+              </GlassButton>
+              <GlassButton
+                onClick={handleResumeClick}
+                className='gradient-border-wrapper text-sm sm:text-base w-full sm:w-auto'
+              >
+                {t('about.cta.resume', 'View Resume')}
               </GlassButton>
             </div>
           </div>
@@ -219,6 +252,12 @@ function About() {
         </div>
       </div>
       <Footer />
+
+      {/* Resume Modal */}
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
     </div>
   );
 }

@@ -100,6 +100,10 @@
         "description": "Estudié en la Université de Mérici, Quebec",
         "level": "Nivel intermedio"
       }
+    },
+    "cta": {
+      "button": "Trabajemos Juntos",
+      "resume": "Ver Currículum"
     }
   },
   "footer": {
