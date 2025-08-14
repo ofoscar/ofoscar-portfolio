@@ -25,14 +25,15 @@ function Home() {
       />
 
       {/* Projects Section - No Padding */}
-      <div className='w-full px-4 sm:px-8 md:px-12 lg:px-[80px] py-12 flex flex-col gap-24'>
+      <div className='py-12 flex flex-col'>
         <ProjectsSection />
 
-        {/* Main Content Section */}
-        {/* Recent Posts Section */}
-        <RecentPostsSection />
+        <div className='w-full px-4 sm:px-8 md:px-12 lg:px-[80px]flex flex-col gap-24'>
+          {/* Main Content Section */}
+          {/* Recent Posts Section */}
+          <RecentPostsSection />
+        </div>
       </div>
-
       {/* Footer */}
       <Footer />
     </div>
