@@ -27,4 +27,5 @@ export interface Project {
   learnings?: string[];
   sections?: ProjectSection[];
   review?: ProjectReview;
+  logo?: string;
 }

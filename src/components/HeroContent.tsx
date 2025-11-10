@@ -54,7 +54,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
           {skills.map((skill) => (
             <span
               key={skill}
-              className='px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-white'
+              className='px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-white cursor-default'
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 backdropFilter: 'blur(12px)',

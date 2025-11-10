@@ -91,6 +91,7 @@ function ProjectsSection() {
                 imageUrl={project.imageUrl}
                 review={project.review}
                 features={project.features}
+                logo={project.logo}
               />
             ))}
         </div>

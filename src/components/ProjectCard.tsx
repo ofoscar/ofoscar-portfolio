@@ -11,6 +11,7 @@ type ProjectCardProps = {
   variant?: 'scroll' | 'grid';
   review?: ProjectReview;
   features?: string[];
+  logo?: string;
 };
 
 function ProjectCard({
@@ -22,6 +23,7 @@ function ProjectCard({
   variant = 'scroll',
   review,
   features,
+  logo,
 }: ProjectCardProps) {
   const navigate = useNavigate();
 
@@ -52,8 +54,8 @@ function ProjectCard({
   const baseClasses =
     'rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-lg cursor-pointer ';
   const scrollClasses =
-    'flex-shrink-0 snap-center w-[calc(100vw-4rem)] sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] lg:w-[calc(100vw-12rem)] xl:w-[840px]';
-  const gridClasses = 'w-full h-full';
+    'flex-shrink-0 snap-center w-[calc(100vw-4rem)] sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] lg:w-[calc(100vw-12rem)] xl:w-[840px] lg:h-[450px]';
+  const gridClasses = 'w-full md:h-[950px]';
 
   const containerClasses =
     variant === 'scroll'
@@ -80,12 +82,16 @@ function ProjectCard({
     >
       <div
         className={`${
-          variant === 'grid' ? 'flex flex-col' : 'flex flex-col lg:flex-row'
+          variant === 'grid'
+            ? 'flex flex-col h-full '
+            : 'flex flex-col lg:flex-row w-full'
         } gap-4 md:gap-6 h-full`}
       >
         <div
           className={
-            variant === 'grid' ? 'w-full relative' : 'w-full lg:w-2/3 relative'
+            variant === 'grid'
+              ? 'w-full relative md:min-h-[250px] md:max-h-[250px]'
+              : 'md:h-[250px] lg:h-full lg:min-w-[325px] lg:max-w-[325px] relative'
           }
         >
           <img
@@ -94,22 +100,22 @@ function ProjectCard({
             className='w-full h-48 sm:h-56 md:h-full object-cover rounded-lg'
           />
           {/* Logo overlay in bottom left */}
-          {review?.imageUrl && (
-            <div className='absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm rounded-md p-1.5 shadow-md'>
+          {logo && (
+            <div className='absolute bottom-3 left-3 bg-white backdrop-blur-sm rounded-md w-12 h-12 shadow-md flex items-center justify-center'>
               <img
-                src={review.imageUrl}
-                alt={`${review.reviewerName} logo`}
-                className='w-8 h-8 sm:w-10 sm:h-10 object-contain'
+                src={logo}
+                alt={`${logo} logo`}
+                className='w-full h-full px-1 object-contain'
               />
             </div>
           )}
         </div>
         <div
           className={`${
-            variant === 'grid' ? 'w-full' : 'w-full h-full lg:w-2/3'
-          } flex flex-col justify-between`}
+            variant === 'grid' ? 'w-full h-full' : 'w-full h-full'
+          } flex flex-col justify-between overflow-hidden`}
         >
-          <div className='flex flex-col gap-3 md:gap-4 max-h-[400px] overflow-hidden'>
+          <div className='flex flex-col gap-3 md:gap-4 max-h-[400px] w-full'>
             <h3
               className='text-lg sm:text-xl font-semibold'
               style={{
@@ -120,7 +126,7 @@ function ProjectCard({
               {title}
             </h3>
             <p
-              className='text-sm sm:text-base leading-relaxed'
+              className='text-sm sm:text-base leading-relaxed w-full break-words whitespace-normal'
               style={{
                 color: theme.colors.text.secondary,
                 fontFamily: theme.typography.fontFamily.sans.join(', '),
@@ -178,7 +184,7 @@ function ProjectCard({
             )}
           </div>
 
-          <div className='flex gap-2 overflow-x-auto scrollbar-hide max-w-full'>
+          <div className='flex gap-2 overflow-x-auto scrollbar-hide'>
             {technologies.map((tech) => (
               <span
                 key={tech}

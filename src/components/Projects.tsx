@@ -184,6 +184,7 @@ function Projects() {
                       variant='grid'
                       review={project.review}
                       features={project.features}
+                      logo={project.logo}
                     />
                   </div>
                 </div>
