@@ -6,6 +6,7 @@ import bng from '../assets/projects/bng.png';
 import layout from '../assets/projects/layout.png';
 import siperros from '../assets/projects/siperros.png';
 import { getProjectsData } from '../data/projects';
+
 function ProjectsSection() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
@@ -43,59 +44,66 @@ function ProjectsSection() {
   }, []);
 
   return (
-    <div
-      ref={scrollContainerRef}
-      className="
+    <div className='flex flex-col gap-[16px]'>
+      <div className='flex justify-center'>
+        <h1 className='font-bold text-3xl text-gray-800'>
+          Proyectos Destacados
+        </h1>
+      </div>
+      <div
+        ref={scrollContainerRef}
+        className="
         flex flex-col gap-[30px] md:flex-row md:gap-[40px] overflow-x-auto scroll-smooth px-8 py-6
         snap-x snap-mandatory
         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']
       "
-    >
-      <ProjectCard
-        project={{
-          name: 'BNG Agro: Web empresarial',
-          background_image: bng,
-          link_label: 'bngagroproductos.com',
-          link_href: 'https://www.bngagroproductos.com',
-          description:
-            'Sitio web empresarial, con catálogo interactivo, buscador y diseño profesional que refuerza la identidad y presencia digital de la marca.',
-        }}
-        style={{
-          backgroundSize: '800px',
-          backgroundPosition: '0px -1px',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
-      <ProjectCard
-        project={{
-          name: 'SiPerros: Mapa pet-friendly',
-          background_image: siperros,
-          link_label: 'siperros.com',
-          link_href: 'https://www.siperros.com',
-          description:
-            'Aplicación web móvil en React para descubrir lugares pet-friendly cerca de ti, con Google Maps, reseñas y aportes de usuarios.',
-        }}
-        style={{
-          backgroundSize: '850px',
-          backgroundPosition: '-70px -1px',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
-      <ProjectCard
-        project={{
-          name: 'Restaurant Map: Sistema interactivo',
-          background_image: layout,
-          link_label: 'ofoscar.com/layout',
-          link_href: 'layout',
-          description:
-            'Sistema web en React para gestión de mesas en restaurantes, con mapa interactivo, seguimiento de órdenes y generación de reportes dinámicos.',
-        }}
-        style={{
-          backgroundSize: '690px',
-          backgroundPosition: '0px -2px',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+      >
+        <ProjectCard
+          project={{
+            name: 'BNG Agro: Web empresarial',
+            background_image: bng,
+            link_label: 'bngagroproductos.com',
+            link_href: 'https://www.bngagroproductos.com',
+            description:
+              'Sitio web empresarial, con catálogo interactivo, buscador y diseño profesional que refuerza la identidad y presencia digital de la marca.',
+          }}
+          style={{
+            backgroundSize: '800px',
+            backgroundPosition: '0px -1px',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <ProjectCard
+          project={{
+            name: 'SiPerros: Mapa pet-friendly',
+            background_image: siperros,
+            link_label: 'siperros.com',
+            link_href: 'https://www.siperros.com',
+            description:
+              'Aplicación web móvil en React para descubrir lugares pet-friendly cerca de ti, con Google Maps, reseñas y aportes de usuarios.',
+          }}
+          style={{
+            backgroundSize: '850px',
+            backgroundPosition: '-70px -1px',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <ProjectCard
+          project={{
+            name: 'Restaurant Map: Sistema interactivo',
+            background_image: layout,
+            link_label: 'ofoscar.com/layout',
+            link_href: 'layout',
+            description:
+              'Sistema web en React para gestión de mesas en restaurantes, con mapa interactivo, seguimiento de órdenes y generación de reportes dinámicos.',
+          }}
+          style={{
+            backgroundSize: '690px',
+            backgroundPosition: '0px -2px',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
     </div>
   );
 }
