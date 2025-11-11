@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import link from '../assets/icons/link.svg';
@@ -118,32 +118,44 @@ type ProjectCardProps = {
 export const ProjectCard = ({ project, style }: ProjectCardProps) => {
   const { name, background_image, link_label, link_href, description } =
     project;
+  const [loaded, setLoaded] = useState(false);
 
   const handleLinkClick = () => {
     window.open(link_href, '_blank', 'noopener,noreferrer');
   };
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = background_image;
+    img.onload = () => setLoaded(true);
+  }, [background_image]);
+
   return (
     <div
       className='
-       w-full h-[520px] md:w-[480px] md:h-[420px] rounded-2xl border border-[#DCDCDC]
+        w-full h-[520px] md:w-[480px] md:h-[420px]
+        rounded-2xl border border-[#DCDCDC]
         relative overflow-hidden flex-shrink-0 cursor-pointer
         snap-center transition-all duration-300 ease-out
         hover:shadow-[0px_12px_40px_0px_rgba(100,100,111,0.45)]
         hover:scale-[1.01]
       '
+      onClick={handleLinkClick}
       style={{
-        backgroundImage: `url(${background_image})`,
+        backgroundImage: loaded ? `url(${background_image})` : 'none',
+        backgroundColor: loaded ? 'transparent' : '#e5e5e5', // gray placeholder
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         boxShadow: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
         ...style,
       }}
-      onClick={handleLinkClick}
     >
       <div className='absolute bottom-0 left-0 right-0 bg-gray-900/70 px-4 py-3 flex flex-col'>
         <h3 className='text-white font-bold text-2xl'>{name}</h3>
         <p className='text-white text-md text-justify'>{description}</p>
         <div className='flex flex-row gap-2 items-center mt-2'>
           <img src={link} alt='link icon' className='w-5 h-5' />
-          <p className='text-gray-200 text-md font-semibold '>{link_label}</p>
+          <p className='text-gray-200 text-md font-semibold'>{link_label}</p>
         </div>
       </div>
     </div>
