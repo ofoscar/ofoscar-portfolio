@@ -1,125 +1,151 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import link from '../assets/icons/link.svg';
+import bng from '../assets/projects/bng.png';
+import layout from '../assets/projects/layout.png';
+import siperros from '../assets/projects/siperros.png';
 import { getProjectsData } from '../data/projects';
-import { theme } from '../theme';
-import ProjectCard from './ProjectCard';
-
 function ProjectsSection() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Get projects data based on current language
   const projectsData = getProjectsData(i18n.language);
 
   useEffect(() => {
-    // Scroll to the middle card (card 2) on component mount
     const scrollToCenter = () => {
-      if (scrollContainerRef.current) {
-        const container = scrollContainerRef.current;
-        // Responsive card width based on screen size
-        const isMobile = window.innerWidth < 768;
-        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
-        let cardWidth;
+      const container = scrollContainerRef.current;
+      if (!container) return;
 
-        if (isMobile) {
-          cardWidth = container.clientWidth - 32; // 32px for padding on mobile
-        } else if (isTablet) {
-          cardWidth = Math.min(600, container.clientWidth - 64); // Smaller cards on tablet
-        } else {
-          cardWidth = 840; // Full size on desktop
-        }
+      const cards = container.children;
+      if (cards.length === 0) return;
 
-        const gap = isMobile ? 20 : 40;
-        const containerWidth = container.clientWidth;
+      // Center on middle card (for 3 cards -> index 1)
+      const middleCardIndex = Math.floor(cards.length / 2);
+      const middleCard = cards[middleCardIndex] as HTMLElement;
 
-        // Always center on the middle card (index 1) on all devices
-        const cardIndex = 1; // Second card (0-indexed) - the middle card
-        const cardPosition = (cardWidth + gap) * cardIndex;
-        const scrollPosition = Math.max(
-          0,
-          cardPosition - (containerWidth - cardWidth) / 2,
-        );
-        container.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      if (middleCard) {
+        const containerCenter = container.clientWidth / 2;
+        const cardCenter = middleCard.offsetLeft + middleCard.offsetWidth / 2;
+        const scrollPosition = cardCenter - containerCenter;
+
+        container.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth',
+        });
       }
     };
 
-    // Use setTimeout to ensure layout is complete
-    setTimeout(scrollToCenter, 100);
+    // Wait for DOM layout to stabilize before scrolling
+    const timer = setTimeout(() => requestAnimationFrame(scrollToCenter), 200);
+    return () => clearTimeout(timer);
   }, []);
-  return (
-    <div className='w-full'>
-      <div className='max-w-[1280px] mx-auto flex flex-col gap-6'>
-        <div className='text-center px-4 flex flex-col gap-2'>
-          <h2
-            className='text-2xl sm:text-3xl font-bold'
-            style={{
-              color: theme.colors.text.primary,
-              fontFamily: theme.typography.fontFamily.sans.join(', '),
-            }}
-          >
-            {t('projects.title')}
-          </h2>
-          <p
-            className='text-base sm:text-lg'
-            style={{
-              color: theme.colors.text.secondary,
-              fontFamily: theme.typography.fontFamily.sans.join(', '),
-            }}
-          >
-            {t('projects.subtitle')}
-          </p>
-        </div>
-        <div
-          ref={scrollContainerRef}
-          className='flex flex-row gap-5 md:gap-[40px] scroll-smooth snap-x snap-mandatory scrollbar-hide overflow-x-auto px-4 md:px-8 py-4'
-          style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-          }}
-        >
-          {projectsData
-            .filter((project) => project.starred)
-            .map((project) => (
-              <ProjectCard
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                technologies={project.technologies}
-                imageUrl={project.imageUrl}
-                review={project.review}
-                features={project.features}
-              />
-            ))}
-        </div>
 
-        {/* See More Button */}
-        <div className='text-center mt-8 md:mt-12'>
-          <button
-            onClick={() => navigate('/projects')}
-            className='cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg'
-            style={{
-              backgroundColor: theme.colors.surface,
-              color: theme.colors.text.primary,
-              border: `2px solid ${theme.colors.border.light}`,
-              fontFamily: theme.typography.fontFamily.sans.join(', '),
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor =
-                theme.colors.surfaceSecondary;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = theme.colors.surface;
-            }}
-          >
-            {t('projects.seeMore', 'See More Projects')}
-          </button>
-        </div>
-      </div>
+  return (
+    <div
+      ref={scrollContainerRef}
+      className="
+        flex flex-col gap-[30px] md:flex-row md:gap-[40px] overflow-x-auto scroll-smooth px-8 py-6
+        snap-x snap-mandatory
+        [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']
+      "
+    >
+      <ProjectCard
+        project={{
+          name: 'BNG Agro: Web empresarial',
+          background_image: bng,
+          link_label: 'bngagroproductos.com',
+          link_href: 'https://www.bngagroproductos.com',
+          description:
+            'Sitio web empresarial, con catálogo interactivo, buscador y diseño profesional que refuerza la identidad y presencia digital de la marca.',
+        }}
+        style={{
+          backgroundSize: '800px',
+          backgroundPosition: '0px -1px',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <ProjectCard
+        project={{
+          name: 'SiPerros: Mapa pet-friendly',
+          background_image: siperros,
+          link_label: 'siperros.com',
+          link_href: 'https://www.siperros.com',
+          description:
+            'Aplicación web móvil en React para descubrir lugares pet-friendly cerca de ti, con Google Maps, reseñas y aportes de usuarios.',
+        }}
+        style={{
+          backgroundSize: '850px',
+          backgroundPosition: '-70px -1px',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <ProjectCard
+        project={{
+          name: 'Restaurant Map: Sistema interactivo',
+          background_image: layout,
+          link_label: 'ofoscar.com/layout',
+          link_href: 'layout',
+          description:
+            'Sistema web en React para gestión de mesas en restaurantes, con mapa interactivo, seguimiento de órdenes y generación de reportes dinámicos.',
+        }}
+        style={{
+          backgroundSize: '690px',
+          backgroundPosition: '0px -2px',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
     </div>
   );
 }
 
 export default ProjectsSection;
+
+type Project = {
+  name: string;
+  background_image: string;
+  link_label: string;
+  link_href: string;
+  description: string;
+};
+
+type ProjectCardProps = {
+  project: Project;
+  style?: {};
+};
+
+export const ProjectCard = ({ project, style }: ProjectCardProps) => {
+  const { name, background_image, link_label, link_href, description } =
+    project;
+
+  const handleLinkClick = () => {
+    window.open(link_href, '_blank', 'noopener,noreferrer');
+  };
+  return (
+    <div
+      className='
+       w-full h-[520px] md:w-[480px] md:h-[420px] rounded-2xl border border-[#DCDCDC]
+        relative overflow-hidden flex-shrink-0 cursor-pointer
+        snap-center transition-all duration-300 ease-out
+        hover:shadow-[0px_12px_40px_0px_rgba(100,100,111,0.45)]
+        hover:scale-[1.01]
+      '
+      style={{
+        backgroundImage: `url(${background_image})`,
+        boxShadow: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
+        ...style,
+      }}
+      onClick={handleLinkClick}
+    >
+      <div className='absolute bottom-0 left-0 right-0 bg-gray-900/70 px-4 py-3 flex flex-col'>
+        <h3 className='text-white font-bold text-2xl'>{name}</h3>
+        <p className='text-white text-md text-justify'>{description}</p>
+        <div className='flex flex-row gap-2 items-center mt-2'>
+          <img src={link} alt='link icon' className='w-5 h-5' />
+          <p className='text-gray-200 text-md font-semibold '>{link_label}</p>
+        </div>
+      </div>
+    </div>
+  );
+};

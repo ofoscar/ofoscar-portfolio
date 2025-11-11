@@ -15,14 +15,7 @@
   "bio": {
     "name": "Oscar Ramirez",
     "description": "Soy un desarrollador full-stack apasionado con experiencia en tecnologías web modernas. Me encanta crear soluciones innovadoras que resuelven problemas del mundo real y brindan experiencias excepcionales al usuario.",
-    "skills": [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Python",
-      "PostgreSQL",
-      "Docker"
-    ]
+    "skills": ["React", "Flutter", "MongoDB", "Python", "PostgreSQL", "Figma"]
   },
   "projects": {
     "title": "Proyectos Destacados",

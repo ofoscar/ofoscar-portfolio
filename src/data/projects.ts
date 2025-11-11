@@ -111,12 +111,7 @@ const projectsDataEn: Project[] = [
           'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
-    /*  review: {
-      rating: 5,
-      reviewerName: 'Casino Manager',
-      comment:
-        'Exceptional system that revolutionized our operations. The team delivered beyond expectations and provided excellent on-site support.',
-    }, */
+    logo: '/betcore_app.png',
   },
   {
     starred: true,
@@ -242,6 +237,7 @@ const projectsDataEn: Project[] = [
         'Professional website that perfectly represents our agricultural values. Great attention to detail and responsive design.',
       imageUrl: '/bng_logo.png',
     },
+    logo: '/bng_logo.png',
   },
   {
     starred: true,
@@ -358,12 +354,6 @@ const projectsDataEn: Project[] = [
           'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
-    /*  review: {
-      rating: 3,
-      reviewerName: 'Restaurant Owner',
-      comment:
-        'Good functionality overall, though it took some time to adapt to the new system. The real-time tracking is very helpful.',
-    }, */
   },
   {
     starred: false,
@@ -483,12 +473,6 @@ const projectsDataEn: Project[] = [
           'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
-    /*  review: {
-      rating: 4,
-      reviewerName: 'Pawn Shop Manager',
-      comment:
-        'Great system for coordinating our multiple locations. The real-time updates have significantly improved our inventory management.',
-    }, */
   },
   {
     starred: false,
@@ -704,6 +688,14 @@ const projectsDataEs: Project[] = [
           'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
+    review: {
+      rating: 5,
+      reviewerName: 'Daniel Bojórquez (BNG Team Lead)',
+      comment:
+        'Professional website that perfectly represents our agricultural values. Great attention to detail and responsive design.',
+      imageUrl: '/bng_logo.png',
+    },
+    logo: '/betcore_app.png',
   },
   {
     starred: true,
@@ -829,8 +821,9 @@ const projectsDataEs: Project[] = [
         'Sitio web profesional que representa perfectamente nuestros valores agrícolas. Gran atención al detalle y diseño responsivo.',
       imageUrl: '/bng_logo.png',
     },
+    logo: '/bng_logo.png',
   },
-  {
+  /* {
     starred: true,
     id: 'restaurant-management-flutter',
     title: 'Tably: Sistema de Gestión de Restaurante',
@@ -945,6 +938,117 @@ const projectsDataEs: Project[] = [
           'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       },
     ],
+  }, */
+  {
+    starred: true,
+    id: 'restaurant-management-flutter',
+    title: 'SiPerros: Encuentra sitios pet-friendly cerca de ti',
+    description:
+      'Una aplicación Flutter integral para gestión de operaciones de restaurante que incluye seguimiento de mesas en tiempo real, gestión de pedidos, visualización de plano de planta en vivo y sistemas de notificación para gerentes.',
+    fullDescription:
+      'Desarrollé una solución completa de gestión de restaurante usando Flutter que proporciona a los gerentes de restaurante insights en tiempo real sobre sus operaciones. La aplicación incluye gestión interactiva de planos de planta, seguimiento de pedidos, monitoreo de estado de mesas y sistemas inteligentes de notificación para alertar a los gerentes sobre actividades inusuales o problemas que requieren atención.',
+    technologies: ['React', 'PostgreSQL', 'Express', 'Figma'],
+    imageUrl:
+      'https://www.mlive.com/resizer/v2/TKLR6JPCPREIJEBWRIX2PFMFWE.JPG?auth=63273ddef927338d7a7a1548c9936bbeee2d8b558b7d95dfc97f823d7a9af134&width=1280&smart=true&quality=90',
+    features: [
+      'Seguimiento y gestión de estado de mesas en tiempo real',
+      'Sistema integral de gestión de pedidos',
+      'Visualización interactiva del plano de planta del restaurante',
+      'Sistema de notificaciones push para alertas de actividad inusual',
+      'Panel avanzado de reportes y análisis',
+      'Actualizaciones de estado en vivo en todos los dispositivos conectados',
+      'Diseño de interfaz intuitivo mobile-first',
+      'Soporte y gestión para múltiples restaurantes',
+    ],
+    challenges: [
+      'Implementar sincronización en tiempo real entre múltiples dispositivos',
+      'Crear una interfaz de plano de planta intuitiva y responsiva',
+      'Diseñar un sistema de notificación efectivo sin abrumar a los gerentes',
+      'Optimizar rendimiento para actualizaciones en tiempo real en entornos de restaurante ocupados',
+      'Asegurar consistencia de datos durante períodos de alto tráfico',
+      'Construir una arquitectura escalable para múltiples ubicaciones de restaurantes',
+    ],
+    learnings: [
+      'Desarrollo avanzado de Flutter y patrones de gestión de estado',
+      'Sincronización de base de datos en tiempo real y resolución de conflictos',
+      'Optimización de rendimiento de aplicaciones móviles para aplicaciones críticas de negocio',
+      'Diseño de experiencia de usuario para entornos de restaurante de alto estrés',
+      'Implementación y estrategias de gestión de notificaciones push',
+      'Mejores prácticas de desarrollo móvil multiplataforma',
+    ],
+    sections: [
+      {
+        title: 'Sistema de Gestión de Mesas',
+        description:
+          'Sistema de seguimiento de mesas en tiempo real que proporciona visibilidad instantánea del estado de las mesas, ocupación y tasas de rotación en todo el restaurante.',
+        content: [
+          'Desarrollé actualizaciones de estado de mesas en tiempo real que se sincronizan instantáneamente en todos los dispositivos conectados',
+          'Creé indicadores visuales intuitivos para disponibilidad de mesas, ocupación y estado de limpieza',
+          'Implementé capacidades de gestión de reservas y lista de espera',
+          'Construí análisis para rastrear tasas de rotación de mesas y optimizar eficiencia de asientos',
+          'Diseñé interfaces táctiles amigables para actualizaciones rápidas de estado por el personal del restaurante',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Sistema de Gestión de Pedidos',
+        description:
+          'Sistema integral de seguimiento de pedidos que monitorea todos los pedidos desde la colocación hasta la finalización, asegurando operaciones fluidas de cocina y satisfacción del cliente.',
+        content: [
+          'Construí un sistema completo de gestión del ciclo de vida de pedidos desde la colocación hasta la entrega',
+          'Implementé actualizaciones de estado de pedidos en tiempo real para personal de cocina y meseros',
+          'Creé algoritmos de priorización de pedidos para optimizar el flujo de trabajo de la cocina',
+          'Desarrollé capacidades de integración con sistemas POS y sistemas de pantalla de cocina',
+          'Diseñé flujos de trabajo de modificación y cancelación de pedidos con pistas de auditoría apropiadas',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Plano de Planta de Restaurante en Vivo',
+        description:
+          'Representación visual interactiva del diseño del restaurante que proporciona actualizaciones de estado en tiempo real y permite gestión eficiente del piso.',
+        content: [
+          'Creé una interfaz de plano de planta interactiva que se actualiza en tiempo real',
+          'Implementé funcionalidad de arrastrar y soltar para modificaciones de diseño de mesas',
+          'Construí indicadores de estado visual que muestran ocupación de mesas de un vistazo',
+          'Desarrollé capacidades de zoom y paneo para diseños de restaurantes grandes',
+          'Diseñé sistemas codificados por colores para identificación rápida de estados de mesas y problemas',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Sistema Inteligente de Notificaciones',
+        description:
+          'Sistema inteligente de notificaciones que alerta a los gerentes sobre actividades inusuales, problemas operacionales y eventos importantes que requieren atención inmediata.',
+        content: [
+          'Desarrollé algoritmos inteligentes para detectar patrones de actividad inusual',
+          'Implementé reglas de notificación personalizables y niveles de prioridad',
+          'Creé sistema de notificaciones push para alertas inmediatas a gerentes',
+          'Construí historial de notificaciones y seguimiento para propósitos de auditoría',
+          'Diseñé procedimientos de escalación para problemas críticos que requieren respuesta inmediata',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+      {
+        title: 'Reportes Avanzados y Análisis',
+        description:
+          'Sistema integral de reportes que proporciona insights sobre rendimiento del restaurante, eficiencia operacional e inteligencia de negocio.',
+        content: [
+          'Construí módulos integrales de reportes para análisis diarios, semanales y mensuales',
+          'Creé paneles de rendimiento con métricas operacionales clave y KPIs',
+          'Implementé herramientas de visualización de datos para análisis de tendencias e insights',
+          'Desarrollé capacidades de exportación para reportes financieros y operacionales',
+          'Diseñé características de análisis predictivo para pronosticar períodos ocupados y necesidades de personal',
+        ],
+        imageUrl:
+          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      },
+    ],
+    logo: '/si_perros.png',
   },
   {
     starred: false,
