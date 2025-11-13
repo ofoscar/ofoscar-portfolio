@@ -24,16 +24,12 @@ function Home() {
         onPrimaryClick={handleGetStarted}
       />
 
-      {/* Projects Section - No Padding */}
-      <div className='py-12 flex flex-col gap-24'>
+      <div className='py-12 flex flex-col gap-24 items-center'>
         <ProjectsSection />
         <div className='w-full px-4 sm:px-8 md:px-12 lg:px-[80px]flex flex-col'>
-          {/* Main Content Section */}
-          {/* Recent Posts Section */}
           <RecentPostsSection />
         </div>
       </div>
-      {/* Footer */}
       <Footer />
     </div>
   );

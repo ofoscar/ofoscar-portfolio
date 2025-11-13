@@ -44,7 +44,7 @@ function ProjectsSection() {
   }, []);
 
   return (
-    <div className='flex flex-col gap-[16px]'>
+    <div className='flex flex-col gap-[16px] w-full max-w-[1280px]'>
       <div className='flex justify-center'>
         <h1 className='font-bold text-3xl text-gray-800'>
           Proyectos Destacados
@@ -53,7 +53,7 @@ function ProjectsSection() {
       <div
         ref={scrollContainerRef}
         className="
-        flex flex-col gap-[30px] md:flex-row md:gap-[40px] overflow-x-auto scroll-smooth px-8 py-6
+        flex flex-row gap-[30px] md:gap-[40px] overflow-x-scroll scroll-smooth px-8 py-6
         snap-x snap-mandatory
         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']
       "
