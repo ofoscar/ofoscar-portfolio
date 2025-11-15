@@ -52,7 +52,7 @@ function ProjectCard({
 
   return (
     <div
-      className='rounded-lg p-4 sm:p-6 md:p-8 h-[400px] transition-all duration-300 hover:shadow-lg cursor-pointer'
+      className='rounded-lg p-4 sm:p-6 md:p-8 md:h-[450px] transition-all duration-300 hover:shadow-lg cursor-pointer'
       style={{
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
@@ -68,7 +68,7 @@ function ProjectCard({
         }
       }}
     >
-      <div className={`flex flex-row gap-4 w-full h-full`}>
+      <div className={`flex flex-col md:flex-row gap-4 w-full h-full`}>
         <div className='h-[250px] lg:h-full relative'>
           <img
             src={imageUrl}
@@ -89,7 +89,7 @@ function ProjectCard({
         <div
           className={`w-full h-full flex flex-col justify-between overflow-hidden`}
         >
-          <div className='flex flex-col gap-3 md:gap-4 max-h-[400px] w-full'>
+          <div className='flex flex-col gap-3 md:gap-4 w-full'>
             <h3
               className='text-lg sm:text-xl font-semibold'
               style={{
