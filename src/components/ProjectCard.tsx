@@ -50,21 +50,9 @@ function ProjectCard({
     );
   };
 
-  // Different styles for different variants
-  const baseClasses =
-    'rounded-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-lg cursor-pointer ';
-  const scrollClasses =
-    'flex-shrink-0 snap-center w-[calc(100vw-4rem)] sm:w-[calc(100vw-6rem)] md:w-[calc(100vw-8rem)] lg:w-[calc(100vw-12rem)] xl:w-[840px] lg:h-[450px]';
-  const gridClasses = 'w-full md:h-[950px]';
-
-  const containerClasses =
-    variant === 'scroll'
-      ? `${baseClasses} ${scrollClasses}`
-      : `${baseClasses} ${gridClasses}`;
-
   return (
     <div
-      className={containerClasses}
+      className='rounded-lg p-4 sm:p-6 md:p-8 h-[400px] transition-all duration-300 hover:shadow-lg cursor-pointer'
       style={{
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
@@ -80,24 +68,12 @@ function ProjectCard({
         }
       }}
     >
-      <div
-        className={`${
-          variant === 'grid'
-            ? 'flex flex-col h-full '
-            : 'flex flex-col lg:flex-row w-full'
-        } gap-4 md:gap-6 h-full`}
-      >
-        <div
-          className={
-            variant === 'grid'
-              ? 'w-full relative md:min-h-[250px] md:max-h-[250px]'
-              : 'md:h-[250px] lg:h-full lg:min-w-[325px] lg:max-w-[325px] relative'
-          }
-        >
+      <div className={`flex flex-row gap-4 w-full h-full`}>
+        <div className='h-[250px] lg:h-full relative'>
           <img
             src={imageUrl}
             alt={title}
-            className='w-full h-48 sm:h-56 md:h-full object-cover rounded-lg'
+            className='w-[550px] h-full object-cover rounded-lg'
           />
           {/* Logo overlay in bottom left */}
           {logo && (
@@ -111,9 +87,7 @@ function ProjectCard({
           )}
         </div>
         <div
-          className={`${
-            variant === 'grid' ? 'w-full h-full' : 'w-full h-full'
-          } flex flex-col justify-between overflow-hidden`}
+          className={`w-full h-full flex flex-col justify-between overflow-hidden`}
         >
           <div className='flex flex-col gap-3 md:gap-4 max-h-[400px] w-full'>
             <h3

@@ -53,7 +53,7 @@ function ProjectsSection() {
       <div
         ref={scrollContainerRef}
         className="
-        flex flex-row gap-[30px] md:gap-[40px] overflow-x-scroll scroll-smooth px-8 py-6
+        flex flex-row gap-[20px] md:gap-[30px] md:gap-[40px] overflow-x-scroll scroll-smooth px-8 py-6
         snap-x snap-mandatory
         [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']
       "
@@ -141,7 +141,7 @@ export const ProjectCard = ({ project, style }: ProjectCardProps) => {
   return (
     <div
       className='
-        w-full h-[520px] md:w-[480px] md:h-[420px]
+        w-full h-[480px] md:h-[520px] md:w-[480px] md:h-[420px]
         rounded-2xl border border-[#DCDCDC]
         relative overflow-hidden flex-shrink-0 cursor-pointer
         snap-center transition-all duration-300 ease-out
@@ -158,12 +158,14 @@ export const ProjectCard = ({ project, style }: ProjectCardProps) => {
         ...style,
       }}
     >
-      <div className='absolute bottom-0 left-0 right-0 bg-gray-900/70 px-4 py-3 flex flex-col'>
-        <h3 className='text-white font-bold text-2xl'>{name}</h3>
-        <p className='text-white text-md text-justify'>{description}</p>
-        <div className='flex flex-row gap-2 items-center mt-2'>
-          <img src={link} alt='link icon' className='w-5 h-5' />
-          <p className='text-gray-200 text-md font-semibold'>{link_label}</p>
+      <div className='absolute bottom-0 left-0 right-0 bg-gray-900/80 px-4 py-3 flex flex-col gap-1 md:gap-0'>
+        <h3 className='text-white font-bold text-xl md:text-2xl'>{name}</h3>
+        <div className='flex flex-col gap-1 md:gap-2'>
+          <p className='text-white md:text-md text-justify'>{description}</p>
+          <div className='flex flex-row gap-2 items-center'>
+            <img src={link} alt='link icon' className='w-5 h-5' />
+            <p className='text-gray-200 text-md font-semibold'>{link_label}</p>
+          </div>
         </div>
       </div>
     </div>
