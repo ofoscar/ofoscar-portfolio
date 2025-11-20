@@ -44,7 +44,7 @@ function ProjectsSection() {
   }, []);
 
   return (
-    <div className='flex flex-col gap-[16px] w-full max-w-[1280px]'>
+    <div className='flex flex-col gap-[16px] w-full max-w-[t]'>
       <div className='flex justify-center'>
         <h1 className='font-bold text-3xl text-gray-800'>
           Proyectos Destacados
