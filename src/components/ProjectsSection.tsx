@@ -1,46 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import link from '../assets/icons/link.svg';
 import bng from '../assets/projects/bng.png';
 import layout from '../assets/projects/layout.png';
 import siperros from '../assets/projects/siperros.png';
-import { getProjectsData } from '../data/projects';
 
 function ProjectsSection() {
-  const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const projectsData = getProjectsData(i18n.language);
+  const rowRef = useRef<HTMLDivElement>(null);
+  const secondCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scrollToCenter = () => {
-      const container = scrollContainerRef.current;
-      if (!container) return;
-
-      const cards = container.children;
-      if (cards.length === 0) return;
-
-      // Center on middle card (for 3 cards -> index 1)
-      const middleCardIndex = Math.floor(cards.length / 2);
-      const middleCard = cards[middleCardIndex] as HTMLElement;
-
-      if (middleCard) {
-        const containerCenter = container.clientWidth / 2;
-        const cardCenter = middleCard.offsetLeft + middleCard.offsetWidth / 2;
-        const scrollPosition = cardCenter - containerCenter;
-
-        container.scrollTo({
-          left: scrollPosition,
-          behavior: 'smooth',
-        });
-      }
-    };
-
-    // Wait for DOM layout to stabilize before scrolling
-    const timer = setTimeout(() => requestAnimationFrame(scrollToCenter), 200);
-    return () => clearTimeout(timer);
+    if (secondCardRef.current) {
+      secondCardRef.current.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      });
+    }
   }, []);
 
   return (
@@ -51,12 +26,8 @@ function ProjectsSection() {
         </h1>
       </div>
       <div
-        ref={scrollContainerRef}
-        className="
-        flex flex-row gap-[20px] md:gap-[30px] md:gap-[40px] overflow-x-scroll scroll-smooth px-8 py-6
-        snap-x snap-mandatory
-        [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']
-      "
+        className='flex flex-row gap-6 overflow-x-auto snap-x snap-mandatory px-2 [&::-webkit-scrollbar]:hidden py-3'
+        ref={rowRef}
       >
         <ProjectCard
           project={{
@@ -73,21 +44,23 @@ function ProjectsSection() {
             backgroundRepeat: 'no-repeat',
           }}
         />
-        <ProjectCard
-          project={{
-            name: 'SiPerros: Mapa pet-friendly',
-            background_image: siperros,
-            link_label: 'siperros.com',
-            link_href: 'https://www.siperros.com',
-            description:
-              'Aplicación web móvil en React para descubrir lugares pet-friendly cerca de ti, con Google Maps, reseñas y aportes de usuarios.',
-          }}
-          style={{
-            backgroundSize: '850px',
-            backgroundPosition: '-70px -1px',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
+        <div ref={secondCardRef} className='snap-center'>
+          <ProjectCard
+            project={{
+              name: 'SiPerros: Mapa pet-friendly',
+              background_image: siperros,
+              link_label: 'siperros.com',
+              link_href: 'https://www.siperros.com',
+              description:
+                'Aplicación web móvil en React para descubrir lugares pet-friendly cerca de ti, con Google Maps, reseñas y aportes de usuarios.',
+            }}
+            style={{
+              backgroundSize: '850px',
+              backgroundPosition: '-70px -1px',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+        </div>
         <ProjectCard
           project={{
             name: 'Restaurant Map: Sistema interactivo',
