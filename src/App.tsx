@@ -6,6 +6,7 @@ import BottomBar from './components/BottomBar';
 import Contact from './components/Contact';
 import CookiesPopup from './components/CookiesPopup';
 import Home from './components/Home';
+import LayoutPage from './components/LayoutPage';
 import ProjectDetail from './components/ProjectDetail';
 import Projects from './components/Projects';
 import ScrollToTop from './components/ScrollToTop';
@@ -24,6 +25,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/project/:projectId' element={<ProjectDetail />} />
+          <Route path='/layout' element={<LayoutPage />} />
         </Routes>
 
         {/* Bottom components */}
