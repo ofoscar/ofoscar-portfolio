@@ -5,16 +5,21 @@ import * as THREE from 'three';
 
 const CloudShaderMesh = () => {
   const mesh = useRef<THREE.Mesh>(null);
+  const mouseValue = useRef([0, 0]);
 
   useFrame((state: RootState) => {
-    const { clock, mouse, gl } = state;
-    if (mesh.current) {
-      const material = mesh.current.material as THREE.ShaderMaterial;
-      material.uniforms.u_mouse.value = [mouse.x / 2 + 0.5, mouse.y / 2 + 0.5];
-      material.uniforms.u_time.value = clock.getElapsedTime();
-      const c = gl.domElement.getBoundingClientRect();
-      material.uniforms.u_resolution.value = [c.width, c.height];
-    }
+    if (!mesh.current) return;
+
+    const material = mesh.current.material as THREE.ShaderMaterial;
+    const { clock, mouse } = state;
+
+    // Update time every frame (necessary for animation)
+    material.uniforms.u_time.value = clock.getElapsedTime();
+
+    // Update mouse position (reuse array to avoid allocation)
+    mouseValue.current[0] = mouse.x / 2 + 0.5;
+    mouseValue.current[1] = mouse.y / 2 + 0.5;
+    material.uniforms.u_mouse.value = mouseValue.current;
   });
 
   const shaderMaterial = useMemo(() => {

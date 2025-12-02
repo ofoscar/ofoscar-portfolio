@@ -158,7 +158,16 @@ function ProjectCard({
             )}
           </div>
 
-          <div className='flex gap-2 overflow-x-auto scrollbar-hide'>
+          <div
+            className='flex gap-2 overflow-x-auto scrollbar-hide'
+            style={
+              {
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                WebkitOverflowScrolling: 'touch',
+              } as React.CSSProperties
+            }
+          >
             {technologies.map((tech) => (
               <span
                 key={tech}
