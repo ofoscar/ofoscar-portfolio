@@ -19,15 +19,23 @@ function ProjectsSection() {
   }, []);
 
   return (
-    <div className='flex flex-col gap-[16px] w-full max-w-[t]'>
+    <div className='flex flex-col items-center gap-[16px] md:gap-[32px] w-full'>
       <div className='flex justify-center'>
         <h1 className='font-bold text-3xl text-gray-800'>
           Proyectos Destacados
         </h1>
       </div>
       <div
-        className='flex flex-row gap-6 overflow-x-auto snap-x snap-mandatory px-2 [&::-webkit-scrollbar]:hidden py-3'
+        /* className='flex flex-row gap-6 overflow-x-auto snap-x snap-mandatory px-2 [&::-webkit-scrollbar]:hidden py-3' */
+        className='flex flex-row gap-6 overflow-auto w-[1280px] max-w-[100vw] px-4 scrollbar-hide'
         ref={rowRef}
+        style={
+          {
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+          } as React.CSSProperties
+        }
       >
         <ProjectCard
           project={{
@@ -114,12 +122,10 @@ export const ProjectCard = ({ project, style }: ProjectCardProps) => {
   return (
     <div
       className='
-        w-full h-[480px] md:h-[520px] md:w-[480px] md:h-[420px]
+        w-[320px] md:w-[402px] h-[480px] md:h-[420px] 
         rounded-2xl border border-[#DCDCDC]
         relative overflow-hidden flex-shrink-0 cursor-pointer
         snap-center transition-all duration-300 ease-out
-        hover:shadow-[0px_12px_40px_0px_rgba(100,100,111,0.45)]
-        hover:scale-[1.01]
       '
       onClick={handleLinkClick}
       style={{
