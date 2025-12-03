@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { theme } from '../theme';
-import CloudTextureBackground from './CloudTextureBackground';
 import EducationCard from './EducationCard';
 import Footer from './Footer';
 import GlassButton from './GlassButton';
@@ -93,21 +92,12 @@ function About() {
   return (
     <div className='flex flex-col w-full overflow-hidden'>
       <div
-        className='relative flex items-center justify-center overflow-hidden md:h-[calc(94dvh-64px)]'
+        className='relative flex items-center justify-center overflow-hidden md:h-[calc(94dvh-64px)] bg-gradient-to-br from-[#BF1A2F] to-[#2F2F2F]'
         style={{
           width: '100dvw',
           minHeight: 'calc(94dvh - 64px)', // Use minHeight for mobile flexibility
-          backgroundColor: theme.colors.surface,
         }}
       >
-        {/* Cloud Texture Background */}
-        <CloudTextureBackground className='opacity-30' />
-
-        {/* Overlay for better text readability */}
-        <div
-          className='absolute inset-0 bg-black opacity-40'
-          aria-hidden='true'
-        ></div>
 
         {/* Content */}
         <div className='relative z-10 text-center md:text-left w-full max-w-7xl flex flex-col md:flex-row items-center md:justify-between p-4 sm:p-8 about-mobile-content gap-4'>
