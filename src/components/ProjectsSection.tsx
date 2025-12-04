@@ -26,7 +26,7 @@ function ProjectsSection() {
         </h1>
       </div>
       <div
-        className='flex flex-row gap-6 overflow-auto w-[1280px] max-w-[100vw] px-4 scrollbar-hide'
+        className='flex flex-row gap-6 overflow-auto w-[1280px] max-w-[100vw] px-4 md:px-0 scrollbar-hide'
         ref={rowRef}
         style={
           {
@@ -121,7 +121,7 @@ export const ProjectCard = ({ project, style }: ProjectCardProps) => {
   return (
     <div
       className='
-        w-[320px] md:w-[402px] h-[480px] md:h-[420px] 
+        w-[320px] md:w-[410px] h-[480px] md:h-[420px] 
         rounded-2xl border border-[#DCDCDC]
         relative overflow-hidden flex-shrink-0 cursor-pointer
         snap-center
@@ -132,7 +132,6 @@ export const ProjectCard = ({ project, style }: ProjectCardProps) => {
         backgroundColor: loaded ? 'transparent' : '#e5e5e5', // gray placeholder
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        boxShadow: '0px 7px 29px 0px rgba(100, 100, 111, 0.2)',
         ...style,
       }}
     >
