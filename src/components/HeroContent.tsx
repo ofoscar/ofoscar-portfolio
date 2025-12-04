@@ -40,7 +40,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
           {title}
         </h1>
         <p
-          className='text-lg sm:text-xl leading-tight text-white mb-6 md:mb-8'
+          className='text-lg sm:text-xl leading-tight text-gray-200 mb-6 md:mb-8'
           style={{
             fontFamily: theme.typography.fontFamily.sans.join(', '),
             textShadow: 'none',

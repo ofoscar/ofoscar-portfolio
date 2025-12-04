@@ -8,13 +8,13 @@
   },
   "hero": {
     "title": "Building Digital Experiences",
-    "subtitle": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions that solve real-world problems and deliver exceptional user experiences.",
+    "subtitle": "I'm a passionate full-stack developer with expertise in modern web technologies.",
     "cta": "View My Work",
     "secondaryCta": "Learn More"
   },
   "bio": {
     "name": "Oscar Ramirez",
-    "description": "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating innovative solutions that solve real-world problems and deliver exceptional user experiences.",
+    "description": "I'm a passionate full-stack developer with expertise in modern web technologies.",
     "skills": ["React", "Flutter", "MongoDB", "Python", "PostgreSQL", "Figma"]
   },
   "projects": {

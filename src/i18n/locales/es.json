@@ -8,13 +8,13 @@
   },
   "hero": {
     "title": "Construyendo Experiencias Digitales",
-    "subtitle": "Soy un desarrollador full-stack apasionado, con experiencia en tecnologías web modernas. Me encanta crear soluciones innovadoras que resuelvan problemas del mundo real y ofrezcan experiencias de usuario excepcionales.",
+    "subtitle": "Desarrollador full-stack apasionado, con experiencia en tecnologías web modernas",
     "cta": "Ver Mi Trabajo",
     "secondaryCta": "Saber Más"
   },
   "bio": {
     "name": "Oscar Ramirez",
-    "description": "Soy un desarrollador full-stack apasionado con experiencia en tecnologías web modernas. Me encanta crear soluciones innovadoras que resuelven problemas del mundo real y brindan experiencias excepcionales al usuario.",
+    "description": "Desarrollador full-stack apasionado con experiencia en tecnologías web modernas",
     "skills": ["React", "Flutter", "MongoDB", "Python", "PostgreSQL", "Figma"]
   },
   "projects": {
