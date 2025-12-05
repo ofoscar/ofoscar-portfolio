@@ -95,10 +95,11 @@ const Contact = () => {
         buttonText='Start the Conversation'
         onButtonClick={scrollToContactCard}
         showSocials={true}
+        className='h-[350px] sm:h-[400px] lg:h-[400px]'
       />
       <div
         ref={contactCardRef}
-        className='py-6 px-4 sm:py-8 sm:px-6 lg:py-[40px] w-full flex justify-center'
+        className='py-6 px-4 sm:py-8 sm:px-6 lg:py-[60px] w-full flex justify-center'
       >
         {/* Main Content */}
         <ContactCard

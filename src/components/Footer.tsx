@@ -16,7 +16,7 @@ function Footer({ className = '' }: FooterProps) {
       style={{ backgroundColor: '#2F2F2F' }}
     >
       {/* Content Section */}
-      <div className='px-8 py-12'>
+      <div className='px-8 py-12 min-h-[320px]'>
         <div className='max-w-6xl mx-auto'>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {/* About Section */}

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 import GlassButton from './GlassButton';
 
@@ -8,6 +9,7 @@ interface HeroProps {
   buttonText?: string;
   onButtonClick?: () => void;
   showSocials?: boolean;
+  className?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({
@@ -17,9 +19,15 @@ const Hero: React.FC<HeroProps> = ({
   buttonText,
   onButtonClick,
   showSocials = false,
+  className,
 }) => {
   return (
-    <div className='relative w-full h-[350px] sm:h-[400px] lg:h-[450px] bg-gray-300'>
+    <div
+      className={clsx(
+        'relative w-full bg-gray-300',
+        className || 'h-[350px] sm:h-[400px] lg:h-[450px]',
+      )}
+    >
       <img
         src={backgroundImage}
         alt='Hero Background'
