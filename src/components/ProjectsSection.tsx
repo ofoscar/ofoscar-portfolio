@@ -12,7 +12,8 @@ function ProjectsSection() {
     if (rowRef.current && secondCardRef.current) {
       const row = rowRef.current;
       const card = secondCardRef.current;
-      row.scrollLeft = card.offsetLeft - (row.offsetWidth - card.offsetWidth) / 2;
+      row.scrollLeft =
+        card.offsetLeft - (row.offsetWidth - card.offsetWidth) / 2;
     }
   }, []);
 
@@ -133,14 +134,12 @@ export const ProjectCard = ({ project, style }: ProjectCardProps) => {
         ...style,
       }}
     >
-      <div className='absolute bottom-0 left-0 right-0 bg-gray-900/80 px-4 py-3 flex flex-col gap-1 md:gap-0'>
+      <div className='absolute bottom-0 left-0 right-0 bg-gray-900/80 px-4 py-3 flex flex-col gap-1 md:gap-0 h-[220px] md:h-[200px] md:justify-between'>
         <h3 className='text-white font-bold text-xl md:text-2xl'>{name}</h3>
-        <div className='flex flex-col gap-1 md:gap-2'>
-          <p className='text-white md:text-md text-justify'>{description}</p>
-          <div className='flex flex-row gap-2 items-center'>
-            <img src={link} alt='link icon' className='w-5 h-5' />
-            <p className='text-gray-200 text-md font-semibold'>{link_label}</p>
-          </div>
+        <p className='text-white md:text-md text-justify'>{description}</p>
+        <div className='flex flex-row gap-2 items-center'>
+          <img src={link} alt='link icon' className='w-5 h-5' />
+          <p className='text-gray-200 text-md font-semibold'>{link_label}</p>
         </div>
       </div>
     </div>
