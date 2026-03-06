@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { theme } from '../theme';
 import type { ProjectReview } from '../types/project';
+import LazyImage from './LazyImage';
 
 type ProjectCardProps = {
   id: string;
@@ -70,7 +71,7 @@ function ProjectCard({
     >
       <div className={`flex flex-col md:flex-row gap-4 w-full h-full`}>
         <div className='h-[250px] lg:h-full relative'>
-          <img
+          <LazyImage
             src={imageUrl}
             alt={title}
             className='w-[550px] h-full object-cover rounded-lg'
@@ -78,7 +79,7 @@ function ProjectCard({
           {/* Logo overlay in bottom left */}
           {logo && (
             <div className='absolute bottom-3 left-3 bg-white backdrop-blur-sm rounded-md w-12 h-12 shadow-md flex items-center justify-center'>
-              <img
+              <LazyImage
                 src={logo}
                 alt={`${logo} logo`}
                 className='w-full h-full px-1 object-contain'

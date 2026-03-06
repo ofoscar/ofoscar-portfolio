@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyImage from './LazyImage';
 
 interface EducationCardProps {
   logo: string;
@@ -41,7 +42,7 @@ const EducationCard: React.FC<EducationCardProps> = ({
       onClick={onClick}
     >
       <div className='flex items-start gap-2 sm:gap-3 h-full'>
-        <img
+        <LazyImage
           src={logo}
           alt={alt}
           className='w-12 sm:w-16 h-full object-contain flex-shrink-0'
