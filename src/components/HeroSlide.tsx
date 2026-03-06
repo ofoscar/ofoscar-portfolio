@@ -7,6 +7,7 @@ interface HeroSlideProps {
   subtitle: string;
   primaryButtonText: string;
   profileImage?: string;
+  backgroundImage?: string;
   onPrimaryClick?: () => void;
   gradientClassName?: string;
 }
@@ -16,6 +17,7 @@ function HeroSlide({
   subtitle,
   primaryButtonText,
   profileImage,
+  backgroundImage,
   onPrimaryClick,
   gradientClassName = 'from-[#BF1A2F] to-[#2F2F2F]',
 }: HeroSlideProps) {
@@ -24,15 +26,21 @@ function HeroSlide({
 
   return (
     <div
-      className={`w-full relative flex items-center justify-center overflow-hidden md:h-[600px] lg:min-h-[480px] lg:h-[480px] p-4 sm:p-8 md:p-[80px] bg-gradient-to-br ${gradientClassName}`}
+      className={`w-full relative flex items-center justify-center overflow-hidden min-h-[500px] sm:min-h-[520px] md:h-[600px] lg:min-h-[480px] lg:h-[480px] p-4 sm:p-8 md:p-[80px] ${!backgroundImage ? `bg-gradient-to-br ${gradientClassName}` : ''}`}
       style={{
         border: `1px solid ${theme.colors.border.light}`,
       }}
     >
-      {/* Cloud Texture Background */}
-      {/* <CloudTextureBackground className='opacity-90' /> */}
-
-      {/* Overlay for better text readability */}
+      {backgroundImage && (
+        <>
+          <img
+            src={backgroundImage}
+            alt='Slide Background'
+            className='absolute inset-0 w-full h-full object-cover'
+          />
+          <div className='absolute inset-0 bg-black/55 backdrop-blur-sm' />
+        </>
+      )}
 
       {/* Content */}
       <HeroContent

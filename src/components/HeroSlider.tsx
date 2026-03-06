@@ -32,7 +32,7 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
       subtitle: t('hero.slide2.subtitle'),
       primaryButtonText: t('hero.slide2.cta'),
       onPrimaryClick: () => navigate('/contact'),
-      gradientClassName: 'from-[#1A4BBF] to-[#2F2F2F]',
+      backgroundImage: 'https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=2893&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ];
 
