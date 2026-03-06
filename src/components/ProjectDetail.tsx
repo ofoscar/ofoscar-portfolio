@@ -4,6 +4,7 @@ import { getProjectsData } from '../data/projects';
 import { theme } from '../theme';
 import Footer from './Footer';
 import GlassButton from './GlassButton';
+import LazyImage from './LazyImage';
 import ProjectNotFound from './ProjectNotFound';
 
 function ProjectDetail() {
@@ -83,7 +84,7 @@ function ProjectDetail() {
           {/* Project Image */}{' '}
           <div className='mb-8'>
             {' '}
-            <img
+            <LazyImage
               src={project.imageUrl}
               alt={project.title}
               className='w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg'
@@ -162,7 +163,7 @@ function ProjectDetail() {
                     </p>
                     {section.imageUrl && (
                       <div className='mb-6'>
-                        <img
+                        <LazyImage
                           src={section.imageUrl}
                           alt={section.title}
                           className='w-full h-48 sm:h-64 object-cover rounded-lg shadow-md'

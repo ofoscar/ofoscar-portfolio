@@ -6,6 +6,7 @@ import {
   type PostsResponse,
 } from '../services/apiService';
 import { theme } from '../theme';
+import LazyImage from './LazyImage';
 
 function RecentPostsSection() {
   const { t } = useTranslation();
@@ -206,7 +207,7 @@ export const ApiPostCard = ({ post }: ApiPostCardProps) => {
         style={{ borderRadius: '12px' }}
       >
         {post.featuredImage ? (
-          <img
+          <LazyImage
             src={post.featuredImage}
             alt={post.title}
             className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'
