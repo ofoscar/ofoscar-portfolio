@@ -21,7 +21,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
   skills,
 }) => {
   return (
-    <div className='relative z-10 text-center md:text-left w-full max-w-[1280px] flex flex-col md:flex-row items-center justify-between gap-8'>
+    <div className={`relative z-10 w-full max-w-[1280px] flex flex-col md:flex-row gap-8 ${profileImage ? 'text-center md:text-left items-center justify-between' : 'text-center items-center justify-center'}`}>
       {/* Mobile Layout: Profile Image First */}
       {profileImage && (
         <div className='block md:hidden'>
@@ -50,7 +50,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
         </p>
 
         {/* Skills */}
-        <div className='flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-start mb-6 md:mb-8'>
+        <div className={`flex flex-wrap gap-2 sm:gap-3 mb-6 md:mb-8 ${profileImage ? 'justify-center md:justify-start' : 'justify-center'}`}>
           {skills.map((skill) => (
             <span
               key={skill}
@@ -69,7 +69,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
           ))}
         </div>
 
-        <div className='flex flex-col sm:flex-row gap-4 justify-center md:justify-start'>
+        <div className={`flex flex-col sm:flex-row gap-4 justify-center ${profileImage ? 'md:justify-start' : ''}`}>
           <GlassButton
             className='gradient-border-wrapper text-base sm:text-lg md:text-2xl w-full sm:w-[220px]'
             onClick={onPrimaryClick}

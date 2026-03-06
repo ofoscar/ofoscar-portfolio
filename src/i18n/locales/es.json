@@ -10,7 +10,12 @@
     "title": "Construyendo Experiencias Digitales",
     "subtitle": "Desarrollador full-stack apasionado, con experiencia en tecnologías web modernas",
     "cta": "Ver Mi Trabajo",
-    "secondaryCta": "Saber Más"
+    "secondaryCta": "Saber Más",
+    "slide2": {
+      "title": "Disponible para Nuevos Proyectos",
+      "subtitle": "Abierto a proyectos freelance y oportunidades emocionantes. Creemos algo increíble juntos.",
+      "cta": "Contáctame"
+    }
   },
   "bio": {
     "name": "Oscar Ramirez",
