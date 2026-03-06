@@ -9,12 +9,10 @@ function ProjectsSection() {
   const secondCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (secondCardRef.current) {
-      secondCardRef.current.scrollIntoView({
-        behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest',
-      });
+    if (rowRef.current && secondCardRef.current) {
+      const row = rowRef.current;
+      const card = secondCardRef.current;
+      row.scrollLeft = card.offsetLeft - (row.offsetWidth - card.offsetWidth) / 2;
     }
   }, []);
 
