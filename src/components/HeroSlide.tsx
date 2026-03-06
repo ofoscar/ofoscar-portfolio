@@ -26,7 +26,7 @@ function HeroSlide({
 
   return (
     <div
-      className={`w-full relative flex items-center justify-center overflow-hidden min-h-[500px] sm:min-h-[520px] md:h-[600px] lg:min-h-[480px] lg:h-[480px] p-4 sm:p-8 md:p-[80px] ${!backgroundImage ? `bg-gradient-to-br ${gradientClassName}` : ''}`}
+      className={`w-full relative flex items-center justify-center overflow-hidden h-[566px] sm:min-h-[520px] md:h-[600px] lg:min-h-[480px] lg:h-[480px] p-4 sm:p-8 md:p-[80px] ${!backgroundImage ? `bg-gradient-to-br ${gradientClassName}` : ''}`}
       style={{
         border: `1px solid ${theme.colors.border.light}`,
       }}

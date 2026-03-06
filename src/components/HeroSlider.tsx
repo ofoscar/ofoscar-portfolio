@@ -32,7 +32,8 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
       subtitle: t('hero.slide2.subtitle'),
       primaryButtonText: t('hero.slide2.cta'),
       onPrimaryClick: () => navigate('/contact'),
-      backgroundImage: 'https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=2893&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      backgroundImage:
+        'https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=2893&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     },
   ];
 
@@ -69,12 +70,16 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
         e.preventDefault();
         scrollLocked.current = true;
         goTo(current + 1);
-        setTimeout(() => { scrollLocked.current = false; }, SCROLL_LOCK_MS);
+        setTimeout(() => {
+          scrollLocked.current = false;
+        }, SCROLL_LOCK_MS);
       } else if (goingUp && current > 0) {
         e.preventDefault();
         scrollLocked.current = true;
         goTo(current - 1);
-        setTimeout(() => { scrollLocked.current = false; }, SCROLL_LOCK_MS);
+        setTimeout(() => {
+          scrollLocked.current = false;
+        }, SCROLL_LOCK_MS);
       }
     };
 
@@ -96,7 +101,7 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
       </div>
 
       {/* Navigation dots */}
-      <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20'>
+      <div className='hidden sm:flex absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20'>
         {slides.map((_, i) => (
           <button
             key={i}
