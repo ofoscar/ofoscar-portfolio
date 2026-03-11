@@ -51,8 +51,8 @@ const NewsletterSection = () => {
         />
         <button
           type='submit'
-          disabled={status === 'sending'}
-          className='px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500'
+          disabled={status === 'sending' || !email.trim()}
+          className='px-4 py-2 text-sm bg-[#BF1A2F] text-white rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-[#BF1A2F] disabled:opacity-50 disabled:cursor-not-allowed enabled:hover:bg-[#9E1624]'
         >
           {status === 'sending'
             ? t('footer.newsletter.sending')

@@ -38,7 +38,7 @@ class ApiService {
   private baseURL: string;
 
   constructor() {
-    this.baseURL = API_BASE_URL || 'http://localhost:3001';
+    this.baseURL = API_BASE_URL || 'http://localhost:5005';
   }
 
   private async makeRequest(endpoint: string, options: RequestInit = {}) {
