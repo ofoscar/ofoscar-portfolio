@@ -7,7 +7,7 @@ interface HeroSliderProps {
   profileImage?: string;
 }
 
-const INTERVAL = 5000;
+const INTERVAL = 10000;
 const SCROLL_LOCK_MS = 800;
 
 function HeroSlider({ profileImage }: HeroSliderProps) {
@@ -24,7 +24,8 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
       subtitle: t('hero.subtitle'),
       primaryButtonText: t('hero.cta'),
       onPrimaryClick: () => navigate('/projects'),
-      gradientClassName: 'from-[#BF1A2F] to-[#2F2F2F]',
+      backgroundImage:
+        'https://images.unsplash.com/photo-1564256075637-d29830edb258?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       profileImage,
     },
     {
@@ -62,18 +63,19 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
 
     const handleWheel = (e: WheelEvent) => {
       if (scrollLocked.current) return;
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
 
-      const goingDown = e.deltaY > 0;
-      const goingUp = e.deltaY < 0;
+      const goingRight = e.deltaX > 0;
+      const goingLeft = e.deltaX < 0;
 
-      if (goingDown && current < slides.length - 1) {
+      if (goingRight && current < slides.length - 1) {
         e.preventDefault();
         scrollLocked.current = true;
         goTo(current + 1);
         setTimeout(() => {
           scrollLocked.current = false;
         }, SCROLL_LOCK_MS);
-      } else if (goingUp && current > 0) {
+      } else if (goingLeft && current > 0) {
         e.preventDefault();
         scrollLocked.current = true;
         goTo(current - 1);
