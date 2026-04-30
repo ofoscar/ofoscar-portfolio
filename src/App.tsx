@@ -4,7 +4,6 @@ import About from './components/About';
 import AppBar from './components/AppBar';
 import BottomBar from './components/BottomBar';
 import Contact from './components/Contact';
-import CookiesPopup from './components/CookiesPopup';
 import Home from './components/Home';
 import LayoutPage from './components/LayoutPage';
 import ProjectDetail from './components/ProjectDetail';
@@ -30,7 +29,6 @@ function App() {
 
         {/* Bottom components */}
         <BottomBar />
-        <CookiesPopup />
       </div>
     </Router>
   );
