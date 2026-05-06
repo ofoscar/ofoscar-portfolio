@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ContactButton from './ContactButton';
 
 interface MobileNavigationProps {
@@ -20,27 +20,28 @@ function MobileNavigation({
       }`}
     >
       <div className='px-4 py-2 space-y-2'>
-        <Link
+        <NavLink
           to='/'
-          className='block text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
+          end
+          className={({ isActive }) => `block py-2 transition-colors ${isActive ? 'text-red-700 font-semibold' : 'text-gray-700 hover:text-blue-600 dark:hover:text-blue-400'}`}
           onClick={() => setIsMenuOpen(false)}
         >
           {t('nav.home')}
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/about'
-          className='block text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
+          className={({ isActive }) => `block py-2 transition-colors ${isActive ? 'text-red-700 font-semibold' : 'text-gray-700 hover:text-blue-600 dark:hover:text-blue-400'}`}
           onClick={() => setIsMenuOpen(false)}
         >
           {t('nav.about')}
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/projects'
-          className='block text-gray-700 hover:text-blue-600 dark:hover:text-blue-400 py-2 transition-colors'
+          className={({ isActive }) => `block py-2 transition-colors ${isActive ? 'text-red-700 font-semibold' : 'text-gray-700 hover:text-blue-600 dark:hover:text-blue-400'}`}
           onClick={() => setIsMenuOpen(false)}
         >
           {t('nav.projects')}
-        </Link>
+        </NavLink>
         <a
           href='https://blog.ofoscar.com'
           target='_blank'

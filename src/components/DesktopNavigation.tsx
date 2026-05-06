@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ContactButton from './ContactButton';
 
 function DesktopNavigation() {
@@ -11,15 +11,15 @@ function DesktopNavigation() {
 
   return (
     <div className='hidden md:flex items-center space-x-8'>
-      <Link to='/' className='nav-link'>
+      <NavLink to='/' end className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
         {t('nav.home')}
-      </Link>
-      <Link to='/about' className='nav-link'>
+      </NavLink>
+      <NavLink to='/about' className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
         {t('nav.about')}
-      </Link>
-      <Link to='/projects' className='nav-link'>
+      </NavLink>
+      <NavLink to='/projects' className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
         {t('nav.projects')}
-      </Link>
+      </NavLink>
       <button
         onClick={handleBlogClick}
         className='nav-link cursor-pointer border-none bg-transparent p-0'

@@ -77,6 +77,11 @@
   color: #BF1A2F;
 }
 
+.nav-link-active {
+  color: #720f1c;
+  font-weight: 600;
+}
+
 .contact-btn {
   background-color: #2F2F2F;
   color: white;

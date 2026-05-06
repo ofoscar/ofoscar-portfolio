@@ -100,7 +100,7 @@ function About() {
       >
 
         {/* Content */}
-        <div className='relative z-10 text-center md:text-left w-full max-w-7xl flex flex-col md:flex-row items-center md:justify-between p-4 sm:p-8 about-mobile-content gap-4'>
+        <div className='relative z-10 text-center md:text-left w-full max-w-7xl flex flex-col md:flex-row items-center md:justify-between p-4 sm:p-8 md:p-[80px] about-mobile-content gap-4'>
           {/* Mobile Layout: Profile Image First */}
           <div className='block md:hidden flex-shrink-0'>
             <ProfileImage src={profile_img} alt='About Profile' />
