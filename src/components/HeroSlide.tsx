@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { theme } from '../theme';
 import HeroContent from './HeroContent';
 
 interface HeroSlideProps {
@@ -35,7 +34,7 @@ function HeroSlide({
             alt='Slide Background'
             className='absolute inset-0 w-full h-full object-cover'
           />
-          <div className='absolute inset-0 bg-black/55 backdrop-blur-sm' />
+          <div className='absolute inset-0 bg-black/55 backdrop-blur-xs backdrop-blur-sm' />
         </>
       )}
 

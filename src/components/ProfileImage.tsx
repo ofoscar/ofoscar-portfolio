@@ -11,7 +11,12 @@ const ProfileImage: React.FC<ProfileImageProps> = ({
   alt = 'Profile',
 }) => {
   return (
-    <div className='w-48 h-48 md:w-56 md:h-56 rounded-full bg-gray-200 overflow-hidden relative z-10'>
+    <div
+      className='w-48 h-48 md:w-56 md:h-56 rounded-full bg-gray-200 overflow-hidden relative z-10'
+      style={{
+        boxShadow: '0 0 0 4px rgba(255, 255, 255, 0.1)',
+      }}
+    >
       <LazyImage src={src} alt={alt} className='w-full h-full object-cover' />
     </div>
   );
