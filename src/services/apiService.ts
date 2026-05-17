@@ -1,4 +1,5 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL;
+const AUTH_API_URL = import.meta.env.VITE_AUTH_API_URL || 'http://localhost:8080';
 
 export interface Post {
   _id: string;
@@ -94,3 +95,30 @@ class ApiService {
 }
 
 export const apiService = new ApiService();
+
+export interface LoginResponse {
+  message: string;
+  username: string;
+}
+
+export async function loginUser(username: string, password: string): Promise<LoginResponse> {
+  const response = await fetch(`${AUTH_API_URL}/api/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    let message = 'Invalid username or password';
+    try {
+      const json = JSON.parse(text);
+      message = json.message || json.error || message;
+    } catch {
+      if (text) message = text;
+    }
+    throw new Error(message);
+  }
+
+  return response.json();
+}
