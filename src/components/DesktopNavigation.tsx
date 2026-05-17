@@ -20,6 +20,9 @@ function DesktopNavigation() {
       <NavLink to='/projects' className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
         {t('nav.projects')}
       </NavLink>
+      <NavLink to='/videos' className={({ isActive }) => isActive ? 'nav-link nav-link-active' : 'nav-link'}>
+        {t('nav.videos', 'Videos')}
+      </NavLink>
       <button
         onClick={handleBlogClick}
         className='nav-link cursor-pointer border-none bg-transparent p-0'

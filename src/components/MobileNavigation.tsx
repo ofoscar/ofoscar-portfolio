@@ -42,6 +42,13 @@ function MobileNavigation({
         >
           {t('nav.projects')}
         </NavLink>
+        <NavLink
+          to='/videos'
+          className={({ isActive }) => `block py-2 transition-colors ${isActive ? 'text-red-700 font-semibold' : 'text-gray-700 hover:text-blue-600 dark:hover:text-blue-400'}`}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {t('nav.videos', 'Videos')}
+        </NavLink>
         <a
           href='https://blog.ofoscar.com'
           target='_blank'
