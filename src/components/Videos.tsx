@@ -87,13 +87,13 @@ function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
         }
       }}
     >
-      <div className='relative' style={{ aspectRatio: '9/16' }}>
+      <div className='relative' style={{ height: '480px' }}>
         <img
           src={
             video.thumbnail ?? `https://img.youtube.com/vi/${video.id}/0.jpg`
           }
           alt={video.title}
-          className='w-full h-full object-cover'
+          className='w-full h-full object-cover object-top'
         />
         <div
           className='absolute inset-0 flex items-center justify-center'
@@ -145,23 +145,43 @@ function Videos() {
       style={{ backgroundColor: theme.colors.background }}
     >
       <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        <h1
-          className='text-3xl sm:text-4xl font-bold mb-2'
-          style={{
-            color: theme.colors.text.primary,
-            fontFamily: theme.typography.fontFamily.sans.join(', '),
-          }}
-        >
-          Videos
-        </h1>
-        <p
-          className='text-base mb-10'
-          style={{ color: theme.colors.text.secondary }}
-        >
-          Shorts, demos, and more.
-        </p>
+        <div className='flex items-start justify-between gap-4 mb-10'>
+          <div>
+            <h1
+              className='text-3xl sm:text-4xl font-bold mb-2'
+              style={{
+                color: theme.colors.text.primary,
+                fontFamily: theme.typography.fontFamily.sans.join(', '),
+              }}
+            >
+              Videos
+            </h1>
+            <p
+              className='text-base'
+              style={{ color: theme.colors.text.secondary }}
+            >
+              Shorts, demos, and more.
+            </p>
+          </div>
+          <a
+            href='https://www.youtube.com/@Ofosca'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='flex-shrink-0 flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-opacity duration-200 hover:opacity-80'
+            style={{
+              backgroundColor: '#FF0000',
+              color: '#ffffff',
+              fontFamily: theme.typography.fontFamily.sans.join(', '),
+            }}
+          >
+            <svg className='w-4 h-4' fill='currentColor' viewBox='0 0 24 24'>
+              <path d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'/>
+            </svg>
+            Follow
+          </a>
+        </div>
 
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4'>
+        <div className='flex flex-col gap-4'>
           {videos.map((video) => (
             <VideoCard
               key={video.id}
