@@ -71,7 +71,7 @@ function VideoModal({ video, onClose }: { video: Video; onClose: () => void }) {
 function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
   return (
     <div
-      className='rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105'
+      className='rounded-xl overflow-hidden cursor-pointer'
       style={{
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,

@@ -88,7 +88,7 @@ function VideosSection() {
         {videos.map((video) => (
           <div
             key={video.id}
-            className='rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105'
+            className='rounded-xl overflow-hidden cursor-pointer'
             style={{
               backgroundColor: theme.colors.surface,
               border: `1px solid ${theme.colors.border.light}`,
