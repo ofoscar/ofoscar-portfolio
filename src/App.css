@@ -32,6 +32,10 @@
   transform: translateY(-100%);
 }
 
+body.modal-open .nav-container {
+  display: none;
+}
+
 /* Hide scrollbar utility class */
 .scrollbar-hide {
   -webkit-overflow-scrolling: touch;
