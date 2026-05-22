@@ -15,7 +15,7 @@ function VideoModal({ video, onClose }: { video: Video; onClose: () => void }) {
 
   return (
     <div
-      className='fixed inset-0 z-50 flex items-center justify-center p-4'
+      className='fixed inset-0 z-50 flex items-center justify-center px-[35px] py-4 md:p-4'
       style={{ backgroundColor: 'rgba(0,0,0,0.75)' }}
       onClick={onClose}
     >
@@ -42,7 +42,7 @@ function VideoModal({ video, onClose }: { video: Video; onClose: () => void }) {
             className='w-full h-full border-0'
           />
         </div>
-        <div className='flex flex-col gap-2 md:h-[455px] md:overflow-y-auto'>
+        <div className='hidden md:flex flex-col gap-2 md:h-[455px] md:overflow-y-auto'>
           <h2
             className='text-lg font-semibold'
             style={{ color: '#ffffff', fontFamily: sansFont }}
