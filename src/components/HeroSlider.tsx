@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import HeroSlide from './HeroSlide';
+import hero1 from '../assets/ hero/1.jpg';
+import hero2 from '../assets/ hero/2.jpg';
 
 interface HeroSliderProps {
   profileImage?: string;
@@ -24,8 +26,7 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
       subtitle: t('hero.subtitle'),
       primaryButtonText: t('hero.cta'),
       onPrimaryClick: () => navigate('/projects'),
-      backgroundImage:
-        'https://images.unsplash.com/photo-1564256075637-d29830edb258?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      backgroundImage: hero1,
       profileImage,
     },
     {
@@ -33,8 +34,7 @@ function HeroSlider({ profileImage }: HeroSliderProps) {
       subtitle: t('hero.slide2.subtitle'),
       primaryButtonText: t('hero.slide2.cta'),
       onPrimaryClick: () => navigate('/contact'),
-      backgroundImage:
-        'https://images.unsplash.com/photo-1644088379091-d574269d422f?q=80&w=2893&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      backgroundImage: hero2,
     },
   ];
 
