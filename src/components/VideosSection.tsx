@@ -84,11 +84,11 @@ function VideosSection() {
         </p>
       </div>
 
-      <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 w-full'>
-        {videos.map((video) => (
+      <div className='grid grid-cols-2 sm:grid-cols-3 gap-4 w-full md:flex md:flex-row md:justify-center md:gap-6'>
+        {videos.map((video, i) => (
           <div
             key={video.id}
-            className='rounded-xl overflow-hidden cursor-pointer'
+            className={`rounded-xl overflow-hidden cursor-pointer md:w-52 md:flex-shrink-0${i >= 2 ? ' hidden sm:block' : ''}`}
             style={{
               backgroundColor: theme.colors.surface,
               border: `1px solid ${theme.colors.border.light}`,

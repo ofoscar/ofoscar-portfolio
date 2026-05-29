@@ -71,7 +71,7 @@ function VideoModal({ video, onClose }: { video: Video; onClose: () => void }) {
 function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
   return (
     <div
-      className='rounded-xl overflow-hidden cursor-pointer'
+      className='rounded-xl overflow-hidden cursor-pointer w-[80vw] mx-auto md:w-52 md:mx-0 md:flex-shrink-0'
       style={{
         backgroundColor: theme.colors.surface,
         border: `1px solid ${theme.colors.border.light}`,
@@ -87,7 +87,7 @@ function VideoCard({ video, onClick }: { video: Video; onClick: () => void }) {
         }
       }}
     >
-      <div className='relative' style={{ height: '480px' }}>
+      <div className='relative' style={{ aspectRatio: '9/16' }}>
         <img
           src={
             video.thumbnail ?? `https://img.youtube.com/vi/${video.id}/0.jpg`
@@ -141,10 +141,10 @@ function Videos() {
 
   return (
     <div
-      className='min-h-screen'
+      className='min-h-screen flex flex-col'
       style={{ backgroundColor: theme.colors.background }}
     >
-      <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      <div className='max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1'>
         <div className='flex items-start justify-between gap-4 mb-10'>
           <div>
             <h1
@@ -181,7 +181,7 @@ function Videos() {
           </a>
         </div>
 
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row md:flex-wrap md:gap-6'>
           {videos.map((video) => (
             <VideoCard
               key={video.id}
